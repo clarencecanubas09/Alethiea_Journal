@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Alethiea2
+{
+    public partial class DailyMood_Entry : Form
+    {
+        public DailyMood_Entry()
+        {
+            InitializeComponent();
+        }
+    }
+}
