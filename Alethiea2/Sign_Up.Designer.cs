@@ -1,7 +1,9 @@
-﻿namespace Alethiea2
+﻿        namespace Alethiea2
 {
     partial class Sign_Up
     {
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,121 +30,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_Up));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            txtEmail = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            btnSignUp1 = new Button();
+            txtUsername1 = new TextBox();
+            txtpPassword1 = new TextBox();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.ALETHEIA_LOGO_no_bg__2;
-            pictureBox1.Location = new Point(320, -160);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(900, 670);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(601, 410);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(370, 50);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(601, 510);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(370, 50);
-            textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(601, 610);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(370, 54);
-            textBox3.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(601, 387);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Imprint MT Shadow", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(255, 192, 255);
+            label1.Location = new Point(95, 23);
             label1.Name = "label1";
-            label1.Size = new Size(46, 20);
-            label1.TabIndex = 4;
-            label1.Text = "Email";
+            label1.Size = new Size(603, 52);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome to Aletheia Journal!";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(601, 487);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Imprint MT Shadow", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(172, 85);
             label2.Name = "label2";
-            label2.Size = new Size(75, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Username";
+            label2.Size = new Size(441, 33);
+            label2.TabIndex = 1;
+            label2.Text = "Reflect on your moods and patterns";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(601, 587);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(224, 144);
             label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 6;
-            label3.Text = "Password";
+            label3.Size = new Size(61, 24);
+            label3.TabIndex = 2;
+            label3.Text = "Email";
             // 
-            // button1
+            // txtEmail
             // 
-            button1.BackColor = Color.DarkBlue;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(680, 684);
-            button1.Name = "button1";
-            button1.Size = new Size(215, 50);
-            button1.TabIndex = 7;
-            button1.Text = "Sign Up";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            txtEmail.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(224, 171);
+            txtEmail.Multiline = true;
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(300, 40);
+            txtEmail.TabIndex = 3;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(224, 214);
+            label4.Name = "label4";
+            label4.Size = new Size(98, 24);
+            label4.TabIndex = 4;
+            label4.Text = "Username";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(224, 284);
+            label5.Name = "label5";
+            label5.Size = new Size(93, 24);
+            label5.TabIndex = 5;
+            label5.Text = "Password";
+            // 
+            // btnSignUp1
+            // 
+            btnSignUp1.BackColor = Color.FromArgb(192, 0, 192);
+            btnSignUp1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSignUp1.ForeColor = Color.White;
+            btnSignUp1.Location = new Point(327, 384);
+            btnSignUp1.Name = "btnSignUp1";
+            btnSignUp1.Size = new Size(100, 40);
+            btnSignUp1.TabIndex = 8;
+            btnSignUp1.Text = "Sign Up";
+            btnSignUp1.UseVisualStyleBackColor = false;
+            btnSignUp1.Click += btnSignUp1_Click;
+            // 
+            // txtUsername1
+            // 
+            txtUsername1.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername1.Location = new Point(224, 241);
+            txtUsername1.Multiline = true;
+            txtUsername1.Name = "txtUsername1";
+            txtUsername1.Size = new Size(300, 40);
+            txtUsername1.TabIndex = 9;
+            // 
+            // txtpPassword1
+            // 
+            txtpPassword1.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtpPassword1.Location = new Point(224, 311);
+            txtpPassword1.Multiline = true;
+            txtpPassword1.Name = "txtpPassword1";
+            txtpPassword1.PasswordChar = '*';
+            txtpPassword1.Size = new Size(300, 40);
+            txtpPassword1.TabIndex = 10;
             // 
             // Sign_Up
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1542, 813);
-            Controls.Add(button1);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(782, 453);
+            Controls.Add(txtpPassword1);
+            Controls.Add(txtUsername1);
+            Controls.Add(btnSignUp1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(txtEmail);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
             Name = "Sign_Up";
             Text = "Sign In";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Sign_Up_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
+        private TextBox txtEmail;
+        private Label label4;
+        private Label label5;
+        private Button btnSignUp1;
+        private TextBox txtUsername1;
+        private TextBox txtpPassword1;
+
+        
+
     }
 }
