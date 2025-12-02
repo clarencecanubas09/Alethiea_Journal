@@ -55,10 +55,6 @@ namespace Alethiea2
             UserStore.Email = txtEmail.Text;
 
             MessageBox.Show("Account created successfully!");
-
-            // Optionally return to Login form
-            Login loginForm = new Login();
-            loginForm.Show();
             this.Close();
         }
     }

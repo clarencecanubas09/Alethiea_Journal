@@ -12,7 +12,8 @@ namespace Alethiea2
         private void button1_Click(object sender, EventArgs e)
         {
             Sign_Up signUpForm = new Sign_Up();
-            signUpForm.Show();
+            signUpForm.ShowDialog(this);
+            
         }
 
 
@@ -30,7 +31,7 @@ namespace Alethiea2
                 // proceed to main app form
                 Home_Page home_Page = new Home_Page();
                 home_Page.Show();
-                this.Close();
+                this.Hide();
             }
             else
             {
