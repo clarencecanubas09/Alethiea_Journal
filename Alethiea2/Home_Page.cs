@@ -26,5 +26,10 @@ namespace Alethiea2
         {
 
         }
+
+        private void Home_Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
