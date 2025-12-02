@@ -29,7 +29,9 @@ namespace Alethiea2
 
         private void Home_Page_Load(object sender, EventArgs e)
         {
-
+            string[] greetings = { "“It’s okay not to be okay. It’s not okay to stay that way.”", "“Your mental health is more important than any test, meeting, or deadline.”", "“You don’t have to control your thoughts; you just have to stop letting them control you.”", "“Healing isn’t linear — some days you’ll move forward, other days backward, and both are part of the journey.”" };
+            Random rand = new Random();
+            lblQuote.Text = greetings[rand.Next(greetings.Length)];
         }
     }
 }
