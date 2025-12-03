@@ -33,5 +33,16 @@ namespace Alethiea2
             Random rand = new Random();
             lblQuote.Text = greetings[rand.Next(greetings.Length)];
         }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            tabPage5 = new TabPage();
+            tabPage5.Show();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

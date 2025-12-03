@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             pictureBox1 = new PictureBox();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
@@ -123,8 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.Teal;
             ClientSize = new Size(1542, 813);
             Controls.Add(label3);
             Controls.Add(button2);
@@ -136,6 +134,7 @@
             Name = "Login";
             Text = "Login";
             Load += Login_Load;
+            Click += button2_Click;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -23,6 +23,14 @@ namespace Alethiea2
             "How do you usually respond when meeting new people?",
             "When solving a problem, what’s your natural method?",
             "Where do you prefer to spend most of your time?",
+            "What influences your decisions most?",
+            "What type of task energizes you the most?",
+            "How do you prefer to approach new challenges?",
+            "Which statement sounds most like you?",
+            "When you're overwhelmed, what helps you regain balance?",
+            "What type of conversations do you prefer?",
+            "Which environment fits you best?"
+
             // … continue until Question 10
         };
 
@@ -47,5 +55,24 @@ namespace Alethiea2
             lblProgress.Text = $"Question {index + 1} of {questions.Count}";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProgress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

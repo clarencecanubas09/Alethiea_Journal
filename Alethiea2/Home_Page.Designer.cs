@@ -1535,6 +1535,7 @@
             button26.TabIndex = 0;
             button26.Text = "View Profile";
             button26.UseVisualStyleBackColor = false;
+            button26.Click += button26_Click;
             // 
             // panel32
             // 

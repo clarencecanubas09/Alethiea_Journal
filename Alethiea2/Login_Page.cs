@@ -29,8 +29,8 @@ namespace Alethiea2
             {
                 MessageBox.Show("Login successful!");
                 // proceed to main app form
-                Home_Page home_Page = new Home_Page();
-                home_Page.Show();
+                PersonalityTest personality_page = new PersonalityTest();
+                personality_page.Show();
                 this.Hide();
             }
             else

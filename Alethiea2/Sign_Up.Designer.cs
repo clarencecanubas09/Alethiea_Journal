@@ -30,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_Up));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -113,7 +112,7 @@
             // 
             // btnSignUp1
             // 
-            btnSignUp1.BackColor = Color.FromArgb(192, 0, 192);
+            btnSignUp1.BackColor = Color.Blue;
             btnSignUp1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp1.ForeColor = Color.White;
             btnSignUp1.Location = new Point(327, 384);
@@ -147,8 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = Color.Teal;
             ClientSize = new Size(782, 453);
             Controls.Add(txtpPassword1);
             Controls.Add(txtUsername1);

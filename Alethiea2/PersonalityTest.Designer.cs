@@ -33,6 +33,9 @@
             lblProgress = new Label();
             label1 = new Label();
             btnA = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // lblQuestion
@@ -41,13 +44,14 @@
             lblQuestion.BackColor = Color.Transparent;
             lblQuestion.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblQuestion.ForeColor = Color.Black;
-            lblQuestion.Location = new Point(138, 214);
+            lblQuestion.Location = new Point(237, 199);
             lblQuestion.MaximumSize = new Size(1138, 140);
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(1131, 56);
+            lblQuestion.Size = new Size(195, 56);
             lblQuestion.TabIndex = 7;
-            lblQuestion.Text = "“It’s okay not to be okay. It’s not okay to stay that way.”";
+            lblQuestion.Text = "question";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
+            lblQuestion.Click += lblQuestion_Click;
             // 
             // lblProgress
             // 
@@ -55,13 +59,14 @@
             lblProgress.BackColor = Color.Transparent;
             lblProgress.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblProgress.ForeColor = Color.Black;
-            lblProgress.Location = new Point(672, 106);
+            lblProgress.Location = new Point(593, 123);
             lblProgress.MaximumSize = new Size(1138, 140);
             lblProgress.Name = "lblProgress";
             lblProgress.Size = new Size(79, 56);
             lblProgress.TabIndex = 8;
             lblProgress.Text = ".....";
             lblProgress.TextAlign = ContentAlignment.MiddleCenter;
+            lblProgress.Click += lblProgress_Click;
             // 
             // label1
             // 
@@ -69,7 +74,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(156, 35);
+            label1.Location = new Point(237, 34);
             label1.MaximumSize = new Size(1138, 140);
             label1.Name = "label1";
             label1.Size = new Size(1097, 56);
@@ -80,12 +85,44 @@
             // btnA
             // 
             btnA.BackColor = Color.FromArgb(255, 192, 255);
-            btnA.Location = new Point(138, 510);
+            btnA.Location = new Point(272, 510);
             btnA.Name = "btnA";
             btnA.Size = new Size(300, 100);
             btnA.TabIndex = 10;
-            btnA.Text = "button1";
+            btnA.Text = "btnA";
             btnA.UseVisualStyleBackColor = false;
+            btnA.Click += btnA_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 192, 255);
+            button1.Location = new Point(272, 645);
+            button1.Name = "button1";
+            button1.Size = new Size(300, 100);
+            button1.TabIndex = 11;
+            button1.Text = "btnC";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(255, 192, 255);
+            button2.Location = new Point(991, 510);
+            button2.Name = "button2";
+            button2.Size = new Size(300, 100);
+            button2.TabIndex = 12;
+            button2.Text = "btnB";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(255, 192, 255);
+            button3.Location = new Point(991, 645);
+            button3.Name = "button3";
+            button3.Size = new Size(300, 100);
+            button3.TabIndex = 13;
+            button3.Text = "btnD";
+            button3.UseVisualStyleBackColor = false;
             // 
             // PersonalityTest
             // 
@@ -95,6 +132,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(btnA);
             Controls.Add(label1);
             Controls.Add(lblProgress);
@@ -113,5 +153,8 @@
         private Label lblProgress;
         private Label label1;
         private Button btnA;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }
