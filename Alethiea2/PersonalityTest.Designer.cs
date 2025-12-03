@@ -33,9 +33,9 @@
             lblProgress = new Label();
             label1 = new Label();
             btnA = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnC = new Button();
+            btnB = new Button();
+            btnD = new Button();
             SuspendLayout();
             // 
             // lblQuestion
@@ -93,36 +93,37 @@
             btnA.UseVisualStyleBackColor = false;
             btnA.Click += btnA_Click;
             // 
-            // button1
+            // btnC
             // 
-            button1.BackColor = Color.FromArgb(255, 192, 255);
-            button1.Location = new Point(272, 645);
-            button1.Name = "button1";
-            button1.Size = new Size(300, 100);
-            button1.TabIndex = 11;
-            button1.Text = "btnC";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnC.BackColor = Color.FromArgb(255, 192, 255);
+            btnC.Location = new Point(272, 645);
+            btnC.Name = "btnC";
+            btnC.Size = new Size(300, 100);
+            btnC.TabIndex = 11;
+            btnC.Text = "btnC";
+            btnC.UseVisualStyleBackColor = false;
+            btnC.Click += btnC_Clicked;
             // 
-            // button2
+            // btnB
             // 
-            button2.BackColor = Color.FromArgb(255, 192, 255);
-            button2.Location = new Point(991, 510);
-            button2.Name = "button2";
-            button2.Size = new Size(300, 100);
-            button2.TabIndex = 12;
-            button2.Text = "btnB";
-            button2.UseVisualStyleBackColor = false;
+            btnB.BackColor = Color.FromArgb(255, 192, 255);
+            btnB.Location = new Point(991, 510);
+            btnB.Name = "btnB";
+            btnB.Size = new Size(300, 100);
+            btnB.TabIndex = 12;
+            btnB.Text = "btnB";
+            btnB.UseVisualStyleBackColor = false;
+            btnB.Click += btnB_Click;
             // 
-            // button3
+            // btnD
             // 
-            button3.BackColor = Color.FromArgb(255, 192, 255);
-            button3.Location = new Point(991, 645);
-            button3.Name = "button3";
-            button3.Size = new Size(300, 100);
-            button3.TabIndex = 13;
-            button3.Text = "btnD";
-            button3.UseVisualStyleBackColor = false;
+            btnD.BackColor = Color.FromArgb(255, 192, 255);
+            btnD.Location = new Point(991, 645);
+            btnD.Name = "btnD";
+            btnD.Size = new Size(300, 100);
+            btnD.TabIndex = 13;
+            btnD.Text = "btnD";
+            btnD.UseVisualStyleBackColor = false;
             // 
             // PersonalityTest
             // 
@@ -132,9 +133,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnD);
+            Controls.Add(btnB);
+            Controls.Add(btnC);
             Controls.Add(btnA);
             Controls.Add(label1);
             Controls.Add(lblProgress);
@@ -153,8 +154,8 @@
         private Label lblProgress;
         private Label label1;
         private Button btnA;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnB;
+        private Button btnD;
+        private Button btnC;
     }
 }
