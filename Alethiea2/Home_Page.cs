@@ -99,5 +99,25 @@ namespace Alethiea2
         {
 
         }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel36_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

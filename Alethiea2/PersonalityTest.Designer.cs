@@ -44,7 +44,7 @@
             lblQuestion.BackColor = Color.Transparent;
             lblQuestion.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblQuestion.ForeColor = Color.Black;
-            lblQuestion.Location = new Point(237, 199);
+            lblQuestion.Location = new Point(256, 198);
             lblQuestion.MaximumSize = new Size(1138, 140);
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(195, 56);
