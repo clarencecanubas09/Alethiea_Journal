@@ -46,7 +46,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Imprint MT Shadow", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(255, 192, 255);
+            label1.ForeColor = Color.FromArgb(0, 192, 192);
             label1.Location = new Point(95, 23);
             label1.Name = "label1";
             label1.Size = new Size(603, 52);
@@ -112,7 +112,7 @@
             // 
             // btnSignUp1
             // 
-            btnSignUp1.BackColor = Color.Blue;
+            btnSignUp1.BackColor = Color.FromArgb(0, 0, 192);
             btnSignUp1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp1.ForeColor = Color.White;
             btnSignUp1.Location = new Point(327, 384);
@@ -146,7 +146,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Teal;
+            BackColor = Color.FromArgb(0, 0, 64);
             ClientSize = new Size(782, 453);
             Controls.Add(txtpPassword1);
             Controls.Add(txtUsername1);

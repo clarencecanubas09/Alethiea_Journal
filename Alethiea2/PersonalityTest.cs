@@ -37,44 +37,58 @@ namespace Alethiea2
 
         List<string> answersA = new List<string>
         {
-            "I enjoy engaging with others and thrive in social settings.",
-            "I analyze data and facts to make informed decisions.",
-            "I prefer bustling environments with lots of activity.",
-            "Objective logic and evidence guide my choices.",
-            "Leading group projects excites me the most.",
-            "I dive into challenges headfirst, learning as I go.",
-            "I am outgoing, assertive, and love being the center of attention.",
-            "Talking with friends and family helps me regain balance.",
-            "I enjoy deep, meaningful conversations about ideas and concepts.",
-            "A lively urban environment suits me best."
+            "I take initiative and lead the conversation.",
+            "Break it down logically and create a strategy.",
+            " Busy, productive environments where things get done.",
+            " Effectiveness and long-term goals.",
+            "Leading, planning, or initiating a challenge.",
+            "Create a plan and take charge immediately.",
+            "“I enjoy leading and improving systems.”",
+            "Focusing on goals and regaining control.",
+            "Debates, ideas, and productivity topics.",
+            " Fast-paced, competitive, driven to achieve results."
         };
 
         List<string> answersB = new List<string>
         {
-            "I enjoy engaging with others and thrive in social settings.",
-            "I consider people's feelings and perspectives when making decisions.",
-            "I prefer bustling environments with lots of activity.",
-            "Empathy and harmony influence my choices.",
-            "Helping others and collaborating energizes me the most.",
-            "I seek advice and support from others when facing challenges.",
-            "I am outgoing, empathetic, and enjoy connecting with others.",
-            "Spending time in nature helps me regain balance.",
-            "I enjoy light-hearted conversations about everyday topics.",
-            "A lively urban environment suits me best."
+            " I smile, connect, and try to make everyone feel comfortable.",
+            "Understand how people feel about it and collaborate.",
+            "Social places where I can connect with others.",
+            "Harmony and how it affects people..",
+            "Encouraging others or working in a team.",
+            "Work with others and keep everyone motivated.",
+            " “I enjoy connecting with people and uplifting them.”",
+            "Talking to someone and seeking emotional connection.",
+            "Personal stories, shared energy, and lively discussions.",
+            "Friendly, collaborative, full of social energy."
         };
 
         List<string> answersC = new List<string>
         {
-            "I prefer one-on-one interactions or small groups over large gatherings.",
-            "I analyze data and facts to make informed decisions.",
-            "I enjoy quiet, solitary environments where I can focus.",
-            "Objective logic and evidence guide my choices.",
-            "Working independently on complex tasks excites me the most.",
-            "I take time to reflect and plan before tackling new challenges.",
-            "I am reserved, thoughtful, and prefer deep connections with a few close friends.",
-            "Engaging in solitary activities like reading or meditation helps me regain balance.",
-            "I enjoy deep, meaningful conversations about ideas and concepts.",
-            "A peaceful rural environment suits me best."
+            "I observe first and only speak when needed.",
+            "Analyze quietly and focus on details and accuracy.",
+            "In organized, quiet spaces where I can think.",
+            "Logic, correctness, and proof.",
+            "Working alone with structure and clarity.",
+            "Study quietly first, then move step-by-step.",
+            "“I enjoy analyzing how things work.”",
+            "Organizing tasks or thinking logically.",
+            "Technical, logical, or informational topics.",
+            "Calm, structured, focused on precision and tasks."
+        };
+
+        List<string> answersD = new List<string>
+        {
+            "I stay quiet and respond thoughtfully and gently.",
+            "Reflect on meanings, values, and intuition.",
+            "In peaceful, creative spaces where I can reflect.",
+            "Personal values, feelings, and inner meaning.",
+            "Helping quietly or working creatively in your own flow.",
+            "Reflect internally and approach at your own pace.",
+            " “I enjoy understanding people’s emotions and inner worlds.”",
+            "Retreating into quiet reflection or creativity.",
+            "Deep emotional or imaginative conversations.",
+            "Peaceful, reflective, emotionally comfortable."
         };
 
         // Track current question

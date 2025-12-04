@@ -63,6 +63,16 @@ namespace Alethiea2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10 {
+            get {
+                object obj = ResourceManager.GetObject("10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ALETHEIA_LOGO_no_bg__2 {
             get {
                 object obj = ResourceManager.GetObject("ALETHEIA LOGO(no bg) 2", resourceCulture);
@@ -96,6 +106,16 @@ namespace Alethiea2.Properties {
         internal static System.Drawing.Bitmap Bad {
             get {
                 object obj = ResourceManager.GetObject("Bad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg1 {
+            get {
+                object obj = ResourceManager.GetObject("bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +233,16 @@ namespace Alethiea2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_9 {
+            get {
+                object obj = ResourceManager.GetObject("Group 9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mood_Summary {
             get {
                 object obj = ResourceManager.GetObject("Mood Summary", resourceCulture);
@@ -256,6 +286,46 @@ namespace Alethiea2.Properties {
         internal static System.Drawing.Bitmap Select_Your_Mood_Today__1_ {
             get {
                 object obj = ResourceManager.GetObject("Select Your Mood Today (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Summer2 {
+            get {
+                object obj = ResourceManager.GetObject("Summer2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Summer3 {
+            get {
+                object obj = ResourceManager.GetObject("Summer3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Summer5 {
+            get {
+                object obj = ResourceManager.GetObject("Summer5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Summer51 {
+            get {
+                object obj = ResourceManager.GetObject("Summer51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

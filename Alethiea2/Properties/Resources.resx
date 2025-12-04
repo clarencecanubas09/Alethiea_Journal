@@ -118,67 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Mood Summary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mood Summary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Are you sure you want to log out_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Are you sure you want to log out_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Confirm Logout (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Confirm Logout (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Awesome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Awesome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Date_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Date_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Select Your Mood Today (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Select Your Mood Today (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Date_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Date_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Your daily path to emotional truth. This journal tracker helps you uncover patterns, gain insight, and achieve genuine self-awareness through focused reflection." type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Your daily path to emotional truth. This journal tracker helps you uncover patterns, gain insight, and achieve genuine self-awareness through focused reflection..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Daily Mood Checker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Daily Mood Checker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dunno what to feel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dunno what to feel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTN-DAILYMOODCHECKER (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN-DAILYMOODCHECKER (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BTN-DAILYMOODCHECKER (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN-DAILYMOODCHECKER (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Notes History" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Notes History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BTN-DAILYMOODCHECKER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN-DAILYMOODCHECKER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ALETHEIA LOGO(no bg) 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ALETHEIA LOGO(no bg) 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pretty good" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pretty good.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Group 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN-DAILYMOODCHECKER (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN-DAILYMOODCHECKER (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Bad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Notes History" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notes History.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN-DAILYMOODCHECKER (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN-DAILYMOODCHECKER (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Date_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Date_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Summer5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Summer5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Date_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Date_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN-DAILYMOODCHECKER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN-DAILYMOODCHECKER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ALETHEIA LOGO(no bg) 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ALETHEIA LOGO(no bg) 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Select Your Mood Today (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Select Your Mood Today (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Confirm Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Confirm Logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN-DAILYMOODCHECKER (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN-DAILYMOODCHECKER (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Daily Mood Checker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daily Mood Checker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pretty good" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pretty good.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Are you sure you want to log out_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Are you sure you want to log out_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Summer3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Summer3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confirm Logout (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirm Logout (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Your daily path to emotional truth. This journal tracker helps you uncover patterns, gain insight, and achieve genuine self-awareness through focused reflection." type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Your daily path to emotional truth. This journal tracker helps you uncover patterns, gain insight, and achieve genuine self-awareness through focused reflection..png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Summer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Summer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mood Summary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mood Summary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Summer51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Summer51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

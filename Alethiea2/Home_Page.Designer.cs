@@ -54,29 +54,30 @@
             pictureBox5 = new PictureBox();
             button4 = new Button();
             tabPage2 = new TabPage();
-            pictureBox37 = new PictureBox();
-            panel15 = new Panel();
             panel16 = new Panel();
-            pictureBox16 = new PictureBox();
-            button13 = new Button();
-            pictureBox17 = new PictureBox();
-            panel17 = new Panel();
-            pictureBox18 = new PictureBox();
-            button14 = new Button();
-            panel18 = new Panel();
-            pictureBox19 = new PictureBox();
-            button15 = new Button();
-            panel19 = new Panel();
-            pictureBox20 = new PictureBox();
-            button16 = new Button();
-            panel20 = new Panel();
-            pictureBox21 = new PictureBox();
-            button17 = new Button();
-            panel21 = new Panel();
-            pictureBox22 = new PictureBox();
-            button18 = new Button();
+            label9 = new Label();
+            label8 = new Label();
+            panel37 = new Panel();
+            panel38 = new Panel();
+            pictureBox37 = new PictureBox();
+            button31 = new Button();
+            pictureBox39 = new PictureBox();
+            panel39 = new Panel();
+            pictureBox40 = new PictureBox();
+            button32 = new Button();
+            panel40 = new Panel();
+            pictureBox41 = new PictureBox();
+            button33 = new Button();
+            panel41 = new Panel();
+            pictureBox42 = new PictureBox();
+            button34 = new Button();
+            panel42 = new Panel();
+            pictureBox43 = new PictureBox();
+            button35 = new Button();
+            panel43 = new Panel();
+            pictureBox44 = new PictureBox();
+            button36 = new Button();
             tabPage3 = new TabPage();
-            pictureBox46 = new PictureBox();
             panel8 = new Panel();
             panel9 = new Panel();
             pictureBox9 = new PictureBox();
@@ -98,13 +99,6 @@
             pictureBox15 = new PictureBox();
             button12 = new Button();
             tabPage4 = new TabPage();
-            pictureBox52 = new PictureBox();
-            pictureBox51 = new PictureBox();
-            pictureBox50 = new PictureBox();
-            pictureBox49 = new PictureBox();
-            pictureBox48 = new PictureBox();
-            pictureBox47 = new PictureBox();
-            pictureBox45 = new PictureBox();
             panel22 = new Panel();
             panel23 = new Panel();
             pictureBox23 = new PictureBox();
@@ -126,14 +120,19 @@
             pictureBox29 = new PictureBox();
             button24 = new Button();
             tabPage5 = new TabPage();
-            pictureBox54 = new PictureBox();
-            pictureBox53 = new PictureBox();
-            pictureBox41 = new PictureBox();
-            pictureBox44 = new PictureBox();
-            pictureBox43 = new PictureBox();
-            pictureBox42 = new PictureBox();
-            pictureBox40 = new PictureBox();
-            pictureBox39 = new PictureBox();
+            panel15 = new Panel();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            panel36 = new Panel();
+            button13 = new Button();
+            textBox3 = new TextBox();
+            label7 = new Label();
+            textBox2 = new TextBox();
+            label6 = new Label();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
             pictureBox38 = new PictureBox();
             panel29 = new Panel();
             panel30 = new Panel();
@@ -155,6 +154,21 @@
             panel35 = new Panel();
             pictureBox36 = new PictureBox();
             button30 = new Button();
+            pictureBox17 = new PictureBox();
+            pictureBox16 = new PictureBox();
+            pictureBox18 = new PictureBox();
+            pictureBox19 = new PictureBox();
+            pictureBox20 = new PictureBox();
+            panel17 = new Panel();
+            panel18 = new Panel();
+            panel19 = new Panel();
+            panel20 = new Panel();
+            panel21 = new Panel();
+            panel44 = new Panel();
+            panel45 = new Panel();
+            panel46 = new Panel();
+            panel47 = new Panel();
+            panel48 = new Panel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -173,23 +187,21 @@
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             tabPage2.SuspendLayout();
+            panel37.SuspendLayout();
+            panel38.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
-            panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
+            panel39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
+            panel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox41).BeginInit();
+            panel41.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox42).BeginInit();
+            panel42.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox43).BeginInit();
+            panel43.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox44).BeginInit();
             tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox46).BeginInit();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -205,13 +217,6 @@
             panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox52).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox51).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox50).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox49).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox48).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox47).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox45).BeginInit();
             panel22.SuspendLayout();
             panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
@@ -227,14 +232,8 @@
             panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox54).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox53).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox41).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox44).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox43).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox42).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
+            panel15.SuspendLayout();
+            panel36.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
             panel29.SuspendLayout();
             panel30.SuspendLayout();
@@ -250,6 +249,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
             panel35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -525,254 +529,298 @@
             // 
             // tabPage2
             // 
-            tabPage2.BackColor = Color.White;
-            tabPage2.Controls.Add(pictureBox37);
-            tabPage2.Controls.Add(panel15);
+            tabPage2.BackColor = Color.Gray;
+            tabPage2.BackgroundImage = (Image)resources.GetObject("tabPage2.BackgroundImage");
+            tabPage2.BackgroundImageLayout = ImageLayout.Zoom;
+            tabPage2.Controls.Add(pictureBox20);
+            tabPage2.Controls.Add(pictureBox18);
+            tabPage2.Controls.Add(pictureBox19);
+            tabPage2.Controls.Add(pictureBox16);
+            tabPage2.Controls.Add(pictureBox17);
+            tabPage2.Controls.Add(panel16);
+            tabPage2.Controls.Add(label9);
+            tabPage2.Controls.Add(label8);
+            tabPage2.Controls.Add(panel37);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1853, 827);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mood Entry";
-            // 
-            // pictureBox37
-            // 
-            pictureBox37.Image = (Image)resources.GetObject("pictureBox37.Image");
-            pictureBox37.Location = new Point(201, -3);
-            pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(1338, 785);
-            pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox37.TabIndex = 15;
-            pictureBox37.TabStop = false;
-            // 
-            // panel15
-            // 
-            panel15.BackColor = Color.Indigo;
-            panel15.Controls.Add(panel16);
-            panel15.Controls.Add(pictureBox17);
-            panel15.Controls.Add(panel17);
-            panel15.Controls.Add(panel18);
-            panel15.Controls.Add(panel19);
-            panel15.Controls.Add(panel20);
-            panel15.Controls.Add(panel21);
-            panel15.Location = new Point(1, 0);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(200, 785);
-            panel15.TabIndex = 14;
+            tabPage2.Click += tabPage2_Click;
             // 
             // panel16
             // 
-            panel16.BackColor = Color.CadetBlue;
-            panel16.Controls.Add(pictureBox16);
-            panel16.Controls.Add(button13);
-            panel16.Location = new Point(0, 429);
+            panel16.BackColor = Color.Silver;
+            panel16.Location = new Point(430, 555);
             panel16.Name = "panel16";
-            panel16.Size = new Size(200, 40);
-            panel16.TabIndex = 2;
+            panel16.Size = new Size(908, 160);
+            panel16.TabIndex = 20;
             // 
-            // pictureBox16
+            // label9
             // 
-            pictureBox16.BackColor = Color.Indigo;
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(3, 0);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(48, 40);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 1;
-            pictureBox16.TabStop = false;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Silver;
+            label9.Font = new Font("Georgia", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(759, 182);
+            label9.Name = "label9";
+            label9.Size = new Size(265, 32);
+            label9.TabIndex = 19;
+            label9.Text = "Select your mood";
+            label9.Click += label9_Click;
             // 
-            // button13
+            // label8
             // 
-            button13.BackColor = Color.Indigo;
-            button13.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button13.ForeColor = Color.Red;
-            button13.Location = new Point(53, 0);
-            button13.Name = "button13";
-            button13.Size = new Size(146, 40);
-            button13.TabIndex = 0;
-            button13.Text = "Log Out";
-            button13.UseVisualStyleBackColor = false;
+            label8.AutoSize = true;
+            label8.BackColor = Color.Silver;
+            label8.Font = new Font("Imprint MT Shadow", 31.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(602, 95);
+            label8.Name = "label8";
+            label8.Size = new Size(594, 63);
+            label8.TabIndex = 17;
+            label8.Text = "How's your mood today?";
+            label8.Click += label8_Click;
             // 
-            // pictureBox17
+            // panel37
             // 
-            pictureBox17.AccessibleRole = AccessibleRole.None;
-            pictureBox17.BackColor = Color.Indigo;
-            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(-47, -44);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(290, 243);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 1;
-            pictureBox17.TabStop = false;
+            panel37.BackColor = Color.FromArgb(64, 64, 64);
+            panel37.Controls.Add(panel38);
+            panel37.Controls.Add(pictureBox39);
+            panel37.Controls.Add(panel39);
+            panel37.Controls.Add(panel40);
+            panel37.Controls.Add(panel41);
+            panel37.Controls.Add(panel42);
+            panel37.Controls.Add(panel43);
+            panel37.Location = new Point(0, 0);
+            panel37.Name = "panel37";
+            panel37.Size = new Size(200, 785);
+            panel37.TabIndex = 16;
             // 
-            // panel17
+            // panel38
             // 
-            panel17.BackColor = Color.CadetBlue;
-            panel17.Controls.Add(pictureBox18);
-            panel17.Controls.Add(button14);
-            panel17.Location = new Point(0, 199);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(200, 40);
-            panel17.TabIndex = 0;
+            panel38.BackColor = Color.CadetBlue;
+            panel38.Controls.Add(pictureBox37);
+            panel38.Controls.Add(button31);
+            panel38.Location = new Point(0, 429);
+            panel38.Name = "panel38";
+            panel38.Size = new Size(200, 40);
+            panel38.TabIndex = 2;
             // 
-            // pictureBox18
+            // pictureBox37
             // 
-            pictureBox18.BackColor = Color.Indigo;
-            pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
-            pictureBox18.Location = new Point(3, 0);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(48, 40);
-            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox18.TabIndex = 1;
-            pictureBox18.TabStop = false;
+            pictureBox37.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox37.Image = (Image)resources.GetObject("pictureBox37.Image");
+            pictureBox37.Location = new Point(3, 0);
+            pictureBox37.Name = "pictureBox37";
+            pictureBox37.Size = new Size(48, 40);
+            pictureBox37.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox37.TabIndex = 1;
+            pictureBox37.TabStop = false;
             // 
-            // button14
+            // button31
             // 
-            button14.BackColor = Color.Indigo;
-            button14.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button14.ForeColor = Color.White;
-            button14.Location = new Point(53, 3);
-            button14.Name = "button14";
-            button14.Size = new Size(146, 40);
-            button14.TabIndex = 0;
-            button14.Text = "View Profile";
-            button14.UseVisualStyleBackColor = false;
+            button31.BackColor = Color.FromArgb(64, 64, 64);
+            button31.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button31.ForeColor = Color.Red;
+            button31.Location = new Point(53, 0);
+            button31.Name = "button31";
+            button31.Size = new Size(146, 40);
+            button31.TabIndex = 0;
+            button31.Text = "Log Out";
+            button31.UseVisualStyleBackColor = false;
             // 
-            // panel18
+            // pictureBox39
             // 
-            panel18.BackColor = Color.CadetBlue;
-            panel18.Controls.Add(pictureBox19);
-            panel18.Controls.Add(button15);
-            panel18.Location = new Point(0, 291);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(200, 40);
-            panel18.TabIndex = 3;
+            pictureBox39.AccessibleRole = AccessibleRole.None;
+            pictureBox39.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox39.Image = (Image)resources.GetObject("pictureBox39.Image");
+            pictureBox39.Location = new Point(-47, -44);
+            pictureBox39.Name = "pictureBox39";
+            pictureBox39.Size = new Size(290, 243);
+            pictureBox39.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox39.TabIndex = 1;
+            pictureBox39.TabStop = false;
             // 
-            // pictureBox19
+            // panel39
             // 
-            pictureBox19.BackColor = Color.Indigo;
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(3, 0);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(48, 40);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 1;
-            pictureBox19.TabStop = false;
+            panel39.BackColor = Color.CadetBlue;
+            panel39.Controls.Add(pictureBox40);
+            panel39.Controls.Add(button32);
+            panel39.Location = new Point(0, 199);
+            panel39.Name = "panel39";
+            panel39.Size = new Size(200, 40);
+            panel39.TabIndex = 0;
             // 
-            // button15
+            // pictureBox40
             // 
-            button15.BackColor = Color.Indigo;
-            button15.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button15.ForeColor = Color.White;
-            button15.Location = new Point(53, 0);
-            button15.Name = "button15";
-            button15.Size = new Size(146, 40);
-            button15.TabIndex = 0;
-            button15.Text = "Mood Entry";
-            button15.UseVisualStyleBackColor = false;
+            pictureBox40.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox40.Image = (Image)resources.GetObject("pictureBox40.Image");
+            pictureBox40.Location = new Point(3, 0);
+            pictureBox40.Name = "pictureBox40";
+            pictureBox40.Size = new Size(48, 40);
+            pictureBox40.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox40.TabIndex = 1;
+            pictureBox40.TabStop = false;
             // 
-            // panel19
+            // button32
             // 
-            panel19.BackColor = Color.CadetBlue;
-            panel19.Controls.Add(pictureBox20);
-            panel19.Controls.Add(button16);
-            panel19.Location = new Point(0, 245);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(200, 40);
-            panel19.TabIndex = 2;
+            button32.BackColor = Color.FromArgb(64, 64, 64);
+            button32.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button32.ForeColor = Color.White;
+            button32.Location = new Point(53, 0);
+            button32.Name = "button32";
+            button32.Size = new Size(146, 40);
+            button32.TabIndex = 0;
+            button32.Text = "View Profile";
+            button32.UseVisualStyleBackColor = false;
             // 
-            // pictureBox20
+            // panel40
             // 
-            pictureBox20.BackColor = Color.Indigo;
-            pictureBox20.Image = (Image)resources.GetObject("pictureBox20.Image");
-            pictureBox20.Location = new Point(3, 0);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(48, 40);
-            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox20.TabIndex = 1;
-            pictureBox20.TabStop = false;
+            panel40.BackColor = Color.CadetBlue;
+            panel40.Controls.Add(pictureBox41);
+            panel40.Controls.Add(button33);
+            panel40.Location = new Point(0, 291);
+            panel40.Name = "panel40";
+            panel40.Size = new Size(200, 40);
+            panel40.TabIndex = 3;
             // 
-            // button16
+            // pictureBox41
             // 
-            button16.BackColor = Color.Indigo;
-            button16.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button16.ForeColor = Color.White;
-            button16.Location = new Point(53, 0);
-            button16.Name = "button16";
-            button16.Size = new Size(146, 40);
-            button16.TabIndex = 0;
-            button16.Text = "Daily Quote";
-            button16.UseVisualStyleBackColor = false;
+            pictureBox41.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox41.Image = (Image)resources.GetObject("pictureBox41.Image");
+            pictureBox41.Location = new Point(3, 0);
+            pictureBox41.Name = "pictureBox41";
+            pictureBox41.Size = new Size(48, 40);
+            pictureBox41.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox41.TabIndex = 1;
+            pictureBox41.TabStop = false;
             // 
-            // panel20
+            // button33
             // 
-            panel20.BackColor = Color.CadetBlue;
-            panel20.Controls.Add(pictureBox21);
-            panel20.Controls.Add(button17);
-            panel20.Location = new Point(0, 383);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(200, 40);
-            panel20.TabIndex = 5;
+            button33.BackColor = Color.FromArgb(64, 64, 64);
+            button33.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button33.ForeColor = Color.White;
+            button33.Location = new Point(53, 0);
+            button33.Name = "button33";
+            button33.Size = new Size(146, 40);
+            button33.TabIndex = 0;
+            button33.Text = "Mood Entry";
+            button33.UseVisualStyleBackColor = false;
             // 
-            // pictureBox21
+            // panel41
             // 
-            pictureBox21.BackColor = Color.Indigo;
-            pictureBox21.Image = (Image)resources.GetObject("pictureBox21.Image");
-            pictureBox21.Location = new Point(3, 0);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(48, 40);
-            pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox21.TabIndex = 1;
-            pictureBox21.TabStop = false;
+            panel41.BackColor = Color.CadetBlue;
+            panel41.Controls.Add(pictureBox42);
+            panel41.Controls.Add(button34);
+            panel41.Location = new Point(0, 245);
+            panel41.Name = "panel41";
+            panel41.Size = new Size(200, 40);
+            panel41.TabIndex = 2;
             // 
-            // button17
+            // pictureBox42
             // 
-            button17.BackColor = Color.Indigo;
-            button17.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button17.ForeColor = Color.White;
-            button17.Location = new Point(53, 0);
-            button17.Name = "button17";
-            button17.Size = new Size(146, 40);
-            button17.TabIndex = 0;
-            button17.Text = "Notes History";
-            button17.UseVisualStyleBackColor = false;
+            pictureBox42.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox42.Image = (Image)resources.GetObject("pictureBox42.Image");
+            pictureBox42.Location = new Point(3, 0);
+            pictureBox42.Name = "pictureBox42";
+            pictureBox42.Size = new Size(48, 40);
+            pictureBox42.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox42.TabIndex = 1;
+            pictureBox42.TabStop = false;
             // 
-            // panel21
+            // button34
             // 
-            panel21.BackColor = Color.CadetBlue;
-            panel21.Controls.Add(pictureBox22);
-            panel21.Controls.Add(button18);
-            panel21.Location = new Point(0, 337);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(200, 40);
-            panel21.TabIndex = 4;
+            button34.BackColor = Color.FromArgb(64, 64, 64);
+            button34.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button34.ForeColor = Color.White;
+            button34.Location = new Point(53, 0);
+            button34.Name = "button34";
+            button34.Size = new Size(146, 40);
+            button34.TabIndex = 0;
+            button34.Text = "Daily Quote";
+            button34.UseVisualStyleBackColor = false;
             // 
-            // pictureBox22
+            // panel42
             // 
-            pictureBox22.BackColor = Color.Indigo;
-            pictureBox22.Image = (Image)resources.GetObject("pictureBox22.Image");
-            pictureBox22.Location = new Point(3, 0);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(48, 40);
-            pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox22.TabIndex = 1;
-            pictureBox22.TabStop = false;
+            panel42.BackColor = Color.CadetBlue;
+            panel42.Controls.Add(pictureBox43);
+            panel42.Controls.Add(button35);
+            panel42.Location = new Point(0, 383);
+            panel42.Name = "panel42";
+            panel42.Size = new Size(200, 40);
+            panel42.TabIndex = 5;
             // 
-            // button18
+            // pictureBox43
             // 
-            button18.BackColor = Color.Indigo;
-            button18.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button18.ForeColor = Color.White;
-            button18.Location = new Point(53, 0);
-            button18.Name = "button18";
-            button18.Size = new Size(146, 40);
-            button18.TabIndex = 0;
-            button18.Text = "Mood Summary";
-            button18.UseVisualStyleBackColor = false;
+            pictureBox43.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox43.Image = (Image)resources.GetObject("pictureBox43.Image");
+            pictureBox43.Location = new Point(3, 0);
+            pictureBox43.Name = "pictureBox43";
+            pictureBox43.Size = new Size(48, 40);
+            pictureBox43.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox43.TabIndex = 1;
+            pictureBox43.TabStop = false;
+            // 
+            // button35
+            // 
+            button35.BackColor = Color.FromArgb(64, 64, 64);
+            button35.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button35.ForeColor = Color.White;
+            button35.Location = new Point(53, 0);
+            button35.Name = "button35";
+            button35.Size = new Size(146, 40);
+            button35.TabIndex = 0;
+            button35.Text = "Notes History";
+            button35.UseVisualStyleBackColor = false;
+            // 
+            // panel43
+            // 
+            panel43.BackColor = Color.CadetBlue;
+            panel43.Controls.Add(pictureBox44);
+            panel43.Controls.Add(button36);
+            panel43.Location = new Point(0, 337);
+            panel43.Name = "panel43";
+            panel43.Size = new Size(200, 40);
+            panel43.TabIndex = 4;
+            // 
+            // pictureBox44
+            // 
+            pictureBox44.BackColor = Color.FromArgb(64, 64, 64);
+            pictureBox44.Image = (Image)resources.GetObject("pictureBox44.Image");
+            pictureBox44.Location = new Point(3, 0);
+            pictureBox44.Name = "pictureBox44";
+            pictureBox44.Size = new Size(48, 40);
+            pictureBox44.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox44.TabIndex = 1;
+            pictureBox44.TabStop = false;
+            // 
+            // button36
+            // 
+            button36.BackColor = Color.FromArgb(64, 64, 64);
+            button36.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button36.ForeColor = Color.White;
+            button36.Location = new Point(53, 0);
+            button36.Name = "button36";
+            button36.Size = new Size(146, 40);
+            button36.TabIndex = 0;
+            button36.Text = "Mood Summary";
+            button36.UseVisualStyleBackColor = false;
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(pictureBox46);
+            tabPage3.BackColor = Color.Gray;
+            tabPage3.BackgroundImage = Properties.Resources.Summer51;
+            tabPage3.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage3.Controls.Add(panel47);
+            tabPage3.Controls.Add(panel48);
+            tabPage3.Controls.Add(panel45);
+            tabPage3.Controls.Add(panel46);
+            tabPage3.Controls.Add(panel21);
+            tabPage3.Controls.Add(panel44);
+            tabPage3.Controls.Add(panel19);
+            tabPage3.Controls.Add(panel20);
+            tabPage3.Controls.Add(panel18);
+            tabPage3.Controls.Add(panel17);
             tabPage3.Controls.Add(panel8);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
@@ -780,17 +828,7 @@
             tabPage3.Size = new Size(1853, 827);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Mood Summary";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox46
-            // 
-            pictureBox46.Image = (Image)resources.GetObject("pictureBox46.Image");
-            pictureBox46.Location = new Point(202, -3);
-            pictureBox46.Name = "pictureBox46";
-            pictureBox46.Size = new Size(1337, 785);
-            pictureBox46.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox46.TabIndex = 16;
-            pictureBox46.TabStop = false;
+           // tabPage3.Click += this.tabPage3_Click;
             // 
             // panel8
             // 
@@ -1019,13 +1057,7 @@
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(pictureBox52);
-            tabPage4.Controls.Add(pictureBox51);
-            tabPage4.Controls.Add(pictureBox50);
-            tabPage4.Controls.Add(pictureBox49);
-            tabPage4.Controls.Add(pictureBox48);
-            tabPage4.Controls.Add(pictureBox47);
-            tabPage4.Controls.Add(pictureBox45);
+            tabPage4.BackColor = Color.DarkSlateGray;
             tabPage4.Controls.Add(panel22);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
@@ -1033,80 +1065,6 @@
             tabPage4.Size = new Size(1853, 827);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Notes History";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox52
-            // 
-            pictureBox52.BackColor = Color.PapayaWhip;
-            pictureBox52.Image = (Image)resources.GetObject("pictureBox52.Image");
-            pictureBox52.Location = new Point(686, 59);
-            pictureBox52.Name = "pictureBox52";
-            pictureBox52.Size = new Size(98, 105);
-            pictureBox52.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox52.TabIndex = 23;
-            pictureBox52.TabStop = false;
-            // 
-            // pictureBox51
-            // 
-            pictureBox51.BackColor = Color.PapayaWhip;
-            pictureBox51.Image = (Image)resources.GetObject("pictureBox51.Image");
-            pictureBox51.Location = new Point(1134, 59);
-            pictureBox51.Name = "pictureBox51";
-            pictureBox51.Size = new Size(98, 105);
-            pictureBox51.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox51.TabIndex = 22;
-            pictureBox51.TabStop = false;
-            // 
-            // pictureBox50
-            // 
-            pictureBox50.BackColor = Color.PapayaWhip;
-            pictureBox50.Image = (Image)resources.GetObject("pictureBox50.Image");
-            pictureBox50.Location = new Point(219, 59);
-            pictureBox50.Name = "pictureBox50";
-            pictureBox50.Size = new Size(98, 105);
-            pictureBox50.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox50.TabIndex = 21;
-            pictureBox50.TabStop = false;
-            // 
-            // pictureBox49
-            // 
-            pictureBox49.BackColor = Color.SkyBlue;
-            pictureBox49.Location = new Point(669, 36);
-            pictureBox49.Margin = new Padding(3, 4, 3, 4);
-            pictureBox49.Name = "pictureBox49";
-            pictureBox49.Size = new Size(394, 675);
-            pictureBox49.TabIndex = 20;
-            pictureBox49.TabStop = false;
-            // 
-            // pictureBox48
-            // 
-            pictureBox48.BackColor = Color.SkyBlue;
-            pictureBox48.Location = new Point(1120, 36);
-            pictureBox48.Margin = new Padding(3, 4, 3, 4);
-            pictureBox48.Name = "pictureBox48";
-            pictureBox48.Size = new Size(394, 675);
-            pictureBox48.TabIndex = 19;
-            pictureBox48.TabStop = false;
-            // 
-            // pictureBox47
-            // 
-            pictureBox47.BackColor = Color.SkyBlue;
-            pictureBox47.Location = new Point(208, 36);
-            pictureBox47.Margin = new Padding(3, 4, 3, 4);
-            pictureBox47.Name = "pictureBox47";
-            pictureBox47.Size = new Size(394, 675);
-            pictureBox47.TabIndex = 18;
-            pictureBox47.TabStop = false;
-            // 
-            // pictureBox45
-            // 
-            pictureBox45.Image = (Image)resources.GetObject("pictureBox45.Image");
-            pictureBox45.Location = new Point(202, -3);
-            pictureBox45.Name = "pictureBox45";
-            pictureBox45.Size = new Size(1336, 785);
-            pictureBox45.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox45.TabIndex = 17;
-            pictureBox45.TabStop = false;
             // 
             // panel22
             // 
@@ -1329,14 +1287,8 @@
             // 
             // tabPage5
             // 
-            tabPage5.Controls.Add(pictureBox54);
-            tabPage5.Controls.Add(pictureBox53);
-            tabPage5.Controls.Add(pictureBox41);
-            tabPage5.Controls.Add(pictureBox44);
-            tabPage5.Controls.Add(pictureBox43);
-            tabPage5.Controls.Add(pictureBox42);
-            tabPage5.Controls.Add(pictureBox40);
-            tabPage5.Controls.Add(pictureBox39);
+            tabPage5.Controls.Add(panel15);
+            tabPage5.Controls.Add(panel36);
             tabPage5.Controls.Add(pictureBox38);
             tabPage5.Controls.Add(panel29);
             tabPage5.Location = new Point(4, 29);
@@ -1347,93 +1299,145 @@
             tabPage5.Text = "View Profile";
             tabPage5.UseVisualStyleBackColor = true;
             // 
-            // pictureBox54
+            // panel15
             // 
-            pictureBox54.BackColor = Color.BlanchedAlmond;
-            pictureBox54.Image = (Image)resources.GetObject("pictureBox54.Image");
-            pictureBox54.Location = new Point(1225, 24);
-            pictureBox54.Margin = new Padding(3, 4, 3, 4);
-            pictureBox54.Name = "pictureBox54";
-            pictureBox54.Size = new Size(224, 77);
-            pictureBox54.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox54.TabIndex = 25;
-            pictureBox54.TabStop = false;
+            panel15.BackColor = Color.Gainsboro;
+            panel15.Controls.Add(label3);
+            panel15.Controls.Add(label2);
+            panel15.Controls.Add(label1);
+            panel15.Location = new Point(588, 80);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(603, 119);
+            panel15.TabIndex = 7;
+            panel15.Paint += panel15_Paint;
             // 
-            // pictureBox53
+            // label3
             // 
-            pictureBox53.BackColor = Color.BlanchedAlmond;
-            pictureBox53.Image = (Image)resources.GetObject("pictureBox53.Image");
-            pictureBox53.Location = new Point(918, 24);
-            pictureBox53.Margin = new Padding(3, 4, 3, 4);
-            pictureBox53.Name = "pictureBox53";
-            pictureBox53.Size = new Size(214, 56);
-            pictureBox53.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox53.TabIndex = 24;
-            pictureBox53.TabStop = false;
+            label3.AutoSize = true;
+            label3.Font = new Font("Imprint MT Shadow", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(180, 39);
+            label3.Name = "label3";
+            label3.Size = new Size(401, 40);
+            label3.TabIndex = 2;
+            label3.Text = "PERSONALITY: ENFJ";
+            label3.Click += label3_Click;
             // 
-            // pictureBox41
+            // label2
             // 
-            pictureBox41.BackColor = Color.BlanchedAlmond;
-            pictureBox41.Image = (Image)resources.GetObject("pictureBox41.Image");
-            pictureBox41.Location = new Point(694, 316);
-            pictureBox41.Margin = new Padding(3, 4, 3, 4);
-            pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(351, 124);
-            pictureBox41.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox41.TabIndex = 23;
-            pictureBox41.TabStop = false;
+            label2.AutoSize = true;
+            label2.Font = new Font("Imprint MT Shadow", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(29, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 33);
+            label2.TabIndex = 1;
+            label2.Text = "test123";
+            label2.Click += label2_Click;
             // 
-            // pictureBox44
+            // label1
             // 
-            pictureBox44.BackColor = Color.BlanchedAlmond;
-            pictureBox44.Location = new Point(286, 316);
-            pictureBox44.Margin = new Padding(3, 4, 3, 4);
-            pictureBox44.Name = "pictureBox44";
-            pictureBox44.Size = new Size(1175, 445);
-            pictureBox44.TabIndex = 22;
-            pictureBox44.TabStop = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(29, 71);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 18);
+            label1.TabIndex = 0;
+            label1.Text = "test123@gmail.com";
             // 
-            // pictureBox43
+            // panel36
             // 
-            pictureBox43.BackColor = Color.BlanchedAlmond;
-            pictureBox43.Location = new Point(1214, 7);
-            pictureBox43.Margin = new Padding(3, 4, 3, 4);
-            pictureBox43.Name = "pictureBox43";
-            pictureBox43.Size = new Size(247, 279);
-            pictureBox43.TabIndex = 21;
-            pictureBox43.TabStop = false;
+            panel36.BackColor = Color.Silver;
+            panel36.Controls.Add(button13);
+            panel36.Controls.Add(textBox3);
+            panel36.Controls.Add(label7);
+            panel36.Controls.Add(textBox2);
+            panel36.Controls.Add(label6);
+            panel36.Controls.Add(textBox1);
+            panel36.Controls.Add(label5);
+            panel36.Controls.Add(label4);
+            panel36.Location = new Point(540, 215);
+            panel36.Name = "panel36";
+            panel36.Size = new Size(700, 350);
+            panel36.TabIndex = 6;
             // 
-            // pictureBox42
+            // button13
             // 
-            pictureBox42.BackColor = Color.BlanchedAlmond;
-            pictureBox42.Location = new Point(902, 7);
-            pictureBox42.Margin = new Padding(3, 4, 3, 4);
-            pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(247, 279);
-            pictureBox42.TabIndex = 20;
-            pictureBox42.TabStop = false;
+            button13.BackColor = Color.DimGray;
+            button13.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button13.ForeColor = Color.Snow;
+            button13.Location = new Point(291, 292);
+            button13.Name = "button13";
+            button13.Size = new Size(100, 35);
+            button13.TabIndex = 9;
+            button13.Text = "Update";
+            button13.UseVisualStyleBackColor = false;
             // 
-            // pictureBox40
+            // textBox3
             // 
-            pictureBox40.BackColor = Color.PapayaWhip;
-            pictureBox40.Image = (Image)resources.GetObject("pictureBox40.Image");
-            pictureBox40.Location = new Point(306, 24);
-            pictureBox40.Margin = new Padding(3, 4, 3, 4);
-            pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(147, 221);
-            pictureBox40.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox40.TabIndex = 18;
-            pictureBox40.TabStop = false;
+            textBox3.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(194, 229);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(370, 30);
+            textBox3.TabIndex = 8;
             // 
-            // pictureBox39
+            // label7
             // 
-            pictureBox39.BackColor = Color.BlanchedAlmond;
-            pictureBox39.Location = new Point(286, 0);
-            pictureBox39.Margin = new Padding(3, 4, 3, 4);
-            pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(554, 285);
-            pictureBox39.TabIndex = 17;
-            pictureBox39.TabStop = false;
+            label7.AutoSize = true;
+            label7.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(79, 235);
+            label7.Name = "label7";
+            label7.Size = new Size(104, 18);
+            label7.TabIndex = 7;
+            label7.Text = "New Password";
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(194, 178);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(370, 30);
+            textBox2.TabIndex = 6;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(57, 185);
+            label6.Name = "label6";
+            label6.Size = new Size(127, 18);
+            label6.TabIndex = 5;
+            label6.Text = "Current Password";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(194, 124);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(370, 30);
+            textBox1.TabIndex = 4;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(107, 130);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 18);
+            label5.TabIndex = 3;
+            label5.Text = "Username";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Imprint MT Shadow", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(150, 26);
+            label4.Name = "label4";
+            label4.Size = new Size(377, 40);
+            label4.TabIndex = 3;
+            label4.Text = "UPDATE ACCOUNT";
+            label4.Click += label4_Click;
             // 
             // pictureBox38
             // 
@@ -1665,6 +1669,157 @@
             button30.Text = "Mood Summary";
             button30.UseVisualStyleBackColor = false;
             // 
+            // pictureBox17
+            // 
+            pictureBox17.BackColor = SystemColors.ControlDark;
+            pictureBox17.Image = Properties.Resources.Bad;
+            pictureBox17.Location = new Point(430, 279);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(149, 83);
+            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox17.TabIndex = 22;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.BackColor = Color.Transparent;
+            pictureBox16.Image = Properties.Resources.Pretty_good;
+            pictureBox16.Location = new Point(812, 279);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(149, 83);
+            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox16.TabIndex = 23;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            pictureBox18.BackColor = Color.Transparent;
+            pictureBox18.Image = Properties.Resources.Dunno_what_to_feel;
+            pictureBox18.Location = new Point(1189, 279);
+            pictureBox18.Name = "pictureBox18";
+            pictureBox18.Size = new Size(149, 83);
+            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox18.TabIndex = 25;
+            pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.BackColor = Color.Transparent;
+            pictureBox19.Image = Properties.Resources.Neutral;
+            pictureBox19.Location = new Point(623, 279);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(149, 83);
+            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox19.TabIndex = 24;
+            pictureBox19.TabStop = false;
+            
+            // 
+            // pictureBox20
+            // 
+            pictureBox20.BackColor = Color.Transparent;
+            pictureBox20.Image = Properties.Resources.Awesome;
+            pictureBox20.Location = new Point(1001, 279);
+            pictureBox20.Name = "pictureBox20";
+            pictureBox20.Size = new Size(149, 83);
+            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox20.TabIndex = 26;
+            pictureBox20.TabStop = false;
+            // 
+            // panel17
+            // 
+            panel17.BackColor = Color.LightSeaGreen;
+            panel17.BackgroundImage = Properties.Resources.Bad;
+            panel17.BackgroundImageLayout = ImageLayout.Center;
+            panel17.Location = new Point(344, 273);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(165, 132);
+            panel17.TabIndex = 25;
+            
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.Ivory;
+            panel18.Location = new Point(344, 400);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(165, 263);
+            panel18.TabIndex = 26;
+            panel18.Paint += panel18_Paint;
+            // 
+            // panel19
+            // 
+            panel19.BackColor = Color.Ivory;
+            panel19.Location = new Point(582, 400);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(165, 263);
+            panel19.TabIndex = 28;
+            // 
+            // panel20
+            // 
+            panel20.BackColor = Color.LightSeaGreen;
+            panel20.BackgroundImage = Properties.Resources.Neutral;
+            panel20.BackgroundImageLayout = ImageLayout.Center;
+            panel20.Location = new Point(582, 273);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(165, 132);
+            panel20.TabIndex = 27;
+            panel20.Paint += panel20_Paint;
+            // 
+            // panel21
+            // 
+            panel21.BackColor = Color.Ivory;
+            panel21.Location = new Point(821, 400);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(165, 263);
+            panel21.TabIndex = 30;
+            
+            // 
+            // panel44
+            // 
+            panel44.BackColor = Color.LightSeaGreen;
+            panel44.BackgroundImage = Properties.Resources.Pretty_good;
+            panel44.BackgroundImageLayout = ImageLayout.Center;
+            panel44.Location = new Point(821, 273);
+            panel44.Name = "panel44";
+            panel44.Size = new Size(165, 132);
+            panel44.TabIndex = 29;
+            
+            // 
+            // panel45
+            // 
+            panel45.BackColor = Color.Ivory;
+            panel45.Location = new Point(1055, 400);
+            panel45.Name = "panel45";
+            panel45.Size = new Size(165, 263);
+            panel45.TabIndex = 32;
+            // 
+            // panel46
+            // 
+            panel46.BackColor = Color.LightSeaGreen;
+            panel46.BackgroundImage = Properties.Resources.Awesome;
+            panel46.BackgroundImageLayout = ImageLayout.Center;
+            panel46.Location = new Point(1055, 273);
+            panel46.Name = "panel46";
+            panel46.Size = new Size(165, 132);
+            panel46.TabIndex = 31;
+            // 
+            // panel47
+            // 
+            panel47.BackColor = Color.Ivory;
+            panel47.Location = new Point(1287, 400);
+            panel47.Name = "panel47";
+            panel47.Size = new Size(165, 263);
+            panel47.TabIndex = 34;
+            // 
+            // panel48
+            // 
+            panel48.BackColor = Color.LightSeaGreen;
+            panel48.BackgroundImage = Properties.Resources.Dunno_what_to_feel;
+            panel48.BackgroundImageLayout = ImageLayout.Center;
+            panel48.Location = new Point(1287, 273);
+            panel48.Name = "panel48";
+            panel48.Size = new Size(165, 132);
+            panel48.TabIndex = 33;
+            // 
             // Home_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1694,23 +1849,22 @@
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            panel37.ResumeLayout(false);
+            panel38.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
-            panel15.ResumeLayout(false);
-            panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
-            panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            panel21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
+            panel39.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
+            panel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox41).EndInit();
+            panel41.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox42).EndInit();
+            panel42.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox43).EndInit();
+            panel43.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox44).EndInit();
             tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox46).EndInit();
             panel8.ResumeLayout(false);
             panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -1726,13 +1880,6 @@
             panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox52).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox51).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox50).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox49).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox48).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox47).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox45).EndInit();
             panel22.ResumeLayout(false);
             panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
@@ -1748,14 +1895,10 @@
             panel28.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
             tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox54).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox53).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox41).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox44).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox43).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox42).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel36.ResumeLayout(false);
+            panel36.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
             panel29.ResumeLayout(false);
             panel30.ResumeLayout(false);
@@ -1771,6 +1914,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
             panel35.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
             ResumeLayout(false);
         }
 
@@ -1800,26 +1948,6 @@
         private PictureBox pictureBox5;
         private Button button4;
         private PictureBox pictureBox8;
-        private Panel panel15;
-        private Panel panel16;
-        private PictureBox pictureBox16;
-        private Button button13;
-        private PictureBox pictureBox17;
-        private Panel panel17;
-        private PictureBox pictureBox18;
-        private Button button14;
-        private Panel panel18;
-        private PictureBox pictureBox19;
-        private Button button15;
-        private Panel panel19;
-        private PictureBox pictureBox20;
-        private Button button16;
-        private Panel panel20;
-        private PictureBox pictureBox21;
-        private Button button17;
-        private Panel panel21;
-        private PictureBox pictureBox22;
-        private Button button18;
         private TabPage tabPage3;
         private Panel panel8;
         private Panel panel9;
@@ -1883,24 +2011,58 @@
         private Panel panel35;
         private PictureBox pictureBox36;
         private Button button30;
-        private PictureBox pictureBox37;
         private PictureBox pictureBox38;
-        private PictureBox pictureBox40;
-        private PictureBox pictureBox39;
-        private PictureBox pictureBox44;
-        private PictureBox pictureBox43;
-        private PictureBox pictureBox42;
-        private PictureBox pictureBox41;
-        private PictureBox pictureBox45;
-        private PictureBox pictureBox46;
-        private PictureBox pictureBox52;
-        private PictureBox pictureBox49;
-        private PictureBox pictureBox51;
-        private PictureBox pictureBox50;
-        private PictureBox pictureBox48;
-        private PictureBox pictureBox47;
-        private PictureBox pictureBox54;
-        private PictureBox pictureBox53;
         private Label lblQuote;
+        private Panel panel36;
+        private Panel panel37;
+        private Panel panel38;
+        private PictureBox pictureBox37;
+        private Button button31;
+        private PictureBox pictureBox39;
+        private Panel panel39;
+        private PictureBox pictureBox40;
+        private Button button32;
+        private Panel panel40;
+        private PictureBox pictureBox41;
+        private Button button33;
+        private Panel panel41;
+        private PictureBox pictureBox42;
+        private Button button34;
+        private Panel panel42;
+        private PictureBox pictureBox43;
+        private Button button35;
+        private Panel panel43;
+        private PictureBox pictureBox44;
+        private Button button36;
+        private Panel panel15;
+        private Label label2;
+        private Label label1;
+        private Label label3;
+        private TextBox textBox1;
+        private Label label5;
+        private Label label4;
+        private TextBox textBox3;
+        private Label label7;
+        private TextBox textBox2;
+        private Label label6;
+        private Button button13;
+        private Label label8;
+        private Label label9;
+        private Panel panel16;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox20;
+        private PictureBox pictureBox18;
+        private PictureBox pictureBox19;
+        private PictureBox pictureBox16;
+        private Panel panel17;
+        private Panel panel18;
+        private Panel panel19;
+        private Panel panel20;
+        private Panel panel21;
+        private Panel panel44;
+        private Panel panel47;
+        private Panel panel48;
+        private Panel panel45;
+        private Panel panel46;
     }
 }
