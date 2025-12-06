@@ -46,18 +46,18 @@ namespace Alethiea2
             "“I enjoy leading and improving systems.”",
             "Focusing on goals and regaining control.",
             "Debates, ideas, and productivity topics.",
-            " Fast-paced, competitive, driven to achieve results."
+            "Fast-paced, competitive, driven to achieve results."
         };
 
         List<string> answersB = new List<string>
         {
-            " I smile, connect, and try to make everyone feel comfortable.",
+            "I smile, connect, and try to make everyone feel comfortable.",
             "Understand how people feel about it and collaborate.",
             "Social places where I can connect with others.",
             "Harmony and how it affects people..",
             "Encouraging others or working in a team.",
             "Work with others and keep everyone motivated.",
-            " “I enjoy connecting with people and uplifting them.”",
+            "“I enjoy connecting with people and uplifting them.”",
             "Talking to someone and seeking emotional connection.",
             "Personal stories, shared energy, and lively discussions.",
             "Friendly, collaborative, full of social energy."
@@ -134,13 +134,6 @@ namespace Alethiea2
 
         }
 
-        private void btnA_Click(object sender, EventArgs e)
-        {
-            btnClicked();
-        }
-
-
-
         void btnClicked()
         {
             if (currentQuestionIndex != 9)
@@ -159,9 +152,13 @@ namespace Alethiea2
             btnA.Text = answersA[currentOptionA];
             btnB.Text = answersB[currentOptionB];
             btnC.Text = answersC[currentOptionC];
+            btnD.Text = answersD[currentOptionD];
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
 
-            
+        }
+        private void btnA_Click(object sender, EventArgs e)
+        {
+            btnClicked();
         }
 
         private void btnB_Click(object sender, EventArgs e)
@@ -170,6 +167,11 @@ namespace Alethiea2
         }
 
         private void btnC_Clicked(object sender, EventArgs e)
+        {
+            btnClicked();
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
         {
             btnClicked();
         }

@@ -124,6 +124,7 @@
             btnD.TabIndex = 13;
             btnD.Text = "btnD";
             btnD.UseVisualStyleBackColor = false;
+            btnD.Click += btnD_Click;
             // 
             // PersonalityTest
             // 
