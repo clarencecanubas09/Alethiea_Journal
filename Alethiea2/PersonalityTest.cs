@@ -85,7 +85,7 @@ namespace Alethiea2
             "Personal values, feelings, and inner meaning.",
             "Helping quietly or working creatively in your own flow.",
             "Reflect internally and approach at your own pace.",
-            " “I enjoy understanding people’s emotions and inner worlds.”",
+            "“I enjoy understanding people’s emotions and inner worlds.”",
             "Retreating into quiet reflection or creativity.",
             "Deep emotional or imaginative conversations.",
             "Peaceful, reflective, emotionally comfortable."
@@ -117,6 +117,7 @@ namespace Alethiea2
             btnA.Text = answersA[index];
             btnB.Text = answersB[index];
             btnC.Text = answersC[index];
+            btnD.Text = answersD[index];
         }
 
         private void button1_Click(object sender, EventArgs e)

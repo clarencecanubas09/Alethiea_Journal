@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Alethiea2
 {
-    public partial class DailyMood_Entry : Form
+    public partial class Logout : Form
     {
-        public DailyMood_Entry()
+        public Logout()
         {
             InitializeComponent();
         }

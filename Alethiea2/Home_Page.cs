@@ -119,5 +119,100 @@ namespace Alethiea2
         {
 
         }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        enum BreathPhase { Inhale, Hold1, Exhale, Hold2 }
+        BreathPhase currentPhase = BreathPhase.Inhale;
+        int phaseTime = 40;
+        int elapsed = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            elapsed++;
+
+            progressBarBreath.Value = elapsed;
+
+            if (elapsed >= phaseTime)
+            {
+                // Move to next phase
+                elapsed = 0;
+                progressBarBreath.Value = 0;
+
+                switch (currentPhase)
+                {
+                    case BreathPhase.Inhale:
+                        currentPhase = BreathPhase.Hold1;
+                        lblInstruction.Text = "Hold";
+                        break;
+                    case BreathPhase.Hold1:
+                        currentPhase = BreathPhase.Exhale;
+                        lblInstruction.Text = "Exhale";
+                        break;
+                    case BreathPhase.Exhale:
+                        currentPhase = BreathPhase.Hold2;
+                        lblInstruction.Text = "Hold";
+                        break;
+                    case BreathPhase.Hold2:
+                        currentPhase = BreathPhase.Inhale;
+                        lblInstruction.Text = "Inhale";
+                        break;
+                }
+            }
+        }
+
+        private void btnBreath_Click(object sender, EventArgs e)
+        {
+            currentPhase = BreathPhase.Inhale;
+            lblInstruction.Text = "Inhale";
+            elapsed = 0;
+
+            progressBarBreath.Maximum = phaseTime;
+            progressBarBreath.Value = 0;
+
+            timer1.Start();
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNavigateHome_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void btnNavigateEntry_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void btnNavigateSummary_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void btnNavigateHistory_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void btnNavigateProfile_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 4;
+        }
+        private void btnNavigateBreathing_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 5;
+        }
     }
 }

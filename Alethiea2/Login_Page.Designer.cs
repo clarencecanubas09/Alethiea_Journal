@@ -79,9 +79,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(590, 387);
             label1.Name = "label1";
-            label1.Size = new Size(98, 24);
+            label1.Size = new Size(61, 24);
             label1.TabIndex = 3;
-            label1.Text = "Username";
+            label1.Text = "Email";
             // 
             // button1
             // 
