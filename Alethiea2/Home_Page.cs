@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Cmp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Alethiea2.Login;
 
 namespace Alethiea2
 {
     public partial class Home_Page : Form
     {
+        string connectionString = "Server=localhost;Database=oop_finals;User ID=root;Pooling=true;";
         public Home_Page()
         {
             InitializeComponent();
@@ -186,10 +190,8 @@ namespace Alethiea2
 
         }
 
-        private void btnNavigateHome_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
-        }
+        private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
+        
 
         private void btnNavigateEntry_Click(object sender, EventArgs e)
         {
@@ -213,6 +215,61 @@ namespace Alethiea2
         private void btnNavigateBreathing_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 5;
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Logout logout = new Logout();
+            logout.Show();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            int userId = Login.UserSession.UserID;
+            string mood = "mood_" + lblMood.Text.ToLower();
+
+            /*using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @$"
+                    INSERT INTO Moods (user_id, {mood})
+                    VALUES (@userId, @mood)
+                    ON DUPLICATE KEY UPDATE
+                    mood = VALUES(mood);
+                ";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@userId", UserSession.UserID);
+                    cmd.Parameters.AddWithValue("@mood", mood);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }*/
+
+        }
+
+        private void mood_Depressed_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Depressed";
+        }
+
+        private void mood_Sad_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Sad";
+        }
+
+        private void mood_Neutral_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Neutral";
+        }
+        private void mood_Happy_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Happy";
+        }
+        private void mood_Amazing_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Amazing";
         }
     }
 }

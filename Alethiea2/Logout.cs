@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Alethiea2.Login;
 
 namespace Alethiea2
 {
@@ -15,6 +16,15 @@ namespace Alethiea2
         public Logout()
         {
             InitializeComponent();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Clear session
+            UserSession.Clear();
+
+            // Close or hide current form
+            this.Close();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Alethiea2
 {
     public partial class PersonalityTest : Form
     {
+        string connectionString = "Server=localhost;Database=oop_finals;User ID=root;Pooling=true;";
         public PersonalityTest()
         {
             InitializeComponent();
@@ -106,8 +107,6 @@ namespace Alethiea2
         int scoreC = 0; // Introverted Analysts
         int scoreD = 0; // Introverted Diplomats
 
-
-
         private void PersonalityTest_Load(object sender, EventArgs e)
         {
             ShowQuestion(currentQuestionIndex);
@@ -167,6 +166,12 @@ namespace Alethiea2
                 else if (maxScore == scoreD)
                     macroPersonality = "Introverted Diplomat";
 
+                int macro_id = GetMacroId(macroPersonality);
+                List<string> possiblePersonalities = GetPersonalitiesByMacroId(macro_id);
+
+                string resultPersonality = $"Macro Personality: {macroPersonality}\n" +
+                                $"Possible MBTI Types: {string.Join(", ", possiblePersonalities)}";
+
                 string result = $"Results:\n" +
                                $"Extroverted Analysts (A): {scoreA}\n" +
                                $"Extroverted Diplomats (B): {scoreB}\n" +
@@ -175,9 +180,12 @@ namespace Alethiea2
                                $"Your macro-personality type is: {macroPersonality}\n" +
                                $"Proceed to next part";
 
-
                 MessageBox.Show(result, "Quiz Finished");
-                //method for part 2 and next set of questions
+
+                PersonalityTestP2 part2 = new PersonalityTestP2(macroPersonality);
+                part2.Show();
+                Hide(); // or this.Close();
+
             }
             currentOptionA = currentQuestionIndex;
             currentOptionB = currentQuestionIndex;
@@ -192,9 +200,6 @@ namespace Alethiea2
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
 
         }
-
-
-
 
         private void btnA_Click(object sender, EventArgs e)
         {
@@ -220,5 +225,55 @@ namespace Alethiea2
         {
 
         }
+
+        private int GetMacroId(string macroPersonality)
+        {
+            int macroId = -1; // default if not found
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT macro_id FROM MacroPersonalities WHERE macro_name = @name LIMIT 1";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", macroPersonality);
+
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        macroId = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return macroId;
+        }
+
+        private List<string> GetPersonalitiesByMacroId(int macroId)
+        {
+            List<string> personalities = new List<string>();
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT code FROM Personalities WHERE macro_id = @macroId";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@macroId", macroId);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            personalities.Add(reader["code"].ToString());
+                        }
+                    }
+                }
+            }
+
+            return personalities;
+        }
+
     }
 }

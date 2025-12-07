@@ -38,7 +38,7 @@
             button1 = new Button();
             panel3 = new Panel();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
+            btnLogout = new Button();
             pictureBox3 = new PictureBox();
             panel4 = new Panel();
             pictureBox4 = new PictureBox();
@@ -58,6 +58,7 @@
             lblQuote = new Label();
             pictureBox8 = new PictureBox();
             tabPage2 = new TabPage();
+            lblMood = new Label();
             panel16 = new Panel();
             panel46 = new Panel();
             pictureBox16 = new PictureBox();
@@ -81,15 +82,15 @@
             panel52 = new Panel();
             pictureBox57 = new PictureBox();
             button41 = new Button();
-            button31 = new Button();
+            btnSave = new Button();
             panel17 = new Panel();
-            textBox4 = new TextBox();
+            txtNotesEntry = new TextBox();
             label14 = new Label();
-            pictureBox42 = new PictureBox();
-            pictureBox41 = new PictureBox();
-            pictureBox40 = new PictureBox();
-            pictureBox39 = new PictureBox();
-            pictureBox37 = new PictureBox();
+            mood_Amazing = new PictureBox();
+            mood_Happy = new PictureBox();
+            mood_Neutral = new PictureBox();
+            mood_Sad = new PictureBox();
+            mood_Depressed = new PictureBox();
             label9 = new Label();
             label8 = new Label();
             tabPage3 = new TabPage();
@@ -275,11 +276,11 @@
             panel52.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox57).BeginInit();
             panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox42).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox41).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Amazing).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Happy).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Neutral).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Sad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Depressed).BeginInit();
             tabPage3.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
@@ -443,7 +444,7 @@
             // 
             panel3.BackColor = Color.CadetBlue;
             panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(button2);
+            panel3.Controls.Add(btnLogout);
             panel3.Location = new Point(0, 475);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 40);
@@ -459,17 +460,18 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // button2
+            // btnLogout
             // 
-            button2.BackColor = Color.CadetBlue;
-            button2.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Red;
-            button2.Location = new Point(53, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(146, 40);
-            button2.TabIndex = 0;
-            button2.Text = "Log Out";
-            button2.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.CadetBlue;
+            btnLogout.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.Red;
+            btnLogout.Location = new Point(53, 0);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(146, 40);
+            btnLogout.TabIndex = 0;
+            btnLogout.Text = "Log Out";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // pictureBox3
             // 
@@ -677,14 +679,15 @@
             // 
             tabPage2.BackColor = Color.DarkSlateGray;
             tabPage2.BackgroundImageLayout = ImageLayout.Zoom;
+            tabPage2.Controls.Add(lblMood);
             tabPage2.Controls.Add(panel16);
-            tabPage2.Controls.Add(button31);
+            tabPage2.Controls.Add(btnSave);
             tabPage2.Controls.Add(panel17);
-            tabPage2.Controls.Add(pictureBox42);
-            tabPage2.Controls.Add(pictureBox41);
-            tabPage2.Controls.Add(pictureBox40);
-            tabPage2.Controls.Add(pictureBox39);
-            tabPage2.Controls.Add(pictureBox37);
+            tabPage2.Controls.Add(mood_Amazing);
+            tabPage2.Controls.Add(mood_Happy);
+            tabPage2.Controls.Add(mood_Neutral);
+            tabPage2.Controls.Add(mood_Sad);
+            tabPage2.Controls.Add(mood_Depressed);
             tabPage2.Controls.Add(label9);
             tabPage2.Controls.Add(label8);
             tabPage2.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -695,6 +698,18 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Mood Entry";
             tabPage2.Click += tabPage2_Click;
+            // 
+            // lblMood
+            // 
+            lblMood.AutoSize = true;
+            lblMood.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMood.ForeColor = Color.FloralWhite;
+            lblMood.Location = new Point(828, 369);
+            lblMood.Name = "lblMood";
+            lblMood.Size = new Size(117, 47);
+            lblMood.TabIndex = 28;
+            lblMood.Text = "mood";
+            lblMood.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel16
             // 
@@ -776,6 +791,7 @@
             button15.TabIndex = 0;
             button15.Text = "Log Out";
             button15.UseVisualStyleBackColor = false;
+            button15.Click += btnLogout_Click;
             // 
             // pictureBox18
             // 
@@ -954,34 +970,35 @@
             button41.UseVisualStyleBackColor = false;
             button41.Click += btnNavigateSummary_Click;
             // 
-            // button31
+            // btnSave
             // 
-            button31.BackColor = Color.DarkCyan;
-            button31.ForeColor = Color.FloralWhite;
-            button31.Location = new Point(800, 707);
-            button31.Name = "button31";
-            button31.Size = new Size(160, 40);
-            button31.TabIndex = 26;
-            button31.Text = "Save";
-            button31.UseVisualStyleBackColor = false;
+            btnSave.BackColor = Color.DarkCyan;
+            btnSave.ForeColor = Color.FloralWhite;
+            btnSave.Location = new Point(804, 753);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(160, 40);
+            btnSave.TabIndex = 26;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnConfirm_Click;
             // 
             // panel17
             // 
             panel17.BackColor = Color.LightSlateGray;
-            panel17.Controls.Add(textBox4);
+            panel17.Controls.Add(txtNotesEntry);
             panel17.Controls.Add(label14);
-            panel17.Location = new Point(337, 355);
+            panel17.Location = new Point(337, 429);
             panel17.Name = "panel17";
             panel17.Size = new Size(1102, 310);
             panel17.TabIndex = 25;
             // 
-            // textBox4
+            // txtNotesEntry
             // 
-            textBox4.Location = new Point(35, 51);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(1040, 244);
-            textBox4.TabIndex = 1;
+            txtNotesEntry.Location = new Point(35, 51);
+            txtNotesEntry.Multiline = true;
+            txtNotesEntry.Name = "txtNotesEntry";
+            txtNotesEntry.Size = new Size(1040, 244);
+            txtNotesEntry.TabIndex = 1;
             // 
             // label14
             // 
@@ -994,55 +1011,60 @@
             label14.TabIndex = 0;
             label14.Text = "Can you tell us why you feel that way?";
             // 
-            // pictureBox42
+            // mood_Amazing
             // 
-            pictureBox42.Image = (Image)resources.GetObject("pictureBox42.Image");
-            pictureBox42.Location = new Point(1296, 215);
-            pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(143, 122);
-            pictureBox42.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox42.TabIndex = 24;
-            pictureBox42.TabStop = false;
+            mood_Amazing.Image = (Image)resources.GetObject("mood_Amazing.Image");
+            mood_Amazing.Location = new Point(1296, 215);
+            mood_Amazing.Name = "mood_Amazing";
+            mood_Amazing.Size = new Size(143, 122);
+            mood_Amazing.SizeMode = PictureBoxSizeMode.Zoom;
+            mood_Amazing.TabIndex = 24;
+            mood_Amazing.TabStop = false;
+            mood_Amazing.Click += mood_Amazing_Click;
             // 
-            // pictureBox41
+            // mood_Happy
             // 
-            pictureBox41.Image = (Image)resources.GetObject("pictureBox41.Image");
-            pictureBox41.Location = new Point(1060, 215);
-            pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(143, 122);
-            pictureBox41.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox41.TabIndex = 23;
-            pictureBox41.TabStop = false;
+            mood_Happy.Image = (Image)resources.GetObject("mood_Happy.Image");
+            mood_Happy.Location = new Point(1060, 215);
+            mood_Happy.Name = "mood_Happy";
+            mood_Happy.Size = new Size(143, 122);
+            mood_Happy.SizeMode = PictureBoxSizeMode.Zoom;
+            mood_Happy.TabIndex = 23;
+            mood_Happy.TabStop = false;
+            mood_Happy.Click += mood_Happy_Click;
             // 
-            // pictureBox40
+            // mood_Neutral
             // 
-            pictureBox40.Image = (Image)resources.GetObject("pictureBox40.Image");
-            pictureBox40.Location = new Point(818, 215);
-            pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(143, 122);
-            pictureBox40.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox40.TabIndex = 22;
-            pictureBox40.TabStop = false;
+            mood_Neutral.Image = (Image)resources.GetObject("mood_Neutral.Image");
+            mood_Neutral.Location = new Point(818, 215);
+            mood_Neutral.Name = "mood_Neutral";
+            mood_Neutral.Size = new Size(143, 122);
+            mood_Neutral.SizeMode = PictureBoxSizeMode.Zoom;
+            mood_Neutral.TabIndex = 22;
+            mood_Neutral.TabStop = false;
+            mood_Neutral.Click += mood_Neutral_Click;
             // 
-            // pictureBox39
+            // mood_Sad
             // 
-            pictureBox39.Image = (Image)resources.GetObject("pictureBox39.Image");
-            pictureBox39.Location = new Point(579, 215);
-            pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(143, 122);
-            pictureBox39.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox39.TabIndex = 21;
-            pictureBox39.TabStop = false;
+            mood_Sad.Image = (Image)resources.GetObject("mood_Sad.Image");
+            mood_Sad.Location = new Point(579, 215);
+            mood_Sad.Name = "mood_Sad";
+            mood_Sad.Size = new Size(143, 122);
+            mood_Sad.SizeMode = PictureBoxSizeMode.Zoom;
+            mood_Sad.TabIndex = 21;
+            mood_Sad.TabStop = false;
+            mood_Sad.Click += mood_Sad_Click;
             // 
-            // pictureBox37
+            // mood_Depressed
             // 
-            pictureBox37.Image = (Image)resources.GetObject("pictureBox37.Image");
-            pictureBox37.Location = new Point(337, 215);
-            pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(143, 122);
-            pictureBox37.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox37.TabIndex = 20;
-            pictureBox37.TabStop = false;
+            mood_Depressed.Image = (Image)resources.GetObject("mood_Depressed.Image");
+            mood_Depressed.Location = new Point(337, 215);
+            mood_Depressed.Name = "mood_Depressed";
+            mood_Depressed.Size = new Size(143, 122);
+            mood_Depressed.SizeMode = PictureBoxSizeMode.Zoom;
+            mood_Depressed.TabIndex = 20;
+            mood_Depressed.TabStop = false;
+            mood_Depressed.Click += mood_Depressed_Click;
             // 
             // label9
             // 
@@ -1162,6 +1184,7 @@
             button8.TabIndex = 0;
             button8.Text = "Log Out";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += btnLogout_Click;
             // 
             // pictureBox11
             // 
@@ -1648,6 +1671,7 @@
             button20.TabIndex = 0;
             button20.Text = "Log Out";
             button20.UseVisualStyleBackColor = false;
+            button20.Click += btnLogout_Click;
             // 
             // pictureBox25
             // 
@@ -2104,6 +2128,7 @@
             button26.TabIndex = 0;
             button26.Text = "Log Out";
             button26.UseVisualStyleBackColor = false;
+            button26.Click += btnLogout_Click;
             // 
             // pictureBox32
             // 
@@ -2518,6 +2543,7 @@
             button32.TabIndex = 0;
             button32.Text = "Log Out";
             button32.UseVisualStyleBackColor = false;
+            button32.Click += btnLogout_Click;
             // 
             // pictureBox49
             // 
@@ -2750,11 +2776,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox57).EndInit();
             panel17.ResumeLayout(false);
             panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox42).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox41).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Amazing).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Happy).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Neutral).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Sad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mood_Depressed).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             panel8.ResumeLayout(false);
@@ -2865,15 +2891,15 @@
         private Label label12;
         private Label label11;
         private Label label13;
-        private PictureBox pictureBox37;
-        private PictureBox pictureBox42;
-        private PictureBox pictureBox41;
-        private PictureBox pictureBox40;
-        private PictureBox pictureBox39;
+        private PictureBox mood_Depressed;
+        private PictureBox mood_Amazing;
+        private PictureBox mood_Happy;
+        private PictureBox mood_Neutral;
+        private PictureBox mood_Sad;
         private Panel panel17;
-        private TextBox textBox4;
+        private TextBox txtNotesEntry;
         private Label label14;
-        private Button button31;
+        private Button btnSave;
         private Panel panel18;
         private Label label19;
         private Label label18;
@@ -2933,7 +2959,7 @@
         private Button button1;
         private Panel panel3;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button btnLogout;
         private PictureBox pictureBox3;
         private Panel panel4;
         private PictureBox pictureBox4;
@@ -3054,5 +3080,6 @@
         private Label lblInstruction;
         private ProgressBar progressBarBreath;
         private Button btnBreath;
+        private Label lblMood;
     }
 }

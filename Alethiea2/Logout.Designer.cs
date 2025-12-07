@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             button1 = new Button();
-            button2 = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // label1
@@ -57,18 +57,19 @@
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnLogout
             // 
-            button2.BackColor = Color.RoyalBlue;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(447, 255);
-            button2.Name = "button2";
-            button2.Size = new Size(120, 55);
-            button2.TabIndex = 7;
-            button2.Text = "Confirm";
-            button2.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.RoyalBlue;
+            btnLogout.BackgroundImageLayout = ImageLayout.None;
+            btnLogout.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(447, 255);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(120, 55);
+            btnLogout.TabIndex = 7;
+            btnLogout.Text = "Confirm";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // Logout
             // 
@@ -76,10 +77,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 64);
             ClientSize = new Size(782, 453);
-            Controls.Add(button2);
+            Controls.Add(btnLogout);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Logout";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Logout";
             ResumeLayout(false);
             PerformLayout();
@@ -89,6 +91,6 @@
 
         private Label label1;
         private Button button1;
-        private Button button2;
+        private Button btnLogout;
     }
 }
