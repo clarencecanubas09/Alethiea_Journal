@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using BCrypt.Net;
 using Org.BouncyCastle.Asn1.Cmp;
 using System;
 using System.Collections.Generic;
@@ -191,7 +192,7 @@ namespace Alethiea2
         }
 
         private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
-        
+
 
         private void btnNavigateEntry_Click(object sender, EventArgs e)
         {
@@ -201,16 +202,21 @@ namespace Alethiea2
         private void btnNavigateSummary_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
+            LoadMoodSummary();
         }
 
         private void btnNavigateHistory_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 3;
+            int userId = Login.UserSession.UserID;
+            List<string> notes = LoadUserNotes(userId);
+            DisplayNotes(notes);
         }
 
         private void btnNavigateProfile_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
+            LoadUserInfo();
         }
         private void btnNavigateBreathing_Click(object sender, EventArgs e)
         {
@@ -293,5 +299,266 @@ namespace Alethiea2
         {
             lblMood.Text = "Amazing";
         }
+
+        private void LoadMoodSummary()
+        {
+            int userId = Login.UserSession.UserID;
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"
+            SELECT 
+                SUM(mood_depressed) AS dep,
+                SUM(mood_sad) AS sad,
+                SUM(mood_neutral) AS neu,
+                SUM(mood_happy) AS happy,
+                SUM(mood_amazing) AS amazing
+            FROM moods
+            WHERE user_id = @uid;
+        ";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@uid", userId);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int dep = SafeInt(reader["dep"]);
+                            int sad = SafeInt(reader["sad"]);
+                            int neu = SafeInt(reader["neu"]);
+                            int happy = SafeInt(reader["happy"]);
+                            int amazing = SafeInt(reader["amazing"]);
+
+                            lblDepressed.Text = dep.ToString();
+                            lblSad.Text = sad.ToString();
+                            lblNeutral.Text = neu.ToString();
+                            lblHappy.Text = happy.ToString();
+                            lblAmazing.Text = amazing.ToString();
+
+                            ShowMessageBasedOnMood(dep, sad, neu, happy, amazing);
+                        }
+                        else
+                        {
+                            lblDepressed.Text = lblSad.Text = lblNeutral.Text =
+                            lblHappy.Text = lblAmazing.Text = "0";
+
+                            lblMessage.Text = "No mood entries yet.";
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        // Helper to safely convert DB fields to int
+        private int SafeInt(object value)
+        {
+            if (value == null || value == DBNull.Value)
+                return 0;
+
+            int result;
+            return int.TryParse(value.ToString(), out result) ? result : 0;
+        }
+
+
+        private void ShowMessageBasedOnMood(int dep, int sad, int neu, int happy, int amazing)
+        {
+            int max = Math.Max(dep, Math.Max(sad, Math.Max(neu, Math.Max(happy, amazing))));
+
+            if (max == 0)
+            {
+                lblMessage.Text = "You haven't recorded any mood yet.";
+                return;
+            }
+
+            if (max == dep)
+                lblMessage.Text = "You've been feeling down lately. It's okay to take a break.";
+            else if (max == sad)
+                lblMessage.Text = "You've experienced sadness—remember to care for yourself.";
+            else if (max == neu)
+                lblMessage.Text = "A balanced state—steady and grounded.";
+            else if (max == happy)
+                lblMessage.Text = "You've been feeling good! Keep that energy going!";
+            else if (max == amazing)
+                lblMessage.Text = "You've been feeling fantastic! Great to see!";
+        }
+
+        private List<string> LoadUserNotes(int userId)
+        {
+            List<string> notesList = new List<string>();
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"SELECT notes FROM Notes WHERE user_id = @uid ORDER BY notes_id DESC;";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@uid", userId);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            notesList.Add(reader["notes"].ToString());
+                        }
+                    }
+                }
+            }
+
+            return notesList;
+        }
+
+
+        private void DisplayNotes(List<string> notes)
+        {
+            flowNotes.Controls.Clear(); // Clear old notes
+
+            foreach (string note in notes)
+            {
+                // --- Create Panel ---
+                Panel notePanel = new Panel();
+                notePanel.Width = flowNotes.Width - 25;   // to fit nicely
+                notePanel.Height = 80;
+                notePanel.BorderStyle = BorderStyle.FixedSingle;
+                notePanel.Margin = new Padding(5);
+                notePanel.BackColor = Color.White; // optional
+
+                // --- Create Label ---
+                Label lblNote = new Label();
+                lblNote.Text = note;
+                lblNote.Dock = DockStyle.Fill;
+                lblNote.Padding = new Padding(8);
+                lblNote.Font = new Font("Imprint MT Shadow", 16);
+                lblNote.AutoSize = false;
+
+                // --- Add to panel ---
+                notePanel.Controls.Add(lblNote);
+
+                // --- Add to FlowLayoutPanel ---
+                flowNotes.Controls.Add(notePanel);
+            }
+        }
+
+        private void LoadUserInfo()
+        {
+            int userId = Login.UserSession.UserID;
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"SELECT username FROM users WHERE user_id = @uid LIMIT 1;";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@uid", userId);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lblUsername.Text = reader["username"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public void UpdateAccount(int userId, string newUsername, string newPassword, string retypePassword)
+        {
+            if (string.IsNullOrWhiteSpace(newUsername) ||
+                string.IsNullOrWhiteSpace(newPassword) ||
+                string.IsNullOrWhiteSpace(retypePassword))
+            {
+                MessageBox.Show("Please fill out all fields!");
+                return;
+            }
+
+            if (newPassword != retypePassword)
+            {
+                MessageBox.Show("Passwords do not match!");
+                return;
+            }
+
+            try
+            {
+                using (var conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Check if username already exists for another user
+                    string checkQuery = @"
+                        SELECT COUNT(*) 
+                        FROM Users 
+                        WHERE username = @username AND user_id != @id;
+                    ";
+
+                    using (var checkCmd = new MySqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@username", newUsername);
+                        checkCmd.Parameters.AddWithValue("@id", userId);
+
+                        int exists = Convert.ToInt32(checkCmd.ExecuteScalar());
+                        if (exists > 0)
+                        {
+                            MessageBox.Show("This username is already taken!");
+                            return;
+                        }
+                    }
+
+                    // Hash the password with BCrypt before saving
+                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword);
+
+                    // Update account details
+                    string updateQuery = @"
+                        UPDATE Users 
+                        SET username = @username, password = @password 
+                        WHERE user_id = @id;
+                    ";
+
+                    using (var updateCmd = new MySqlCommand(updateQuery, conn))
+                    {
+                        updateCmd.Parameters.AddWithValue("@username", newUsername);
+                        updateCmd.Parameters.AddWithValue("@password", hashedPassword);
+                        updateCmd.Parameters.AddWithValue("@id", userId);
+
+                        int rows = updateCmd.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Account updated successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No account was updated. Please check the user ID.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating account: " + ex.Message, "Database Error");
+            }
+        }
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateAccount(
+                UserSession.UserID,
+                txtNewUsername.Text,
+                txtNewPassword.Text,
+                txtRetypePassword.Text
+            );
+        }
     }
 }
+

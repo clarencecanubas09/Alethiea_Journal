@@ -21,7 +21,8 @@ namespace Alethiea2
         private void btnLogout_Click(object sender, EventArgs e)
         {
             // Clear session
-            UserSession.Clear();
+            Login login = new Login();
+            login.Show();
 
             // Close or hide current form
             this.Close();

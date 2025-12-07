@@ -117,13 +117,13 @@
             panel53 = new Panel();
             pictureBox58 = new PictureBox();
             button42 = new Button();
-            label25 = new Label();
+            lblMessage = new Label();
             panel18 = new Panel();
-            label24 = new Label();
-            label23 = new Label();
-            label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
+            lblAmazing = new Label();
+            lblHappy = new Label();
+            lblNeutral = new Label();
+            lblSad = new Label();
+            lblDepressed = new Label();
             label19 = new Label();
             label18 = new Label();
             label17 = new Label();
@@ -137,6 +137,7 @@
             label10 = new Label();
             label12 = new Label();
             tabPage4 = new TabPage();
+            flowNotes = new FlowLayoutPanel();
             panel22 = new Panel();
             panel23 = new Panel();
             pictureBox23 = new PictureBox();
@@ -160,24 +161,11 @@
             panel54 = new Panel();
             pictureBox59 = new PictureBox();
             button43 = new Button();
-            panel21 = new Panel();
-            label33 = new Label();
-            label30 = new Label();
-            label34 = new Label();
-            panel20 = new Panel();
-            label31 = new Label();
-            label29 = new Label();
-            label32 = new Label();
-            panel19 = new Panel();
-            label28 = new Label();
-            label27 = new Label();
-            label26 = new Label();
             label11 = new Label();
             label13 = new Label();
             tabPage5 = new TabPage();
-            label3 = new Label();
+            lblUsername = new Label();
             label1 = new Label();
-            label2 = new Label();
             panel29 = new Panel();
             panel30 = new Panel();
             pictureBox30 = new PictureBox();
@@ -204,10 +192,10 @@
             panel36 = new Panel();
             label7 = new Label();
             label6 = new Label();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            button13 = new Button();
-            textBox1 = new TextBox();
+            txtRetypePassword = new TextBox();
+            txtNewPassword = new TextBox();
+            btnUpdate = new Button();
+            txtNewUsername = new TextBox();
             label5 = new Label();
             label4 = new Label();
             tabPage6 = new TabPage();
@@ -321,9 +309,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox29).BeginInit();
             panel54.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox59).BeginInit();
-            panel21.SuspendLayout();
-            panel20.SuspendLayout();
-            panel19.SuspendLayout();
             tabPage5.SuspendLayout();
             panel29.SuspendLayout();
             panel30.SuspendLayout();
@@ -1093,7 +1078,7 @@
             // 
             tabPage3.BackColor = Color.DarkSlateGray;
             tabPage3.Controls.Add(panel8);
-            tabPage3.Controls.Add(label25);
+            tabPage3.Controls.Add(lblMessage);
             tabPage3.Controls.Add(panel18);
             tabPage3.Controls.Add(label10);
             tabPage3.Controls.Add(label12);
@@ -1363,25 +1348,25 @@
             button42.UseVisualStyleBackColor = false;
             button42.Click += btnNavigateSummary_Click;
             // 
-            // label25
+            // lblMessage
             // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label25.ForeColor = Color.FloralWhite;
-            label25.Location = new Point(485, 598);
-            label25.Name = "label25";
-            label25.Size = new Size(816, 47);
-            label25.TabIndex = 23;
-            label25.Text = "Message here. Depends on the dominant mood";
+            lblMessage.AutoSize = true;
+            lblMessage.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMessage.ForeColor = Color.FloralWhite;
+            lblMessage.Location = new Point(485, 598);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(816, 47);
+            lblMessage.TabIndex = 23;
+            lblMessage.Text = "Message here. Depends on the dominant mood";
             // 
             // panel18
             // 
             panel18.BackColor = Color.MediumAquamarine;
-            panel18.Controls.Add(label24);
-            panel18.Controls.Add(label23);
-            panel18.Controls.Add(label22);
-            panel18.Controls.Add(label21);
-            panel18.Controls.Add(label20);
+            panel18.Controls.Add(lblAmazing);
+            panel18.Controls.Add(lblHappy);
+            panel18.Controls.Add(lblNeutral);
+            panel18.Controls.Add(lblSad);
+            panel18.Controls.Add(lblDepressed);
             panel18.Controls.Add(label19);
             panel18.Controls.Add(label18);
             panel18.Controls.Add(label17);
@@ -1397,55 +1382,55 @@
             panel18.Size = new Size(1102, 270);
             panel18.TabIndex = 22;
             // 
-            // label24
+            // lblAmazing
             // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label24.Location = new Point(1008, 169);
-            label24.Name = "label24";
-            label24.Size = new Size(57, 71);
-            label24.TabIndex = 39;
-            label24.Text = "1";
+            lblAmazing.AutoSize = true;
+            lblAmazing.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAmazing.Location = new Point(1008, 169);
+            lblAmazing.Name = "lblAmazing";
+            lblAmazing.Size = new Size(57, 71);
+            lblAmazing.TabIndex = 39;
+            lblAmazing.Text = "1";
             // 
-            // label23
+            // lblHappy
             // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label23.Location = new Point(768, 169);
-            label23.Name = "label23";
-            label23.Size = new Size(57, 71);
-            label23.TabIndex = 38;
-            label23.Text = "1";
+            lblHappy.AutoSize = true;
+            lblHappy.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHappy.Location = new Point(768, 169);
+            lblHappy.Name = "lblHappy";
+            lblHappy.Size = new Size(57, 71);
+            lblHappy.TabIndex = 38;
+            lblHappy.Text = "1";
             // 
-            // label22
+            // lblNeutral
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(527, 169);
-            label22.Name = "label22";
-            label22.Size = new Size(57, 71);
-            label22.TabIndex = 37;
-            label22.Text = "1";
+            lblNeutral.AutoSize = true;
+            lblNeutral.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNeutral.Location = new Point(527, 169);
+            lblNeutral.Name = "lblNeutral";
+            lblNeutral.Size = new Size(57, 71);
+            lblNeutral.TabIndex = 37;
+            lblNeutral.Text = "1";
             // 
-            // label21
+            // lblSad
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(285, 169);
-            label21.Name = "label21";
-            label21.Size = new Size(57, 71);
-            label21.TabIndex = 36;
-            label21.Text = "1";
+            lblSad.AutoSize = true;
+            lblSad.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSad.Location = new Point(285, 169);
+            lblSad.Name = "lblSad";
+            lblSad.Size = new Size(57, 71);
+            lblSad.TabIndex = 36;
+            lblSad.Text = "1";
             // 
-            // label20
+            // lblDepressed
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(46, 169);
-            label20.Name = "label20";
-            label20.Size = new Size(57, 71);
-            label20.TabIndex = 35;
-            label20.Text = "1";
+            lblDepressed.AutoSize = true;
+            lblDepressed.Font = new Font("Imprint MT Shadow", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDepressed.Location = new Point(46, 169);
+            lblDepressed.Name = "lblDepressed";
+            lblDepressed.Size = new Size(57, 71);
+            lblDepressed.TabIndex = 35;
+            lblDepressed.Text = "1";
             // 
             // label19
             // 
@@ -1577,10 +1562,8 @@
             // tabPage4
             // 
             tabPage4.BackColor = Color.DarkSlateGray;
+            tabPage4.Controls.Add(flowNotes);
             tabPage4.Controls.Add(panel22);
-            tabPage4.Controls.Add(panel21);
-            tabPage4.Controls.Add(panel20);
-            tabPage4.Controls.Add(panel19);
             tabPage4.Controls.Add(label11);
             tabPage4.Controls.Add(label13);
             tabPage4.Location = new Point(4, 29);
@@ -1590,6 +1573,17 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Notes History";
             tabPage4.Click += tabPage4_Click;
+            // 
+            // flowNotes
+            // 
+            flowNotes.AutoScroll = true;
+            flowNotes.FlowDirection = FlowDirection.TopDown;
+            flowNotes.Font = new Font("Imprint MT Shadow", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            flowNotes.Location = new Point(281, 213);
+            flowNotes.Name = "flowNotes";
+            flowNotes.Size = new Size(1191, 557);
+            flowNotes.TabIndex = 26;
+            flowNotes.WrapContents = false;
             // 
             // panel22
             // 
@@ -1849,135 +1843,6 @@
             button43.Text = "Mood Summary";
             button43.UseVisualStyleBackColor = false;
             // 
-            // panel21
-            // 
-            panel21.BackColor = Color.Gray;
-            panel21.Controls.Add(label33);
-            panel21.Controls.Add(label30);
-            panel21.Controls.Add(label34);
-            panel21.Location = new Point(1125, 206);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(370, 520);
-            panel21.TabIndex = 24;
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label33.ForeColor = Color.FloralWhite;
-            label33.Location = new Point(14, 39);
-            label33.Name = "label33";
-            label33.Size = new Size(192, 20);
-            label33.TabIndex = 6;
-            label33.Text = "MOOD SELECTED :";
-            // 
-            // label30
-            // 
-            label30.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label30.ForeColor = Color.FloralWhite;
-            label30.Location = new Point(14, 85);
-            label30.Name = "label30";
-            label30.Size = new Size(343, 406);
-            label30.TabIndex = 4;
-            label30.Text = resources.GetString("label30.Text");
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label34.ForeColor = Color.FloralWhite;
-            label34.Location = new Point(14, 13);
-            label34.Name = "label34";
-            label34.Size = new Size(174, 20);
-            label34.TabIndex = 5;
-            label34.Text = "DATE CREATED :";
-            // 
-            // panel20
-            // 
-            panel20.BackColor = Color.Gray;
-            panel20.Controls.Add(label31);
-            panel20.Controls.Add(label29);
-            panel20.Controls.Add(label32);
-            panel20.Location = new Point(693, 206);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(370, 520);
-            panel20.TabIndex = 23;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label31.ForeColor = Color.FloralWhite;
-            label31.Location = new Point(14, 39);
-            label31.Name = "label31";
-            label31.Size = new Size(192, 20);
-            label31.TabIndex = 4;
-            label31.Text = "MOOD SELECTED :";
-            // 
-            // label29
-            // 
-            label29.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label29.ForeColor = Color.FloralWhite;
-            label29.Location = new Point(14, 85);
-            label29.Name = "label29";
-            label29.Size = new Size(343, 406);
-            label29.TabIndex = 3;
-            label29.Text = resources.GetString("label29.Text");
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label32.ForeColor = Color.FloralWhite;
-            label32.Location = new Point(14, 13);
-            label32.Name = "label32";
-            label32.Size = new Size(174, 20);
-            label32.TabIndex = 3;
-            label32.Text = "DATE CREATED :";
-            // 
-            // panel19
-            // 
-            panel19.BackColor = Color.Gray;
-            panel19.Controls.Add(label28);
-            panel19.Controls.Add(label27);
-            panel19.Controls.Add(label26);
-            panel19.Location = new Point(261, 206);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(370, 520);
-            panel19.TabIndex = 22;
-            // 
-            // label28
-            // 
-            label28.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label28.ForeColor = Color.FloralWhite;
-            label28.Location = new Point(12, 85);
-            label28.Name = "label28";
-            label28.Size = new Size(343, 406);
-            label28.TabIndex = 2;
-            label28.Text = resources.GetString("label28.Text");
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label27.ForeColor = Color.FloralWhite;
-            label27.Location = new Point(12, 39);
-            label27.Name = "label27";
-            label27.Size = new Size(192, 20);
-            label27.TabIndex = 1;
-            label27.Text = "MOOD SELECTED :";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Imprint MT Shadow", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label26.ForeColor = Color.FloralWhite;
-            label26.Location = new Point(12, 13);
-            label26.Name = "label26";
-            label26.Size = new Size(174, 20);
-            label26.TabIndex = 0;
-            label26.Text = "DATE CREATED :";
-            // 
             // label11
             // 
             label11.AutoSize = true;
@@ -2003,9 +1868,8 @@
             // tabPage5
             // 
             tabPage5.BackColor = Color.DarkSlateGray;
-            tabPage5.Controls.Add(label3);
+            tabPage5.Controls.Add(lblUsername);
             tabPage5.Controls.Add(label1);
-            tabPage5.Controls.Add(label2);
             tabPage5.Controls.Add(panel29);
             tabPage5.Controls.Add(panel36);
             tabPage5.Location = new Point(4, 29);
@@ -2015,38 +1879,27 @@
             tabPage5.TabIndex = 4;
             tabPage5.Text = "View Profile";
             // 
-            // label3
+            // lblUsername
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FloralWhite;
-            label3.Location = new Point(811, 15);
-            label3.Name = "label3";
-            label3.Size = new Size(439, 79);
-            label3.TabIndex = 24;
-            label3.Text = "USERNAME";
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.FloralWhite;
+            lblUsername.Location = new Point(812, 48);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(439, 79);
+            lblUsername.TabIndex = 24;
+            lblUsername.Text = "USERNAME";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FloralWhite;
-            label1.Location = new Point(525, 15);
+            label1.Location = new Point(526, 48);
             label1.Name = "label1";
             label1.Size = new Size(319, 79);
             label1.TabIndex = 23;
             label1.Text = "HELLO, ";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FloralWhite;
-            label2.Location = new Point(653, 109);
-            label2.Name = "label2";
-            label2.Size = new Size(438, 47);
-            label2.TabIndex = 22;
-            label2.Text = "You are an ESFJ/ESFP";
             // 
             // panel29
             // 
@@ -2312,10 +2165,10 @@
             panel36.BackColor = Color.Silver;
             panel36.Controls.Add(label7);
             panel36.Controls.Add(label6);
-            panel36.Controls.Add(textBox3);
-            panel36.Controls.Add(textBox2);
-            panel36.Controls.Add(button13);
-            panel36.Controls.Add(textBox1);
+            panel36.Controls.Add(txtRetypePassword);
+            panel36.Controls.Add(txtNewPassword);
+            panel36.Controls.Add(btnUpdate);
+            panel36.Controls.Add(txtNewUsername);
             panel36.Controls.Add(label5);
             panel36.Controls.Add(label4);
             panel36.Location = new Point(440, 199);
@@ -2344,45 +2197,46 @@
             label6.TabIndex = 12;
             label6.Text = "Password";
             // 
-            // textBox3
+            // txtRetypePassword
             // 
-            textBox3.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(201, 307);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(450, 35);
-            textBox3.TabIndex = 11;
+            txtRetypePassword.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtRetypePassword.Location = new Point(201, 307);
+            txtRetypePassword.Multiline = true;
+            txtRetypePassword.Name = "txtRetypePassword";
+            txtRetypePassword.Size = new Size(450, 35);
+            txtRetypePassword.TabIndex = 11;
             // 
-            // textBox2
+            // txtNewPassword
             // 
-            textBox2.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(201, 230);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(450, 35);
-            textBox2.TabIndex = 10;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtNewPassword.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNewPassword.Location = new Point(201, 230);
+            txtNewPassword.Multiline = true;
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.Size = new Size(450, 35);
+            txtNewPassword.TabIndex = 10;
+            txtNewPassword.TextChanged += textBox2_TextChanged;
             // 
-            // button13
+            // btnUpdate
             // 
-            button13.BackColor = Color.DimGray;
-            button13.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button13.ForeColor = Color.Snow;
-            button13.Location = new Point(348, 369);
-            button13.Name = "button13";
-            button13.Size = new Size(160, 60);
-            button13.TabIndex = 9;
-            button13.Text = "Update";
-            button13.UseVisualStyleBackColor = false;
+            btnUpdate.BackColor = Color.DimGray;
+            btnUpdate.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = Color.Snow;
+            btnUpdate.Location = new Point(348, 369);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(160, 60);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // textBox1
+            // txtNewUsername
             // 
-            textBox1.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(201, 155);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(450, 35);
-            textBox1.TabIndex = 4;
+            txtNewUsername.Font = new Font("Imprint MT Shadow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNewUsername.Location = new Point(201, 155);
+            txtNewUsername.Multiline = true;
+            txtNewUsername.Name = "txtNewUsername";
+            txtNewUsername.Size = new Size(450, 35);
+            txtNewUsername.TabIndex = 4;
             // 
             // label5
             // 
@@ -2824,12 +2678,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox29).EndInit();
             panel54.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox59).EndInit();
-            panel21.ResumeLayout(false);
-            panel21.PerformLayout();
-            panel20.ResumeLayout(false);
-            panel20.PerformLayout();
-            panel19.ResumeLayout(false);
-            panel19.PerformLayout();
             tabPage5.ResumeLayout(false);
             tabPage5.PerformLayout();
             panel29.ResumeLayout(false);
@@ -2879,10 +2727,10 @@
         private TabPage tabPage5;
         private Label lblQuote;
         private Panel panel36;
-        private TextBox textBox1;
+        private TextBox txtNewUsername;
         private Label label5;
         private Label label4;
-        private Button button13;
+        private Button btnUpdate;
         private TabPage tabPage2;
         private TabPage tabPage3;
         private Label label9;
@@ -2911,24 +2759,12 @@
         private PictureBox pictureBox45;
         private PictureBox pictureBox46;
         private PictureBox pictureBox47;
-        private Label label25;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private Label label21;
-        private Label label20;
-        private Panel panel21;
-        private Panel panel20;
-        private Panel panel19;
-        private Label label33;
-        private Label label30;
-        private Label label34;
-        private Label label31;
-        private Label label29;
-        private Label label32;
-        private Label label28;
-        private Label label27;
-        private Label label26;
+        private Label lblMessage;
+        private Label lblAmazing;
+        private Label lblHappy;
+        private Label lblNeutral;
+        private Label lblSad;
+        private Label lblDepressed;
         private TabPage tabPage6;
         private Panel panel37;
         private Panel panel44;
@@ -3068,11 +2904,10 @@
         private Panel panel55;
         private PictureBox pictureBox60;
         private Button button44;
-        private Label label3;
+        private Label lblUsername;
         private Label label1;
-        private Label label2;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtRetypePassword;
+        private TextBox txtNewPassword;
         private Label label7;
         private Label label6;
         private Label label35;
@@ -3081,5 +2916,6 @@
         private ProgressBar progressBarBreath;
         private Button btnBreath;
         private Label lblMood;
+        private FlowLayoutPanel flowNotes;
     }
 }
