@@ -30,12 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             pictureBox1 = new PictureBox();
-            txtUsername = new TextBox();
+            txtEmail = new TextBox();
             txtPassword = new TextBox();
-            label1 = new Label();
             button1 = new Button();
             button2 = new Button();
-            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -50,15 +48,17 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // txtUsername
+            // txtEmail
             // 
-            txtUsername.BackColor = Color.Gainsboro;
-            txtUsername.Font = new Font("Imprint MT Shadow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(590, 410);
-            txtUsername.Multiline = true;
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(370, 54);
-            txtUsername.TabIndex = 1;
+            txtEmail.BackColor = Color.Gainsboro;
+            txtEmail.Font = new Font("Imprint MT Shadow", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(590, 411);
+            txtEmail.Multiline = true;
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Enter your email";
+            txtEmail.Size = new Size(370, 54);
+            txtEmail.TabIndex = 1;
+            txtEmail.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
@@ -68,20 +68,9 @@
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Enter your password";
             txtPassword.Size = new Size(370, 54);
             txtPassword.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(590, 387);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 24);
-            label1.TabIndex = 3;
-            label1.Text = "Email";
             // 
             // button1
             // 
@@ -109,18 +98,6 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(590, 486);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 24);
-            label3.TabIndex = 7;
-            label3.Text = "Password";
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -128,12 +105,10 @@
             BackColor = Color.Teal;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1542, 813);
-            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label1);
             Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
+            Controls.Add(txtEmail);
             Controls.Add(pictureBox1);
             Name = "Login";
             Text = "Login";
@@ -147,11 +122,9 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private TextBox txtUsername;
+        private TextBox txtEmail;
         private TextBox txtPassword;
-        private Label label1;
         private Button button1;
         private Button button2;
-        private Label label3;
     }
 }

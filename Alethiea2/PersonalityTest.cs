@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Alethiea2.Login;
 
 namespace Alethiea2
 {
@@ -105,6 +107,7 @@ namespace Alethiea2
         int scoreD = 0; // Introverted Diplomats
 
 
+
         private void PersonalityTest_Load(object sender, EventArgs e)
         {
             ShowQuestion(currentQuestionIndex);
@@ -135,14 +138,45 @@ namespace Alethiea2
 
         }
 
-        void btnClicked()
+        private void btnClicked(char choice)
         {
             if (currentQuestionIndex != 9)
             {
                 currentQuestionIndex++;
+
+                switch (choice)
+                {
+                    case 'A': scoreA++; break;
+                    case 'B': scoreB++; break;
+                    case 'C': scoreC++; break;
+                    case 'D': scoreD++; break;
+                }
             }
             else
             {
+                int maxScore = Math.Max(Math.Max(scoreA, scoreB), Math.Max(scoreC, scoreD));
+                string macroPersonality = "";
+                string personality = "";
+
+                if (maxScore == scoreA)
+                    macroPersonality = "Extroverted Analyst";
+                else if (maxScore == scoreB)
+                    macroPersonality = "Extroverted Diplomat";
+                else if (maxScore == scoreC)
+                    macroPersonality = "Introverted Analyst";
+                else if (maxScore == scoreD)
+                    macroPersonality = "Introverted Diplomat";
+
+                string result = $"Results:\n" +
+                               $"Extroverted Analysts (A): {scoreA}\n" +
+                               $"Extroverted Diplomats (B): {scoreB}\n" +
+                               $"Introverted Analysts (C): {scoreC}\n" +
+                               $"Introverted Diplomats (D): {scoreD}\n" +
+                               $"Your macro-personality type is: {macroPersonality}\n" +
+                               $"Proceed to next part";
+
+
+                MessageBox.Show(result, "Quiz Finished");
                 //method for part 2 and next set of questions
             }
             currentOptionA = currentQuestionIndex;
@@ -154,27 +188,37 @@ namespace Alethiea2
             btnB.Text = answersB[currentOptionB];
             btnC.Text = answersC[currentOptionC];
             btnD.Text = answersD[currentOptionD];
+
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
 
         }
+
+
+
+
         private void btnA_Click(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('A');
         }
 
         private void btnB_Click(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('B');
         }
 
         private void btnC_Clicked(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('C');
         }
 
         private void btnD_Click(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('D');
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
