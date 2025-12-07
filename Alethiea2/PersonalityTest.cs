@@ -109,6 +109,18 @@ namespace Alethiea2
 
         private void PersonalityTest_Load(object sender, EventArgs e)
         {
+            int userId = Login.UserSession.UserID;
+
+            if (UserAlreadyHasPersonality(userId))
+            {
+                MessageBox.Show("You already completed the personality test.");
+
+                Home_Page home = new Home_Page();
+                home.Show();
+                this.Close();
+                return;
+            }
+
             ShowQuestion(currentQuestionIndex);
         }
 
@@ -274,6 +286,33 @@ namespace Alethiea2
 
             return personalities;
         }
+
+        private bool UserAlreadyHasPersonality(int userId)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"SELECT personality_id FROM users WHERE user_id = @uid LIMIT 1";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@uid", userId);
+
+                    var result = cmd.ExecuteScalar();
+
+                    // Personality is considered set if NOT NULL and NOT empty
+                    if (result != DBNull.Value && result != null)
+                    {
+                        string personalityValue = result.ToString().Trim();
+                        return personalityValue != "";
+                    }
+                }
+            }
+
+            return false; // No personality found → proceed with test
+        }
+
 
     }
 }

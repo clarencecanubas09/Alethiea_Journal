@@ -225,29 +225,51 @@ namespace Alethiea2
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             int userId = Login.UserSession.UserID;
-            string mood = "mood_" + lblMood.Text.ToLower();
+            string moodColumn = "mood_" + lblMood.Text.ToLower();   // example: mood_happy
+            string notes = txtNotesEntry.Text.Trim();
 
-            /*using (var conn = new MySqlConnection(connectionString))
+            using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
 
-                string sql = @$"
-                    INSERT INTO Moods (user_id, {mood})
-                    VALUES (@userId, @mood)
+                // -------------------------
+                // 1) Update Mood Counter
+                // -------------------------
+                string moodSql = $@"
+                    INSERT INTO Moods (user_id, {moodColumn})
+                    VALUES (@userId, 1)
                     ON DUPLICATE KEY UPDATE
-                    mood = VALUES(mood);
+                    {moodColumn} = {moodColumn};
                 ";
 
-                using (var cmd = new MySqlCommand(sql, conn))
+                using (var moodCmd = new MySqlCommand(moodSql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@userId", UserSession.UserID);
-                    cmd.Parameters.AddWithValue("@mood", mood);
-
-                    cmd.ExecuteNonQuery();
+                    moodCmd.Parameters.AddWithValue("@userId", userId);
+                    moodCmd.ExecuteNonQuery();
                 }
-            }*/
 
+                // -------------------------
+                // 2) Insert Notes in Notes Table
+                // -------------------------
+                if (!string.IsNullOrEmpty(notes))
+                {
+                    string noteSql = @"
+                        INSERT INTO Notes (user_id, notes)
+                        VALUES (@userId, @notes);
+                    ";
+
+                    using (var noteCmd = new MySqlCommand(noteSql, conn))
+                    {
+                        noteCmd.Parameters.AddWithValue("@userId", userId);
+                        noteCmd.Parameters.AddWithValue("@notes", notes);
+                        noteCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+
+            MessageBox.Show("Mood and note saved!");
         }
+
 
         private void mood_Depressed_Click(object sender, EventArgs e)
         {

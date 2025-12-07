@@ -704,11 +704,11 @@
             lblMood.AutoSize = true;
             lblMood.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMood.ForeColor = Color.FloralWhite;
-            lblMood.Location = new Point(828, 369);
+            lblMood.Location = new Point(754, 371);
             lblMood.Name = "lblMood";
-            lblMood.Size = new Size(117, 47);
+            lblMood.Size = new Size(265, 47);
             lblMood.TabIndex = 28;
-            lblMood.Text = "mood";
+            lblMood.Text = "Current Mood";
             lblMood.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel16
