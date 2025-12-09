@@ -398,7 +398,7 @@
             tabControl1.Controls.Add(tabViewProfile);
             tabControl1.Controls.Add(tabBoxBreathing);
             tabControl1.Controls.Add(tabMessages);
-            tabControl1.Location = new Point(3, 1);
+            tabControl1.Location = new Point(-5, -29);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1844, 860);

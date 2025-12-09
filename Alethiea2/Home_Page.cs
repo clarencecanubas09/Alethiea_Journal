@@ -165,19 +165,10 @@ namespace Alethiea2
                 }
             }
 
-            int personalityId = UserSession.PersonalityId;
-            string mood = lblMood.Text;
-
-            // Generate personality-based message
-            string messageText = GetMessageForMood(mood, personalityId);
-
-            // Show message in your TabPage2 (instead of MessageBox)
-            lblMessagesForMood.Text = messageText;   // lblMessage is a Label inside TabPage2
-
-            // Switch to the Messages tab automatically
-            tabControl1.SelectedIndex = 6;
-
+            HandleMoodSelection(lblMood.Text.ToLower());
         }
+
+
 
         private string GetMessageForMood(string mood, int personalityId)
         {
@@ -219,17 +210,53 @@ namespace Alethiea2
             return "Stay mindful of your emotions.";
         }
 
-        private void mood_Depressed_Click(object sender, EventArgs e) => lblMood.Text = "Depressed";
+        private void HandleMoodSelection(string mood)
+        {
+
+            int personalityId = UserSession.PersonalityId;
+
+            // Generate personality-based message
+            string messageText = GetMessageForMood(mood, personalityId);
+
+            // Show in TabPage2
+            lblMessagesForMood.Text = messageText;
+            tabControl1.SelectedIndex = 6;
+
+            // Optionally save mood + notes to DB here if you want
+        }
+
+
+        private void mood_Depressed_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Depressed";
+            
+        } 
         
 
-        private void mood_Sad_Click(object sender, EventArgs e) => lblMood.Text = "Sad";
+        private void mood_Sad_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Sad";
+            
+        }
         
 
-        private void mood_Neutral_Click(object sender, EventArgs e) => lblMood.Text = "Neutral";
-        
-        private void mood_Happy_Click(object sender, EventArgs e) => lblMood.Text = "Happy";
-        
-        private void mood_Amazing_Click(object sender, EventArgs e) => lblMood.Text = "Amazing";
+        private void mood_Neutral_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Neutral";
+           
+        }
+
+        private void mood_Happy_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Happy";
+            
+        }
+
+        private void mood_Amazing_Click(object sender, EventArgs e)
+        { 
+            lblMood.Text = "Amazing";
+           
+        }
         
         private void LoadMoodSummary()
         {
