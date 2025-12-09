@@ -119,7 +119,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Sign_Up";
-            Text = "Sign In";
+            Text = "Sign Up";
             Load += Sign_Up_Load;
             ResumeLayout(false);
             PerformLayout();

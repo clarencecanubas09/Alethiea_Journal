@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            pictureBox1 = new PictureBox();
+            picLogo = new PictureBox();
             txtEmail = new TextBox();
             txtPassword = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btnSignUp = new Button();
+            btnLogIn = new Button();
+            ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // picLogo
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.ALETHEIA_LOGO_no_bg__2;
-            pictureBox1.Location = new Point(320, -160);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(900, 670);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            picLogo.BackColor = Color.Transparent;
+            picLogo.Image = Properties.Resources.ALETHEIA_LOGO_no_bg__2;
+            picLogo.Location = new Point(320, -160);
+            picLogo.Name = "picLogo";
+            picLogo.Size = new Size(900, 670);
+            picLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picLogo.TabIndex = 0;
+            picLogo.TabStop = false;
             // 
             // txtEmail
             // 
@@ -58,7 +58,6 @@
             txtEmail.PlaceholderText = "Enter your email";
             txtEmail.Size = new Size(370, 54);
             txtEmail.TabIndex = 1;
-            txtEmail.TextChanged += txtUsername_TextChanged;
             // 
             // txtPassword
             // 
@@ -72,31 +71,31 @@
             txtPassword.Size = new Size(370, 54);
             txtPassword.TabIndex = 2;
             // 
-            // button1
+            // btnSignUp
             // 
-            button1.BackColor = Color.DarkBlue;
-            button1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(600, 600);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 55);
-            button1.TabIndex = 5;
-            button1.Text = "Sign Up";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnSignUp.BackColor = Color.DarkBlue;
+            btnSignUp.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSignUp.ForeColor = Color.White;
+            btnSignUp.Location = new Point(600, 600);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.Size = new Size(120, 55);
+            btnSignUp.TabIndex = 5;
+            btnSignUp.Text = "Sign Up";
+            btnSignUp.UseVisualStyleBackColor = false;
+            btnSignUp.Click += btnSignUp_Click;
             // 
-            // button2
+            // btnLogIn
             // 
-            button2.BackColor = Color.DarkBlue;
-            button2.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(830, 600);
-            button2.Name = "button2";
-            button2.Size = new Size(120, 55);
-            button2.TabIndex = 6;
-            button2.Text = "Log In";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnLogIn.BackColor = Color.DarkBlue;
+            btnLogIn.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogIn.ForeColor = Color.White;
+            btnLogIn.Location = new Point(830, 600);
+            btnLogIn.Name = "btnLogIn";
+            btnLogIn.Size = new Size(120, 55);
+            btnLogIn.TabIndex = 6;
+            btnLogIn.Text = "Log In";
+            btnLogIn.UseVisualStyleBackColor = false;
+            btnLogIn.Click += btnLogIn_Click;
             // 
             // Login
             // 
@@ -105,26 +104,25 @@
             BackColor = Color.Teal;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1542, 813);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnLogIn);
+            Controls.Add(btnSignUp);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
-            Controls.Add(pictureBox1);
+            Controls.Add(picLogo);
             Name = "Login";
-            Text = "Login";
-            Load += Login_Load;
-            Click += button2_Click;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Log In";
+            Click += btnLogIn_Click;
+            ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox picLogo;
         private TextBox txtEmail;
         private TextBox txtPassword;
-        private Button button1;
-        private Button button2;
+        private Button btnSignUp;
+        private Button btnLogIn;
     }
 }

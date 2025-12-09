@@ -19,12 +19,9 @@ namespace Alethiea2
                 conn.Open();
 
                 string sql = @"
-
                         CREATE DATABASE IF NOT EXISTS OOP_Finals;
                         USE OOP_Finals;
 
-                        
-                        
                         CREATE TABLE IF NOT EXISTS MacroPersonalities (
                             macro_id INT AUTO_INCREMENT PRIMARY KEY,
                             macro_name VARCHAR(100) NOT NULL UNIQUE
@@ -62,12 +59,10 @@ namespace Alethiea2
                             notes VARCHAR(500) NOT NULL,
                             CONSTRAINT fk_notes_users FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
                         );
-                    ";
-
+                ";
                 using var cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
-
         }
 
         private void SeedMacroAndPersonalities()
@@ -77,11 +72,11 @@ namespace Alethiea2
                 conn.Open();
 
                 string macros = @"
-                INSERT IGNORE INTO MacroPersonalities (macro_name) VALUES
-                ('Extraverted Analysts'),
-                ('Extraverted Diplomats'),
-                ('Introverted Analysts'),
-                ('Introverted Diplomats');
+                    INSERT IGNORE INTO MacroPersonalities (macro_name) VALUES
+                    ('Extraverted Analysts'),
+                    ('Extraverted Diplomats'),
+                    ('Introverted Analysts'),
+                    ('Introverted Diplomats');
                 ";
 
                 using (var cmd = new MySqlCommand(macros, conn))
@@ -90,24 +85,23 @@ namespace Alethiea2
                 }
 
                 string mbti = @"
-                INSERT IGNORE INTO Personalities (code, macro_id) VALUES
-                -- Extraverted Analysts (macro_id, 1)
-                ('ENTJ', 1), ('ENTP', 1),
-                ('ESTJ', 1), ('ESTP', 1),
+                    INSERT IGNORE INTO Personalities (code, macro_id) VALUES
+                    -- Extraverted Analysts (macro_id, 1)
+                    ('ENTJ', 1), ('ENTP', 1),
+                    ('ESTJ', 1), ('ESTP', 1),
 
-                -- Extraverted Diplomats (macro_id, 2)
-                ('ENFJ', 2), ('ENFP', 2),
-                ('ESFJ', 2), ('ESFP', 2),
+                    -- Extraverted Diplomats (macro_id, 2)
+                    ('ENFJ', 2), ('ENFP', 2),
+                    ('ESFJ', 2), ('ESFP', 2),
 
-                -- Introverted Analysts (macro_id, 3)
-                ('INTJ', 3), ('INTP', 3),
-                ('ISTJ', 3), ('ISTP', 3),
+                    -- Introverted Analysts (macro_id, 3)
+                    ('INTJ', 3), ('INTP', 3),
+                    ('ISTJ', 3), ('ISTP', 3),
 
-                -- Introverted Diplomats (macro_id, 4)
-                ('INFJ', 4), ('INFP', 4),
-                ('ISFJ', 4), ('ISFP', 4);
+                    -- Introverted Diplomats (macro_id, 4)
+                    ('INFJ', 4), ('INFP', 4),
+                    ('ISFJ', 4), ('ISFP', 4);
                 ";
-
                 using (var cmd = new MySqlCommand(mbti, conn))
                 {
                     cmd.ExecuteNonQuery();
@@ -115,11 +109,11 @@ namespace Alethiea2
             }
         }
 
-
         public static class UserSession
         {
             public static int UserID { get; set; }
             public static string Email { get; set; }
+            public static int PersonalityId { get; set; }
 
             public static void Clear()
             {
@@ -128,20 +122,13 @@ namespace Alethiea2
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
             Sign_Up signUpForm = new Sign_Up();
             signUpForm.ShowDialog(this);
-
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnLogIn_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
@@ -162,7 +149,7 @@ namespace Alethiea2
             {
                 conn.Open();
 
-                string query = "SELECT user_id, password FROM users WHERE email = @email";
+                string query = "SELECT user_id, personality_id, password FROM users WHERE email = @email";
 
                 using (var cmd = new MySqlCommand(query, conn))
                 {
@@ -173,6 +160,7 @@ namespace Alethiea2
                     {
                         int user_id = Convert.ToInt32(reader["user_id"]);
                         string storedHashedPassword = reader["password"].ToString();
+                        int personalityId = reader.IsDBNull(reader.GetOrdinal("personality_id")) ? 0 : reader.GetInt32("personality_id");
 
                         bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, storedHashedPassword);
 
@@ -181,6 +169,7 @@ namespace Alethiea2
                             // Store current user info
                             UserSession.UserID = user_id;
                             UserSession.Email = email;
+                            UserSession.PersonalityId = personalityId;
 
                             MessageBox.Show("Login successful!");
 
@@ -199,13 +188,6 @@ namespace Alethiea2
                     }
                 }
             }
-        }
-
-
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -43,149 +43,148 @@ namespace Alethiea2
         List<string[]> macroAChoices = new List<string[]>
         { 
             new string[] 
-            { "A. I trust facts and real examples (S)",
-                "B. I trust facts and real examples (N)",
-                "C. I compare systems and frameworks (T)", 
-                "D. I act spontaneously based on ideas (P)" }, 
+            { "A. I trust facts and real examples",
+                "B. I trust facts and real examples",
+                "C. I compare systems and frameworks", 
+                "D. I act spontaneously based on ideas" }, 
             new string[] 
-            { "A. I prefer detailed instructions (S)", 
-                "B. I imagine different outcomes (N)", 
-                "C. I decide based on logic (T)", 
-                "D. I stay flexible with final decisions (P)" 
+            { "A. I prefer detailed instructions", 
+                "B. I imagine different outcomes", 
+                "C. I decide based on logic", 
+                "D. I stay flexible with final decisions" 
             }, 
             new string[] 
-            { "A. Practical and hands-on (S)", 
-                "B. Innovative and abstract (N)", 
-                "C. Objective and firm (T)", 
-                "D. Adaptive and exploratory (P)" 
+            { "A. Practical and hands-on", 
+                "B. Innovative and abstract", 
+                "C. Objective and firm", 
+                "D. Adaptive and exploratory" 
             }, 
             new string[] 
-            { "A. Notice small details (S)", 
-                "B. See the bigger picture (N)",
-                "C. Apply rules and systems (T)", 
-                "D. Keep things open-ended (P)" 
+            { "A. Notice small details", 
+                "B. See the bigger picture",
+                "C. Apply rules and systems", 
+                "D. Keep things open-ended" 
             }, 
             new string[]
-            { "A. Prefer proven methods (S)", 
-                "B. Prefer unique approaches (N)", 
-                "C. Value correctness (T)", 
-                "D. Value experimentation (P)" 
+            { "A. Prefer proven methods", 
+                "B. Prefer unique approaches", 
+                "C. Value correctness", 
+                "D. Value experimentation" 
             }, 
         };
         List<string[]> macroBChoices = new List<string[]>
         {
             new string[]
-            {"A. I like practical tasks (S)",
-             "B. I enjoy exploring ideas (N)",
-             "C. I rely on empathy (F)",
-             "D. I adapt quickly (P)"
+            {"A. I like practical tasks",
+             "B. I enjoy exploring ideas",
+             "C. I rely on empathy",
+             "D. I adapt quickly"
             },
 
             new string[]
-            {"A. I follow proven methods (S)",
-             "B. I focus on possibilities (N)",
-             "C. I help others decide emotionally (F)",
-             "D. I stay open and spontaneous (P)"
+            {"A. I follow proven methods",
+             "B. I focus on possibilities",
+             "C. I help others decide emotionally",
+             "D. I stay open and spontaneous"
             },
 
             new string[]
-            {"A. Down-to-earth (S)",
-             "B. Imaginative (N)",
-             "C. Compassionate (F)",
-             "D. Flexible (P)"
+            {"A. Down-to-earth",
+             "B. Imaginative",
+             "C. Compassionate",
+             "D. Flexible"
             },
 
             new string[]
-            {"A. Detail-focused (S)",
-             "B. Big-picture (N)",
-             "C. Value-driven (F)",
-             "D. Easygoing (P)"
+            {"A. Detail-focused",
+             "B. Big-picture",
+             "C. Value-driven",
+             "D. Easygoing"
             },
 
             new string[]
-            {"A. Practical (S)",
-             "B. Intuitive (N)",
-             "C. Feeling-oriented (F)",
-             "D. Adaptable (P)"
+            {"A. Practical",
+             "B. Intuitive",
+             "C. Feeling-oriented",
+             "D. Adaptable"
             },
         };
 
         List<string[]> macroCChoices = new List<string[]>
         {
             new string[]
-            {"A. I rely on facts (S)",
-             "B. I rely on ideas (N)",
-             "C. I decide logically (T)",
-             "D. I keep options open (P)"
+            {"A. I rely on facts",
+             "B. I rely on ideas",
+             "C. I decide logically",
+             "D. I keep options open"
             },
 
             new string[]
-            {"A. I follow proven steps (S)",
-             "B. I look for future possibilities (N)",
-             "C. I choose objectivity (T)",
-             "D. I experiment (P)"
+            {"A. I follow proven steps",
+             "B. I look for future possibilities",
+             "C. I choose objectivity",
+             "D. I experiment"
             },
 
             new string[]
-            {"A. Detail-oriented (S)",
-             "B. Conceptual (N)",
-             "C. Structured thinking (T)",
-             "D. Spontaneous (P)"
+            {"A. Detail-oriented",
+             "B. Conceptual",
+             "C. Structured thinking",
+             "D. Spontaneous"
             },
 
             new string[]
-            {"A. Practical (S)",
-             "B. Visionary (N)",
-             "C. Firm decisions (T)",
-             "D. Flexible plans (P)"
+            {"A. Practical",
+             "B. Visionary",
+             "C. Firm decisions",
+             "D. Flexible plans"
             },
 
             new string[]
-            {"A. Trust experience (S)",
-             "B. Trust imagination (N)",
-             "C. Logic first (T)",
-             "D. Adaptable (P)"
+            {"A. Trust experience",
+             "B. Trust imagination",
+             "C. Logic first",
+             "D. Adaptable"
             },
         };
 
         List<string[]> macroDChoices = new List<string[]>
         {
             new string[]
-            {"A. Notice real details (S)",
-             "B. Focus on meanings (N)",
-             "C. Rely on feelings (F)",
-             "D. Prefer flexibility (P)"
+            {"A. Notice real details",
+             "B. Focus on meanings",
+             "C. Rely on feelings",
+             "D. Prefer flexibility"
             },
 
             new string[]
-            {"A. Stick to what works (S)",
-             "B. Seek deeper symbolism (N)",
-             "C. Empathy first (F)",
-             "D. Go with the flow (P)"
+            {"A. Stick to what works",
+             "B. Seek deeper symbolism",
+             "C. Empathy first",
+             "D. Go with the flow"
             },
 
             new string[]
-            {"A. Practical helper (S)",
-             "B. Idealistic dreamer (N)",
-             "C. Warm and considerate (F)",
-             "D. Adaptive and gentle (P)"
+            {"A. Practical helper",
+             "B. Idealistic dreamer",
+             "C. Warm and considerate",
+             "D. Adaptive and gentle"
             },
 
             new string[]
-            {"A. Down-to-earth (S)",
-             "B. Future-oriented (N)",
-             "C. Emotion-conscious (F)",
-             "D. Free-spirited (P)"
+            {"A. Down-to-earth",
+             "B. Future-oriented",
+             "C. Emotion-conscious",
+             "D. Free-spirited"
             },
 
             new string[]
-            {"A. Stable and grounded (S)",
-             "B. Imaginative (N)",
-             "C. Values-driven (F)",
-             "D. Open-minded (P)"
+            {"A. Stable and grounded",
+             "B. Imaginative",
+             "C. Values-driven",
+             "D. Open-minded"
             },
         };
-
 
         private void ShowChoiceSet(List<string[]> choiceSets, int index)
         {
@@ -198,7 +197,6 @@ namespace Alethiea2
         }
 
         private void btnA2_Click(object sender, EventArgs e) => HandleChoice('A');
-
         private void btnB2_Click(object sender, EventArgs e) => HandleChoice('A');
         private void btnC2_Click(object sender, EventArgs e) => HandleChoice('C');
         private void btnD2_Click(object sender, EventArgs e) => HandleChoice('D');
@@ -251,6 +249,9 @@ namespace Alethiea2
 
                 SavePersonalityToUser(mbti);
                 Close();
+
+                Home_Page home = new Home_Page();
+                home.Show();
             }   
         }
 

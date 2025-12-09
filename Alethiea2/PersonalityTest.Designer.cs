@@ -35,7 +35,7 @@
             btnC = new Button();
             btnB = new Button();
             btnD = new Button();
-            label9 = new Label();
+            lblPersonalityTest = new Label();
             SuspendLayout();
             // 
             // lblQuestion
@@ -50,7 +50,6 @@
             lblQuestion.TabIndex = 7;
             lblQuestion.Text = "question";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
-            lblQuestion.Click += lblQuestion_Click;
             // 
             // lblProgress
             // 
@@ -64,7 +63,6 @@
             lblProgress.TabIndex = 8;
             lblProgress.Text = ".....";
             lblProgress.TextAlign = ContentAlignment.MiddleCenter;
-            lblProgress.Click += lblProgress_Click;
             // 
             // btnA
             // 
@@ -114,17 +112,17 @@
             btnD.UseVisualStyleBackColor = false;
             btnD.Click += btnD_Click;
             // 
-            // label9
+            // lblPersonalityTest
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.FloralWhite;
-            label9.Location = new Point(405, 70);
-            label9.Name = "label9";
-            label9.Size = new Size(750, 79);
-            label9.TabIndex = 20;
-            label9.Text = "PERSONALITY TEST";
+            lblPersonalityTest.AutoSize = true;
+            lblPersonalityTest.BackColor = Color.Transparent;
+            lblPersonalityTest.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPersonalityTest.ForeColor = Color.FloralWhite;
+            lblPersonalityTest.Location = new Point(405, 70);
+            lblPersonalityTest.Name = "lblPersonalityTest";
+            lblPersonalityTest.Size = new Size(750, 79);
+            lblPersonalityTest.TabIndex = 20;
+            lblPersonalityTest.Text = "PERSONALITY TEST";
             // 
             // PersonalityTest
             // 
@@ -134,7 +132,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
-            Controls.Add(label9);
+            Controls.Add(lblPersonalityTest);
             Controls.Add(btnD);
             Controls.Add(btnB);
             Controls.Add(btnC);
@@ -157,6 +155,6 @@
         private Button btnB;
         private Button btnD;
         private Button btnC;
-        private Label label9;
+        private Label lblPersonalityTest;
     }
 }

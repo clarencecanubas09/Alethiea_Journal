@@ -21,7 +21,7 @@ namespace Alethiea2
             InitializeComponent();
         }
 
-        // Question list
+        // Questions for Macro-Personality
         List<string> questions = new List<string>
         {
             "How do you usually respond when meeting new people?",
@@ -34,10 +34,9 @@ namespace Alethiea2
             "When you're overwhelmed, what helps you regain balance?",
             "What type of conversations do you prefer?",
             "Which environment fits you best?"
-
-            // … continue until Question 10
         };
 
+        // Choices for Macro-Personality
         List<string> answersA = new List<string>
         {
             "I take initiative and lead the conversation.",
@@ -51,7 +50,6 @@ namespace Alethiea2
             "Debates, ideas, and productivity topics.",
             "Fast-paced, competitive, driven to achieve results."
         };
-
         List<string> answersB = new List<string>
         {
             "I smile, connect, and try to make everyone feel comfortable.",
@@ -65,7 +63,6 @@ namespace Alethiea2
             "Personal stories, shared energy, and lively discussions.",
             "Friendly, collaborative, full of social energy."
         };
-
         List<string> answersC = new List<string>
         {
             "I observe first and only speak when needed.",
@@ -79,7 +76,6 @@ namespace Alethiea2
             "Technical, logical, or informational topics.",
             "Calm, structured, focused on precision and tasks."
         };
-
         List<string> answersD = new List<string>
         {
             "I stay quiet and respond thoughtfully and gently.",
@@ -120,7 +116,6 @@ namespace Alethiea2
                 this.Close();
                 return;
             }
-
             ShowQuestion(currentQuestionIndex);
         }
 
@@ -132,21 +127,6 @@ namespace Alethiea2
             btnB.Text = answersB[index];
             btnC.Text = answersC[index];
             btnD.Text = answersD[index];
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblProgress_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblQuestion_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnClicked(char choice)
@@ -190,7 +170,7 @@ namespace Alethiea2
                                $"Introverted Analysts (C): {scoreC}\n" +
                                $"Introverted Diplomats (D): {scoreD}\n" +
                                $"Your macro-personality type is: {macroPersonality}\n" +
-                               $"Proceed to next part";
+                               $"Proceed to next part to determine your MBTI Personality";
 
                 MessageBox.Show(result, "Quiz Finished");
 
@@ -210,7 +190,6 @@ namespace Alethiea2
             btnD.Text = answersD[currentOptionD];
 
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
-
         }
 
         private void btnA_Click(object sender, EventArgs e)
@@ -231,11 +210,6 @@ namespace Alethiea2
         private void btnD_Click(object sender, EventArgs e)
         {
             btnClicked('D');
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private int GetMacroId(string macroPersonality)
@@ -283,7 +257,6 @@ namespace Alethiea2
                     }
                 }
             }
-
             return personalities;
         }
 
@@ -293,26 +266,27 @@ namespace Alethiea2
             {
                 conn.Open();
 
-                string sql = @"SELECT personality_id FROM users WHERE user_id = @uid LIMIT 1";
+                const string sql = @"SELECT personality_id FROM Users WHERE user_id = @uid LIMIT 1";
 
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@uid", userId);
-
                     var result = cmd.ExecuteScalar();
 
-                    // Personality is considered set if NOT NULL and NOT empty
-                    if (result != DBNull.Value && result != null)
-                    {
-                        string personalityValue = result.ToString().Trim();
-                        return personalityValue != "";
-                    }
+                    // Not found or NULL → no personality set
+                    if (result == null || result == DBNull.Value)
+                        return false;
+
+                    // If INT, treat 0 as NOT set; > 0 means set
+                    int personalityId;
+                    if (int.TryParse(result.ToString(), out personalityId))
+                        return personalityId > 0;
+
+                    // If stored as string, treat empty as NOT set
+                    var str = result.ToString().Trim();
+                    return !string.IsNullOrEmpty(str);
                 }
             }
-
-            return false; // No personality found → proceed with test
         }
-
-
     }
 }

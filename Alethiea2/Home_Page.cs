@@ -22,16 +22,6 @@ namespace Alethiea2
             InitializeComponent();
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Home_Page_Load(object sender, EventArgs e)
         {
             string[] greetings = { "“It’s okay not to be okay. It’s not okay to stay that way.”", "“Your mental health is more important than any test, meeting, or deadline.”", "“You don’t have to control your thoughts; you just have to stop letting them control you.”", "“Healing isn’t linear — some days you’ll move forward, other days backward, and both are part of the journey.”" };
@@ -41,93 +31,8 @@ namespace Alethiea2
 
         private void button26_Click(object sender, EventArgs e)
         {
-            tabPage5 = new TabPage();
-            tabPage5.Show();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel15_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel18_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel20_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel36_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-
+            tabViewProfile = new TabPage();
+            tabViewProfile.Show();
         }
 
         enum BreathPhase { Inhale, Hold1, Exhale, Hold2 }
@@ -181,23 +86,12 @@ namespace Alethiea2
             timer1.Start();
         }
 
-        private void tabPage1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
 
 
-        private void btnNavigateEntry_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 1;
-        }
+        private void btnNavigateEntry_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 1;
+        
 
         private void btnNavigateSummary_Click(object sender, EventArgs e)
         {
@@ -218,10 +112,8 @@ namespace Alethiea2
             tabControl1.SelectedIndex = 4;
             LoadUserInfo();
         }
-        private void btnNavigateBreathing_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 5;
-        }
+        private void btnNavigateBreathing_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 5;
+        
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout logout = new Logout();
@@ -273,33 +165,72 @@ namespace Alethiea2
                 }
             }
 
-            MessageBox.Show("Mood and note saved!");
+            int personalityId = UserSession.PersonalityId;
+            string mood = lblMood.Text;
+
+            // Generate personality-based message
+            string messageText = GetMessageForMood(mood, personalityId);
+
+            // Show message in your TabPage2 (instead of MessageBox)
+            lblMessagesForMood.Text = messageText;   // lblMessage is a Label inside TabPage2
+
+            // Switch to the Messages tab automatically
+            tabControl1.SelectedIndex = 6;
+
         }
 
+        private string GetMessageForMood(string mood, int personalityId)
+        {
+            mood = mood.ToLower();
 
-        private void mood_Depressed_Click(object sender, EventArgs e)
-        {
-            lblMood.Text = "Depressed";
+            if (personalityId >= 1 && personalityId <= 4) // Group A
+            {
+                if (mood == "amazing") return "“You’re on fire today! I’m proud of you. If you want to share what made your day this great, I’m all ears.”\r\n";
+                if (mood == "happy") return "“I love seeing you in a good mood! Let’s use that energy what are you excited about today?”";
+                if (mood == "neutral") return "“Just checking in if there’s anything on your mind or anything you want to sort out, you can always talk to me.”\r\n";
+                if (mood == "sad") return "“I can see you’re not okay, and that’s completely valid. If you want to walk through what’s bothering you or think it through together, I’m here.”";
+                if (mood == "depressed") return "“Hey, I know things feel really heavy right now. You don’t have to solve everything at once. I’m here to help you break things down or just sit with you if you don’t feel like talking.”\r\n";
+            }
+            else if (personalityId >= 5 && personalityId <= 8) // Group B
+            {
+                if (mood == "amazing") return "“You’re glowing today! Whatever happened, I’m so happy for you. Keep that beautiful energy shining.”";
+                if (mood == "happy") return "“It makes me so happy to see you smiling! I hope that good feeling stays with you all day.”\r\n";
+                if (mood == "neutral") return "“Hey, just checking in. How’s your heart today? I’m always here if you want to talk.”";
+                if (mood == "sad") return "“I can tell your heart feels heavy today. If you want to express what you’re feeling, I’m here to listen and support you.”";
+                if (mood == "depressed") return "“I’m so sorry you’re feeling this way. You bring so much to the people around you, and you deserve just as much care. I’m here for you always.”";
+            }
+            else if (personalityId >= 9 && personalityId <= 12) // Group C
+            {
+                if (mood == "amazing") return "“It’s great seeing you in such a good place. Whatever you accomplished, you should be proud.”\r\n";
+                if (mood == "happy") return "“Glad to hear you’re feeling good today. I hope your peace lasts and if you ever want to share what’s going well, I’m here.”";
+                if (mood == "neutral") return "“Hope your day is steady. If there’s anything on your mind you want to reason through, I’m always ready.”";
+                if (mood == "sad") return "“I noticed you’re down. No pressure to talk, but if you want someone who’ll listen without judgment, I’m here.”\r\n";
+                if (mood == "depressed") return "“I’m really sorry you’re going through something this heavy. You don’t owe anyone an explanation, but I’m here anytime you want a calm space to share or reflect.”\r\n";
+            }
+            else if (personalityId >= 13 && personalityId <= 16) // Group D
+            {
+                if (mood == "amazing") return "“You seem so light and bright today it’s beautiful to see. I hope that warmth stays with you for a long time.”\r\n";
+                if (mood == "happy") return "“It’s nice to feel your calm happiness. I’m glad today is kind to you.”";
+                if (mood == "neutral") return "“Just checking on your heart today. Even if things are steady, you don’t have to hold things in alone.”";
+                if (mood == "sad") return "“I can sense something is weighing on you. Take your time. I’m here to listen with care whenever you’re ready.”";
+                if (mood == "depressed") return "“I’m really sorry you’re hurting. You feel deeply, and that’s part of your strength. You don’t have to face this pain alone I’m here softly, patiently, whenever you need me.”\r\n";
+            }
+
+            return "Stay mindful of your emotions.";
         }
 
-        private void mood_Sad_Click(object sender, EventArgs e)
-        {
-            lblMood.Text = "Sad";
-        }
+        private void mood_Depressed_Click(object sender, EventArgs e) => lblMood.Text = "Depressed";
+        
 
-        private void mood_Neutral_Click(object sender, EventArgs e)
-        {
-            lblMood.Text = "Neutral";
-        }
-        private void mood_Happy_Click(object sender, EventArgs e)
-        {
-            lblMood.Text = "Happy";
-        }
-        private void mood_Amazing_Click(object sender, EventArgs e)
-        {
-            lblMood.Text = "Amazing";
-        }
+        private void mood_Sad_Click(object sender, EventArgs e) => lblMood.Text = "Sad";
+        
 
+        private void mood_Neutral_Click(object sender, EventArgs e) => lblMood.Text = "Neutral";
+        
+        private void mood_Happy_Click(object sender, EventArgs e) => lblMood.Text = "Happy";
+        
+        private void mood_Amazing_Click(object sender, EventArgs e) => lblMood.Text = "Amazing";
+        
         private void LoadMoodSummary()
         {
             int userId = Login.UserSession.UserID;
@@ -309,15 +240,15 @@ namespace Alethiea2
                 conn.Open();
 
                 string sql = @"
-            SELECT 
-                SUM(mood_depressed) AS dep,
-                SUM(mood_sad) AS sad,
-                SUM(mood_neutral) AS neu,
-                SUM(mood_happy) AS happy,
-                SUM(mood_amazing) AS amazing
-            FROM moods
-            WHERE user_id = @uid;
-        ";
+                SELECT 
+                    SUM(mood_depressed) AS dep,
+                    SUM(mood_sad) AS sad,
+                    SUM(mood_neutral) AS neu,
+                    SUM(mood_happy) AS happy,
+                    SUM(mood_amazing) AS amazing
+                FROM moods
+                WHERE user_id = @uid;
+            ";
 
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -353,9 +284,6 @@ namespace Alethiea2
             }
         }
 
-
-
-
         // Helper to safely convert DB fields to int
         private int SafeInt(object value)
         {
@@ -365,7 +293,6 @@ namespace Alethiea2
             int result;
             return int.TryParse(value.ToString(), out result) ? result : 0;
         }
-
 
         private void ShowMessageBasedOnMood(int dep, int sad, int neu, int happy, int amazing)
         {
@@ -412,10 +339,8 @@ namespace Alethiea2
                     }
                 }
             }
-
             return notesList;
         }
-
 
         private void DisplayNotes(List<string> notes)
         {
@@ -472,7 +397,6 @@ namespace Alethiea2
             }
         }
 
-
         public void UpdateAccount(int userId, string newUsername, string newPassword, string retypePassword)
         {
             if (string.IsNullOrWhiteSpace(newUsername) ||
@@ -499,7 +423,7 @@ namespace Alethiea2
                     string checkQuery = @"
                         SELECT COUNT(*) 
                         FROM Users 
-                        WHERE username = @username AND user_id != @id;
+                        WHERE username = @username AND user_id != @uid;
                     ";
 
                     using (var checkCmd = new MySqlCommand(checkQuery, conn))

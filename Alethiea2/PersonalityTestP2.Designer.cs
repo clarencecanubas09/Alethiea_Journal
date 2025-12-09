@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalityTestP2));
-            label9 = new Label();
+            lblPersonalityTestPart2 = new Label();
             btnD2 = new Button();
             btnB2 = new Button();
             btnC2 = new Button();
@@ -37,17 +37,17 @@
             lblProgress2 = new Label();
             SuspendLayout();
             // 
-            // label9
+            // lblPersonalityTestPart2
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.FloralWhite;
-            label9.Location = new Point(382, 77);
-            label9.Name = "label9";
-            label9.Size = new Size(750, 79);
-            label9.TabIndex = 27;
-            label9.Text = "PERSONALITY TEST";
+            lblPersonalityTestPart2.AutoSize = true;
+            lblPersonalityTestPart2.BackColor = Color.Transparent;
+            lblPersonalityTestPart2.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPersonalityTestPart2.ForeColor = Color.FloralWhite;
+            lblPersonalityTestPart2.Location = new Point(382, 77);
+            lblPersonalityTestPart2.Name = "lblPersonalityTestPart2";
+            lblPersonalityTestPart2.Size = new Size(750, 79);
+            lblPersonalityTestPart2.TabIndex = 27;
+            lblPersonalityTestPart2.Text = "PERSONALITY TEST";
             // 
             // btnD2
             // 
@@ -117,7 +117,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
-            Controls.Add(label9);
+            Controls.Add(lblPersonalityTestPart2);
             Controls.Add(btnD2);
             Controls.Add(btnB2);
             Controls.Add(btnC2);
@@ -133,7 +133,7 @@
 
         #endregion
 
-        private Label label9;
+        private Label lblPersonalityTestPart2;
         private Button btnD2;
         private Button btnB2;
         private Button btnC2;
