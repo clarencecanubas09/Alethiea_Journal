@@ -20,6 +20,12 @@ namespace Alethiea2
         public Home_Page()
         {
             InitializeComponent();
+            progressBarBreath.Minimum = 0;
+            progressBarBreath.Maximum = phaseTime; // phaseTime = number of ticks per phase
+            progressBarBreath.Value = 0;
+
+
+
         }
 
         private void Home_Page_Load(object sender, EventArgs e)
@@ -40,15 +46,20 @@ namespace Alethiea2
         int phaseTime = 40;
         int elapsed = 0;
 
+        int cycleCount = 0;
+        int totalCycles = 4;
         private void timer1_Tick(object sender, EventArgs e)
         {
             elapsed++;
 
             progressBarBreath.Value = elapsed;
 
+            elapsed++;
+            progressBarBreath.Value = elapsed;
+            progressBarBreath.Value = Math.Min(progressBarBreath.Maximum, progressBarBreath.Value);
+
             if (elapsed >= phaseTime)
             {
-                // Move to next phase
                 elapsed = 0;
                 progressBarBreath.Value = 0;
 
@@ -58,32 +69,59 @@ namespace Alethiea2
                         currentPhase = BreathPhase.Hold1;
                         lblInstruction.Text = "Hold";
                         break;
+
                     case BreathPhase.Hold1:
                         currentPhase = BreathPhase.Exhale;
-                        lblInstruction.Text = "Exhale";
+                        lblInstruction.Text = "exhale";
                         break;
+
                     case BreathPhase.Exhale:
-                        currentPhase = BreathPhase.Hold2;
-                        lblInstruction.Text = "Hold";
+                        cycleCount++;
+                        if (cycleCount >= totalCycles)
+                        {
+                            timer1.Stop();
+                            lblInstruction.Text = "Finished!";
+                            btnBreath.Text = "Start";
+                            return;
+                        }
+                        currentPhase = BreathPhase.Inhale;
+                        lblInstruction.Text = "Inhale";
                         break;
-                    case BreathPhase.Hold2:
+
+                        // Start next cycle
                         currentPhase = BreathPhase.Inhale;
                         lblInstruction.Text = "Inhale";
                         break;
                 }
             }
-        }
-
+            }
+        bool isPaused = false;  
         private void btnBreath_Click(object sender, EventArgs e)
         {
-            currentPhase = BreathPhase.Inhale;
-            lblInstruction.Text = "Inhale";
-            elapsed = 0;
+            if (timer1.Enabled)
+            {
+                // Pause
+                timer1.Stop();
+                btnBreath.Text = "Start";
+                isPaused = true;
+            }
+            else
+            {
+                if (!isPaused)
+                {
+                    // Starting fresh → reset everything
+                    cycleCount = 0;
+                    elapsed = 0;
+                    currentPhase = BreathPhase.Inhale;
+                    lblInstruction.Text = "Inhale";
+                    progressBarBreath.Value = 0;
+                }
 
-            progressBarBreath.Maximum = phaseTime;
-            progressBarBreath.Value = 0;
-
-            timer1.Start();
+                // Start/resume timer
+                timer1.Start();
+                btnBreath.Text = "Pause";
+                isPaused = false;
+            }
         }
 
         
