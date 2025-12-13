@@ -2333,6 +2333,7 @@
             progressBarBreath.Name = "progressBarBreath";
             progressBarBreath.Size = new Size(494, 47);
             progressBarBreath.TabIndex = 24;
+            progressBarBreath.Click += progressBarBreath_Click;
             // 
             // lblInstruction
             // 

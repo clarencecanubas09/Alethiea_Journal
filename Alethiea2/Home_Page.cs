@@ -86,12 +86,12 @@ namespace Alethiea2
             timer1.Start();
         }
 
-        
+
         private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
 
 
         private void btnNavigateEntry_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 1;
-        
+
 
         private void btnNavigateSummary_Click(object sender, EventArgs e)
         {
@@ -113,7 +113,7 @@ namespace Alethiea2
             LoadUserInfo();
         }
         private void btnNavigateBreathing_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 5;
-        
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout logout = new Logout();
@@ -176,35 +176,35 @@ namespace Alethiea2
 
             if (personalityId >= 1 && personalityId <= 4) // Group A
             {
-                if (mood == "amazing") return "“You’re on fire today! I’m proud of you. If you want to share what made your day this great, I’m all ears.”\r\n";
+                if (mood == "amazing") return "“You’re on fire today! I’m proud of you. If you want to share what made your day this great, I’m all ears.”";
                 if (mood == "happy") return "“I love seeing you in a good mood! Let’s use that energy what are you excited about today?”";
-                if (mood == "neutral") return "“Just checking in if there’s anything on your mind or anything you want to sort out, you can always talk to me.”\r\n";
+                if (mood == "neutral") return "“Just checking in if there’s anything on your mind or anything you want to sort out, you can always talk to me.”";
                 if (mood == "sad") return "“I can see you’re not okay, and that’s completely valid. If you want to walk through what’s bothering you or think it through together, I’m here.”";
-                if (mood == "depressed") return "“Hey, I know things feel really heavy right now. You don’t have to solve everything at once. I’m here to help you break things down or just sit with you if you don’t feel like talking.”\r\n";
+                if (mood == "depressed") return "“Hey, I know things feel really heavy right now. You don’t have to solve everything at once. I’m here to help you break things down or just sit with you if you don’t feel like talking.”";
             }
             else if (personalityId >= 5 && personalityId <= 8) // Group B
             {
                 if (mood == "amazing") return "“You’re glowing today! Whatever happened, I’m so happy for you. Keep that beautiful energy shining.”";
-                if (mood == "happy") return "“It makes me so happy to see you smiling! I hope that good feeling stays with you all day.”\r\n";
+                if (mood == "happy") return "“It makes me so happy to see you smiling! I hope that good feeling stays with you all day.”";
                 if (mood == "neutral") return "“Hey, just checking in. How’s your heart today? I’m always here if you want to talk.”";
                 if (mood == "sad") return "“I can tell your heart feels heavy today. If you want to express what you’re feeling, I’m here to listen and support you.”";
                 if (mood == "depressed") return "“I’m so sorry you’re feeling this way. You bring so much to the people around you, and you deserve just as much care. I’m here for you always.”";
             }
             else if (personalityId >= 9 && personalityId <= 12) // Group C
             {
-                if (mood == "amazing") return "“It’s great seeing you in such a good place. Whatever you accomplished, you should be proud.”\r\n";
+                if (mood == "amazing") return "“It’s great seeing you in such a good place. Whatever you accomplished, you should be proud.”";
                 if (mood == "happy") return "“Glad to hear you’re feeling good today. I hope your peace lasts and if you ever want to share what’s going well, I’m here.”";
                 if (mood == "neutral") return "“Hope your day is steady. If there’s anything on your mind you want to reason through, I’m always ready.”";
-                if (mood == "sad") return "“I noticed you’re down. No pressure to talk, but if you want someone who’ll listen without judgment, I’m here.”\r\n";
-                if (mood == "depressed") return "“I’m really sorry you’re going through something this heavy. You don’t owe anyone an explanation, but I’m here anytime you want a calm space to share or reflect.”\r\n";
+                if (mood == "sad") return "“I noticed you’re down. No pressure to talk, but if you want someone who’ll listen without judgment, I’m here.”";
+                if (mood == "depressed") return "“I’m really sorry you’re going through something this heavy. You don’t owe anyone an explanation, but I’m here anytime you want a calm space to share or reflect.”";
             }
             else if (personalityId >= 13 && personalityId <= 16) // Group D
             {
-                if (mood == "amazing") return "“You seem so light and bright today it’s beautiful to see. I hope that warmth stays with you for a long time.”\r\n";
+                if (mood == "amazing") return "“You seem so light and bright today it’s beautiful to see. I hope that warmth stays with you for a long time.”";
                 if (mood == "happy") return "“It’s nice to feel your calm happiness. I’m glad today is kind to you.”";
                 if (mood == "neutral") return "“Just checking on your heart today. Even if things are steady, you don’t have to hold things in alone.”";
                 if (mood == "sad") return "“I can sense something is weighing on you. Take your time. I’m here to listen with care whenever you’re ready.”";
-                if (mood == "depressed") return "“I’m really sorry you’re hurting. You feel deeply, and that’s part of your strength. You don’t have to face this pain alone I’m here softly, patiently, whenever you need me.”\r\n";
+                if (mood == "depressed") return "“I’m really sorry you’re hurting. You feel deeply, and that’s part of your strength. You don’t have to face this pain alone I’m here softly, patiently, whenever you need me.”";
             }
 
             return "Stay mindful of your emotions.";
@@ -229,35 +229,35 @@ namespace Alethiea2
         private void mood_Depressed_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Depressed";
-            
-        } 
-        
+
+        }
+
 
         private void mood_Sad_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Sad";
-            
+
         }
-        
+
 
         private void mood_Neutral_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Neutral";
-           
+
         }
 
         private void mood_Happy_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Happy";
-            
+
         }
 
         private void mood_Amazing_Click(object sender, EventArgs e)
-        { 
+        {
             lblMood.Text = "Amazing";
-           
+
         }
-        
+
         private void LoadMoodSummary()
         {
             int userId = Login.UserSession.UserID;
@@ -509,6 +509,11 @@ namespace Alethiea2
                 txtNewPassword.Text,
                 txtRetypePassword.Text
             );
+        }
+
+        private void progressBarBreath_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
