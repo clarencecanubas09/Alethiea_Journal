@@ -56,7 +56,6 @@
             pictureBox56 = new PictureBox();
             btnMoodSummary = new Button();
             lblQuote = new Label();
-            pictureBox8 = new PictureBox();
             tabMoodEntry = new TabPage();
             lblMood = new Label();
             panel16 = new Panel();
@@ -270,7 +269,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox56).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             tabMoodEntry.SuspendLayout();
             panel16.SuspendLayout();
             panel46.SuspendLayout();
@@ -407,16 +405,17 @@
             // 
             // tabDailyQuote
             // 
+            tabDailyQuote.BackColor = SystemColors.ActiveBorder;
+            tabDailyQuote.BackgroundImage = Properties.Resources.BgForDailyQuote;
+            tabDailyQuote.BackgroundImageLayout = ImageLayout.Zoom;
             tabDailyQuote.Controls.Add(panel1);
             tabDailyQuote.Controls.Add(lblQuote);
-            tabDailyQuote.Controls.Add(pictureBox8);
             tabDailyQuote.Location = new Point(4, 29);
             tabDailyQuote.Name = "tabDailyQuote";
             tabDailyQuote.Padding = new Padding(3);
             tabDailyQuote.Size = new Size(1836, 827);
             tabDailyQuote.TabIndex = 0;
             tabDailyQuote.Text = "HomePage";
-            tabDailyQuote.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -679,27 +678,15 @@
             // 
             // lblQuote
             // 
-            lblQuote.AutoSize = true;
             lblQuote.BackColor = Color.Transparent;
             lblQuote.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuote.ForeColor = Color.Black;
-            lblQuote.Location = new Point(286, 364);
-            lblQuote.MaximumSize = new Size(1138, 140);
+            lblQuote.ForeColor = Color.FloralWhite;
+            lblQuote.Location = new Point(292, 234);
             lblQuote.Name = "lblQuote";
-            lblQuote.Size = new Size(1131, 56);
+            lblQuote.Size = new Size(1138, 316);
             lblQuote.TabIndex = 6;
-            lblQuote.Text = "“It’s okay not to be okay. It’s not okay to stay that way.”";
+            lblQuote.Text = "Quote";
             lblQuote.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(202, 0);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(1338, 813);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 2;
-            pictureBox8.TabStop = false;
             // 
             // tabMoodEntry
             // 
@@ -2913,7 +2900,6 @@
             Load += Home_Page_Load;
             tabControl1.ResumeLayout(false);
             tabDailyQuote.ResumeLayout(false);
-            tabDailyQuote.PerformLayout();
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -2930,7 +2916,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox56).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             tabMoodEntry.ResumeLayout(false);
             tabMoodEntry.PerformLayout();
             panel16.ResumeLayout(false);
@@ -3060,7 +3045,6 @@
 
         private TabControl tabControl1;
         private TabPage tabDailyQuote;
-        private PictureBox pictureBox8;
         private TabPage tabNotesHistory;
         private TabPage tabViewProfile;
         private Label lblQuote;

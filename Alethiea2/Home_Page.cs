@@ -30,7 +30,19 @@ namespace Alethiea2
 
         private void Home_Page_Load(object sender, EventArgs e)
         {
-            string[] greetings = { "“It’s okay not to be okay. It’s not okay to stay that way.”", "“Your mental health is more important than any test, meeting, or deadline.”", "“You don’t have to control your thoughts; you just have to stop letting them control you.”", "“Healing isn’t linear — some days you’ll move forward, other days backward, and both are part of the journey.”" };
+            string[] greetings = 
+                {
+                "“There is no normal life that is free of pain. It’s the very wrestling with our problems that can be the impetus for our growth.” — Fred Rogers",
+                "“Our wounds are often the openings into the best and most beautiful part of us.” — David Richo",
+                "“Just because no one else can heal or do your inner work for you doesn’t mean you can, should, or need to do it alone.” — Lisa Olivera",
+                "“You are valuable just because you exist. Not because of what you do or what you have done, but simply because you are. — Max Lucado",
+                "“There is hope, even when your brain tells you there isn’t.” — John Green",
+                "“Numbing the pain for a while will make it worse when you finally feel it” — Albus Dumbledore",
+                "“You don’t need to find a lesson in your trauma.” — Jordan Pickell, MCP RCC",
+                "“Emotional pain is not something that should be hidden away and never spoken about. There is truth in your pain, there is growth in your pain, but only if it’s first brought out into the open.” — Steven Aitchison",
+                "“When we deny our pain, losses, and feelings year after year, we become less and less human. We transform slowly into empty shells with smiley faces painted on them.” — Peter Scazzero ",
+                "“‘Positive vibes only’ isn’t a thing. Humans have a wide range of emotions and that’s OK.” — Molly Bahr, LMHC",
+                };
             Random rand = new Random();
             lblQuote.Text = greetings[rand.Next(greetings.Length)];
         }
@@ -72,7 +84,7 @@ namespace Alethiea2
 
                     case BreathPhase.Hold1:
                         currentPhase = BreathPhase.Exhale;
-                        lblInstruction.Text = "exhale";
+                        lblInstruction.Text = "Exhale";
                         break;
 
                     case BreathPhase.Exhale:
@@ -80,7 +92,7 @@ namespace Alethiea2
                         if (cycleCount >= totalCycles)
                         {
                             timer1.Stop();
-                            lblInstruction.Text = "Finished!";
+                            lblInstruction.Text = "Box Breathing Session Finished! ";
                             btnBreath.Text = "Start";
                             return;
                         }
