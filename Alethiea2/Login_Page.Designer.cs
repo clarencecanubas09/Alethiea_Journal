@@ -103,12 +103,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
             Controls.Add(btnLogIn);
             Controls.Add(btnSignUp);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
             Controls.Add(picLogo);
+            DoubleBuffered = true;
             Name = "Login";
             Text = "Log In";
             Click += btnLogIn_Click;

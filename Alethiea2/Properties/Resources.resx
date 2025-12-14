@@ -148,6 +148,9 @@
   <data name="BTN-DAILYMOODCHECKER (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN-DAILYMOODCHECKER (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Summer51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Summer51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Date_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Date_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,7 +202,7 @@
   <data name="Mood Summary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mood Summary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Summer51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Summer51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BgForDailyQuote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BgForDailyQuote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

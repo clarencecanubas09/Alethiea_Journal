@@ -20,11 +20,29 @@ namespace Alethiea2
         public Home_Page()
         {
             InitializeComponent();
+            progressBarBreath.Minimum = 0;
+            progressBarBreath.Maximum = phaseTime; // phaseTime = number of ticks per phase
+            progressBarBreath.Value = 0;
+
+
+
         }
 
         private void Home_Page_Load(object sender, EventArgs e)
         {
-            string[] greetings = { "“It’s okay not to be okay. It’s not okay to stay that way.”", "“Your mental health is more important than any test, meeting, or deadline.”", "“You don’t have to control your thoughts; you just have to stop letting them control you.”", "“Healing isn’t linear — some days you’ll move forward, other days backward, and both are part of the journey.”" };
+            string[] greetings = 
+                {
+                "“There is no normal life that is free of pain. It’s the very wrestling with our problems that can be the impetus for our growth.” — Fred Rogers",
+                "“Our wounds are often the openings into the best and most beautiful part of us.” — David Richo",
+                "“Just because no one else can heal or do your inner work for you doesn’t mean you can, should, or need to do it alone.” — Lisa Olivera",
+                "“You are valuable just because you exist. Not because of what you do or what you have done, but simply because you are. — Max Lucado",
+                "“There is hope, even when your brain tells you there isn’t.” — John Green",
+                "“Numbing the pain for a while will make it worse when you finally feel it” — Albus Dumbledore",
+                "“You don’t need to find a lesson in your trauma.” — Jordan Pickell, MCP RCC",
+                "“Emotional pain is not something that should be hidden away and never spoken about. There is truth in your pain, there is growth in your pain, but only if it’s first brought out into the open.” — Steven Aitchison",
+                "“When we deny our pain, losses, and feelings year after year, we become less and less human. We transform slowly into empty shells with smiley faces painted on them.” — Peter Scazzero ",
+                "“‘Positive vibes only’ isn’t a thing. Humans have a wide range of emotions and that’s OK.” — Molly Bahr, LMHC",
+                };
             Random rand = new Random();
             lblQuote.Text = greetings[rand.Next(greetings.Length)];
         }
@@ -41,15 +59,20 @@ namespace Alethiea2
         int phaseTime = 40;
         int elapsed = 0;
 
+        int cycleCount = 0;
+        int totalCycles = 4;
         private void timer1_Tick(object sender, EventArgs e)
         {
             elapsed++;
 
             progressBarBreath.Value = elapsed;
 
+            elapsed++;
+            progressBarBreath.Value = elapsed;
+            progressBarBreath.Value = Math.Min(progressBarBreath.Maximum, progressBarBreath.Value);
+
             if (elapsed >= phaseTime)
             {
-                // Move to next phase
                 elapsed = 0;
                 progressBarBreath.Value = 0;
 
@@ -59,32 +82,59 @@ namespace Alethiea2
                         currentPhase = BreathPhase.Hold1;
                         lblInstruction.Text = "Hold";
                         break;
+
                     case BreathPhase.Hold1:
                         currentPhase = BreathPhase.Exhale;
                         lblInstruction.Text = "Exhale";
                         break;
+
                     case BreathPhase.Exhale:
-                        currentPhase = BreathPhase.Hold2;
-                        lblInstruction.Text = "Hold";
+                        cycleCount++;
+                        if (cycleCount >= totalCycles)
+                        {
+                            timer1.Stop();
+                            lblInstruction.Text = "Box Breathing Session Finished! ";
+                            btnBreath.Text = "Start";
+                            return;
+                        }
+                        currentPhase = BreathPhase.Inhale;
+                        lblInstruction.Text = "Inhale";
                         break;
-                    case BreathPhase.Hold2:
+
+                        // Start next cycle
                         currentPhase = BreathPhase.Inhale;
                         lblInstruction.Text = "Inhale";
                         break;
                 }
             }
-        }
-
+            }
+        bool isPaused = false;  
         private void btnBreath_Click(object sender, EventArgs e)
         {
-            currentPhase = BreathPhase.Inhale;
-            lblInstruction.Text = "Inhale";
-            elapsed = 0;
+            if (timer1.Enabled)
+            {
+                // Pause
+                timer1.Stop();
+                btnBreath.Text = "Start";
+                isPaused = true;
+            }
+            else
+            {
+                if (!isPaused)
+                {
+                    // Starting fresh → reset everything
+                    cycleCount = 0;
+                    elapsed = 0;
+                    currentPhase = BreathPhase.Inhale;
+                    lblInstruction.Text = "Inhale";
+                    progressBarBreath.Value = 0;
+                }
 
-            progressBarBreath.Maximum = phaseTime;
-            progressBarBreath.Value = 0;
-
-            timer1.Start();
+                // Start/resume timer
+                timer1.Start();
+                btnBreath.Text = "Pause";
+                isPaused = false;
+            }
         }
 
 
@@ -166,19 +216,10 @@ namespace Alethiea2
                 }
             }
 
-            int personalityId = UserSession.PersonalityId;
-            string mood = lblMood.Text;
-
-            // Generate personality-based message
-            string messageText = GetMessageForMood(mood, personalityId);
-
-            // Show message in your TabPage2 (instead of MessageBox)
-            lblMessagesForMood.Text = messageText;   // lblMessage is a Label inside TabPage2
-
-            // Switch to the Messages tab automatically
-            tabControl1.SelectedIndex = 6;
-
+            HandleMoodSelection(lblMood.Text.ToLower());
         }
+
+
 
         private string GetMessageForMood(string mood, int personalityId)
         {
@@ -186,51 +227,87 @@ namespace Alethiea2
 
             if (personalityId >= 1 && personalityId <= 4) // Group A
             {
-                if (mood == "amazing") return "“You’re on fire today! I’m proud of you. If you want to share what made your day this great, I’m all ears.”\r\n";
+                if (mood == "amazing") return "“You’re on fire today! I’m proud of you. If you want to share what made your day this great, I’m all ears.”";
                 if (mood == "happy") return "“I love seeing you in a good mood! Let’s use that energy what are you excited about today?”";
-                if (mood == "neutral") return "“Just checking in if there’s anything on your mind or anything you want to sort out, you can always talk to me.”\r\n";
+                if (mood == "neutral") return "“Just checking in if there’s anything on your mind or anything you want to sort out, you can always talk to me.”";
                 if (mood == "sad") return "“I can see you’re not okay, and that’s completely valid. If you want to walk through what’s bothering you or think it through together, I’m here.”";
-                if (mood == "depressed") return "“Hey, I know things feel really heavy right now. You don’t have to solve everything at once. I’m here to help you break things down or just sit with you if you don’t feel like talking.”\r\n";
+                if (mood == "depressed") return "“Hey, I know things feel really heavy right now. You don’t have to solve everything at once. I’m here to help you break things down or just sit with you if you don’t feel like talking.”";
             }
             else if (personalityId >= 5 && personalityId <= 8) // Group B
             {
                 if (mood == "amazing") return "“You’re glowing today! Whatever happened, I’m so happy for you. Keep that beautiful energy shining.”";
-                if (mood == "happy") return "“It makes me so happy to see you smiling! I hope that good feeling stays with you all day.”\r\n";
+                if (mood == "happy") return "“It makes me so happy to see you smiling! I hope that good feeling stays with you all day.”";
                 if (mood == "neutral") return "“Hey, just checking in. How’s your heart today? I’m always here if you want to talk.”";
                 if (mood == "sad") return "“I can tell your heart feels heavy today. If you want to express what you’re feeling, I’m here to listen and support you.”";
                 if (mood == "depressed") return "“I’m so sorry you’re feeling this way. You bring so much to the people around you, and you deserve just as much care. I’m here for you always.”";
             }
             else if (personalityId >= 9 && personalityId <= 12) // Group C
             {
-                if (mood == "amazing") return "“It’s great seeing you in such a good place. Whatever you accomplished, you should be proud.”\r\n";
+                if (mood == "amazing") return "“It’s great seeing you in such a good place. Whatever you accomplished, you should be proud.”";
                 if (mood == "happy") return "“Glad to hear you’re feeling good today. I hope your peace lasts and if you ever want to share what’s going well, I’m here.”";
                 if (mood == "neutral") return "“Hope your day is steady. If there’s anything on your mind you want to reason through, I’m always ready.”";
-                if (mood == "sad") return "“I noticed you’re down. No pressure to talk, but if you want someone who’ll listen without judgment, I’m here.”\r\n";
-                if (mood == "depressed") return "“I’m really sorry you’re going through something this heavy. You don’t owe anyone an explanation, but I’m here anytime you want a calm space to share or reflect.”\r\n";
+                if (mood == "sad") return "“I noticed you’re down. No pressure to talk, but if you want someone who’ll listen without judgment, I’m here.”";
+                if (mood == "depressed") return "“I’m really sorry you’re going through something this heavy. You don’t owe anyone an explanation, but I’m here anytime you want a calm space to share or reflect.”";
             }
             else if (personalityId >= 13 && personalityId <= 16) // Group D
             {
-                if (mood == "amazing") return "“You seem so light and bright today it’s beautiful to see. I hope that warmth stays with you for a long time.”\r\n";
+                if (mood == "amazing") return "“You seem so light and bright today it’s beautiful to see. I hope that warmth stays with you for a long time.”";
                 if (mood == "happy") return "“It’s nice to feel your calm happiness. I’m glad today is kind to you.”";
                 if (mood == "neutral") return "“Just checking on your heart today. Even if things are steady, you don’t have to hold things in alone.”";
                 if (mood == "sad") return "“I can sense something is weighing on you. Take your time. I’m here to listen with care whenever you’re ready.”";
-                if (mood == "depressed") return "“I’m really sorry you’re hurting. You feel deeply, and that’s part of your strength. You don’t have to face this pain alone I’m here softly, patiently, whenever you need me.”\r\n";
+                if (mood == "depressed") return "“I’m really sorry you’re hurting. You feel deeply, and that’s part of your strength. You don’t have to face this pain alone I’m here softly, patiently, whenever you need me.”";
             }
 
             return "Stay mindful of your emotions.";
         }
 
-        private void mood_Depressed_Click(object sender, EventArgs e) => lblMood.Text = "Depressed";
+        private void HandleMoodSelection(string mood)
+        {
+
+            int personalityId = UserSession.PersonalityId;
+
+            // Generate personality-based message
+            string messageText = GetMessageForMood(mood, personalityId);
+
+            // Show in TabPage2
+            lblMessagesForMood.Text = messageText;
+            tabControl1.SelectedIndex = 6;
+
+            // Optionally save mood + notes to DB here if you want
+        }
 
 
-        private void mood_Sad_Click(object sender, EventArgs e) => lblMood.Text = "Sad";
+        private void mood_Depressed_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Depressed";
+
+        }
 
 
-        private void mood_Neutral_Click(object sender, EventArgs e) => lblMood.Text = "Neutral";
+        private void mood_Sad_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Sad";
 
-        private void mood_Happy_Click(object sender, EventArgs e) => lblMood.Text = "Happy";
+        }
 
-        private void mood_Amazing_Click(object sender, EventArgs e) => lblMood.Text = "Amazing";
+
+        private void mood_Neutral_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Neutral";
+
+        }
+
+        private void mood_Happy_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Happy";
+
+        }
+
+        private void mood_Amazing_Click(object sender, EventArgs e)
+        {
+            lblMood.Text = "Amazing";
+
+        }
 
         private void LoadMoodSummary()
         {
@@ -485,7 +562,7 @@ namespace Alethiea2
             );
         }
 
-        private void lblQuote_Click(object sender, EventArgs e)
+        private void progressBarBreath_Click(object sender, EventArgs e)
         {
 
         }
