@@ -188,11 +188,6 @@ namespace Alethiea2
             btnB.Text = answersB[currentOptionB];
             btnC.Text = answersC[currentOptionC];
             btnD.Text = answersD[currentOptionD];
-<<<<<<< HEAD
-            lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
-
-
-=======
 
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
         }
@@ -200,7 +195,6 @@ namespace Alethiea2
         private void btnA_Click(object sender, EventArgs e)
         {
             btnClicked('A');
->>>>>>> e919bd72c55fc13206b914d117d06401de03bb97
         }
 
         private void btnB_Click(object sender, EventArgs e)
