@@ -690,6 +690,7 @@
             lblQuote.TabIndex = 6;
             lblQuote.Text = "“It’s okay not to be okay. It’s not okay to stay that way.”";
             lblQuote.TextAlign = ContentAlignment.MiddleCenter;
+            lblQuote.Click += lblQuote_Click;
             // 
             // pictureBox8
             // 

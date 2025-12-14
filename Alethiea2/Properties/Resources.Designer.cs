@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Alethiea2.Properties {
-    using System;
-    
-    
+using System;
+
+namespace Alethiea2.Properties
+{
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,319 +22,383 @@ namespace Alethiea2.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
-        
+    internal class Resources
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Resources()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        internal static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Alethiea2.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        internal static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10 {
-            get {
+        internal static System.Drawing.Bitmap _10
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ALETHEIA_LOGO_no_bg__2 {
-            get {
+        internal static System.Drawing.Bitmap ALETHEIA_LOGO_no_bg__2
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("ALETHEIA LOGO(no bg) 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Are_you_sure_you_want_to_log_out_ {
-            get {
+        internal static System.Drawing.Bitmap Are_you_sure_you_want_to_log_out_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Are you sure you want to log out_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Awesome {
-            get {
+        internal static System.Drawing.Bitmap Awesome
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Awesome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bad {
-            get {
+        internal static System.Drawing.Bitmap Bad
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Bad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg1 {
-            get {
+        internal static System.Drawing.Bitmap bg1
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER {
-            get {
+        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("BTN-DAILYMOODCHECKER", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__3_ {
-            get {
+        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__3_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("BTN-DAILYMOODCHECKER (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__4_ {
-            get {
+        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__4_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("BTN-DAILYMOODCHECKER (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__5_ {
-            get {
+        internal static System.Drawing.Bitmap BTN_DAILYMOODCHECKER__5_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("BTN-DAILYMOODCHECKER (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Confirm_Logout {
-            get {
+        internal static System.Drawing.Bitmap Confirm_Logout
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Confirm Logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Confirm_Logout__1_ {
-            get {
+        internal static System.Drawing.Bitmap Confirm_Logout__1_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Confirm Logout (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Daily_Mood_Checker {
-            get {
+        internal static System.Drawing.Bitmap Daily_Mood_Checker
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Daily Mood Checker", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Date_ {
-            get {
+        internal static System.Drawing.Bitmap Date_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Date_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Date_1 {
-            get {
+        internal static System.Drawing.Bitmap Date_1
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Date_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Dunno_what_to_feel {
-            get {
+        internal static System.Drawing.Bitmap Dunno_what_to_feel
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Dunno what to feel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Group_3 {
-            get {
+        internal static System.Drawing.Bitmap Group_3
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Group 3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Group_9 {
-            get {
+        internal static System.Drawing.Bitmap Group_9
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Group 9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mood_Summary {
-            get {
+        internal static System.Drawing.Bitmap Mood_Summary
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Mood Summary", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Neutral {
-            get {
+        internal static System.Drawing.Bitmap Neutral
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Notes_History {
-            get {
+        internal static System.Drawing.Bitmap Notes_History
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Notes History", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pretty_good {
-            get {
+        internal static System.Drawing.Bitmap Pretty_good
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Pretty good", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Select_Your_Mood_Today__1_ {
-            get {
+        internal static System.Drawing.Bitmap Select_Your_Mood_Today__1_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Select Your Mood Today (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Summer2 {
-            get {
+        internal static System.Drawing.Bitmap Summer2
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Summer2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Summer3 {
-            get {
+        internal static System.Drawing.Bitmap Summer3
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Summer3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Summer5 {
-            get {
+        internal static System.Drawing.Bitmap Summer5
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Summer5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Summer51 {
-            get {
+        internal static System.Drawing.Bitmap Summer51
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Summer51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Your_daily_path_to_emotional_truth__This_journal_tracker_helps_you_uncover_patterns__gain_insight__and_achieve_genuine_self_awareness_through_focused_reflection_ {
-            get {
+        internal static System.Drawing.Bitmap Your_daily_path_to_emotional_truth__This_journal_tracker_helps_you_uncover_patterns__gain_insight__and_achieve_genuine_self_awareness_through_focused_reflection_
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("Your daily path to emotional truth. This journal tracker helps you uncover patter" +
                         "ns, gain insight, and achieve genuine self-awareness through focused reflection." +
                         "", resourceCulture);

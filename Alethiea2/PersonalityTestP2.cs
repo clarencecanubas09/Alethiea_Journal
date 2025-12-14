@@ -1,7 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using static Alethiea2.Login;
 
 namespace Alethiea2
@@ -41,36 +41,36 @@ namespace Alethiea2
         }
 
         List<string[]> macroAChoices = new List<string[]>
-        { 
-            new string[] 
+        {
+            new string[]
             { "A. I trust facts and real examples",
                 "B. I trust facts and real examples",
-                "C. I compare systems and frameworks", 
-                "D. I act spontaneously based on ideas" }, 
-            new string[] 
-            { "A. I prefer detailed instructions", 
-                "B. I imagine different outcomes", 
-                "C. I decide based on logic", 
-                "D. I stay flexible with final decisions" 
-            }, 
-            new string[] 
-            { "A. Practical and hands-on", 
-                "B. Innovative and abstract", 
-                "C. Objective and firm", 
-                "D. Adaptive and exploratory" 
-            }, 
-            new string[] 
-            { "A. Notice small details", 
-                "B. See the bigger picture",
-                "C. Apply rules and systems", 
-                "D. Keep things open-ended" 
-            }, 
+                "C. I compare systems and frameworks",
+                "D. I act spontaneously based on ideas" },
             new string[]
-            { "A. Prefer proven methods", 
-                "B. Prefer unique approaches", 
-                "C. Value correctness", 
-                "D. Value experimentation" 
-            }, 
+            { "A. I prefer detailed instructions",
+                "B. I imagine different outcomes",
+                "C. I decide based on logic",
+                "D. I stay flexible with final decisions"
+            },
+            new string[]
+            { "A. Practical and hands-on",
+                "B. Innovative and abstract",
+                "C. Objective and firm",
+                "D. Adaptive and exploratory"
+            },
+            new string[]
+            { "A. Notice small details",
+                "B. See the bigger picture",
+                "C. Apply rules and systems",
+                "D. Keep things open-ended"
+            },
+            new string[]
+            { "A. Prefer proven methods",
+                "B. Prefer unique approaches",
+                "C. Value correctness",
+                "D. Value experimentation"
+            },
         };
         List<string[]> macroBChoices = new List<string[]>
         {
@@ -252,7 +252,7 @@ namespace Alethiea2
 
                 Home_Page home = new Home_Page();
                 home.Show();
-            }   
+            }
         }
 
         private string DetermineMBTI(string macroResult)

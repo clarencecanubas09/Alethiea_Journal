@@ -1,7 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using BCrypt.Net;
-using Org.BouncyCastle.Asn1.Cmp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Cmp;
 using static Alethiea2.Login;
 
 namespace Alethiea2
@@ -35,7 +35,8 @@ namespace Alethiea2
             tabViewProfile.Show();
         }
 
-        enum BreathPhase { Inhale, Hold1, Exhale, Hold2 }
+        private enum BreathPhase
+        { Inhale, Hold1, Exhale, Hold2 }
         BreathPhase currentPhase = BreathPhase.Inhale;
         int phaseTime = 40;
         int elapsed = 0;
@@ -86,12 +87,12 @@ namespace Alethiea2
             timer1.Start();
         }
 
-        
+
         private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
 
 
         private void btnNavigateEntry_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 1;
-        
+
 
         private void btnNavigateSummary_Click(object sender, EventArgs e)
         {
@@ -113,7 +114,7 @@ namespace Alethiea2
             LoadUserInfo();
         }
         private void btnNavigateBreathing_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 5;
-        
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Logout logout = new Logout();
@@ -220,17 +221,17 @@ namespace Alethiea2
         }
 
         private void mood_Depressed_Click(object sender, EventArgs e) => lblMood.Text = "Depressed";
-        
+
 
         private void mood_Sad_Click(object sender, EventArgs e) => lblMood.Text = "Sad";
-        
+
 
         private void mood_Neutral_Click(object sender, EventArgs e) => lblMood.Text = "Neutral";
-        
+
         private void mood_Happy_Click(object sender, EventArgs e) => lblMood.Text = "Happy";
-        
+
         private void mood_Amazing_Click(object sender, EventArgs e) => lblMood.Text = "Amazing";
-        
+
         private void LoadMoodSummary()
         {
             int userId = Login.UserSession.UserID;
@@ -482,6 +483,11 @@ namespace Alethiea2
                 txtNewPassword.Text,
                 txtRetypePassword.Text
             );
+        }
+
+        private void lblQuote_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
