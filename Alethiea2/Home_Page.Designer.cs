@@ -687,7 +687,6 @@
             lblQuote.TabIndex = 6;
             lblQuote.Text = "Quote";
             lblQuote.TextAlign = ContentAlignment.MiddleCenter;
-            lblQuote.Click += lblQuote_Click;
             // 
             // tabMoodEntry
             // 
