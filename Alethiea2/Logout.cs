@@ -7,24 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Alethiea2.Login;
 
 namespace Alethiea2
 {
-    public partial class Log_Out : Form
+    public partial class Logout : Form
     {
-        public Log_Out()
+        public Logout()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
+            // Clear session
+            Login login = new Login();
+            login.Show();
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
+            // Close or hide current form
+            this.Close();
         }
     }
 }

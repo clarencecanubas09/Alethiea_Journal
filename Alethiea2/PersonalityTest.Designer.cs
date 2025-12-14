@@ -31,63 +31,46 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalityTest));
             lblQuestion = new Label();
             lblProgress = new Label();
-            label1 = new Label();
             btnA = new Button();
             btnC = new Button();
             btnB = new Button();
             btnD = new Button();
+            lblPersonalityTest = new Label();
             SuspendLayout();
             // 
             // lblQuestion
             // 
-            lblQuestion.AutoSize = true;
             lblQuestion.BackColor = Color.Transparent;
             lblQuestion.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuestion.ForeColor = Color.Black;
-            lblQuestion.Location = new Point(237, 199);
+            lblQuestion.ForeColor = Color.FloralWhite;
+            lblQuestion.Location = new Point(237, 270);
             lblQuestion.MaximumSize = new Size(1138, 140);
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(195, 56);
+            lblQuestion.Size = new Size(1097, 56);
             lblQuestion.TabIndex = 7;
             lblQuestion.Text = "question";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
-            lblQuestion.Click += lblQuestion_Click;
             // 
             // lblProgress
             // 
-            lblProgress.AutoSize = true;
             lblProgress.BackColor = Color.Transparent;
             lblProgress.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProgress.ForeColor = Color.Black;
-            lblProgress.Location = new Point(593, 123);
+            lblProgress.ForeColor = Color.FloralWhite;
+            lblProgress.Location = new Point(237, 180);
             lblProgress.MaximumSize = new Size(1138, 140);
             lblProgress.Name = "lblProgress";
-            lblProgress.Size = new Size(79, 56);
+            lblProgress.Size = new Size(1097, 56);
             lblProgress.TabIndex = 8;
             lblProgress.Text = ".....";
             lblProgress.TextAlign = ContentAlignment.MiddleCenter;
-            lblProgress.Click += lblProgress_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(237, 34);
-            label1.MaximumSize = new Size(1138, 140);
-            label1.Name = "label1";
-            label1.Size = new Size(1097, 56);
-            label1.TabIndex = 9;
-            label1.Text = "Let's determine your personality before we get started";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnA
             // 
             btnA.BackColor = Color.FromArgb(255, 192, 255);
-            btnA.Location = new Point(272, 510);
+            btnA.Font = new Font("Imprint MT Shadow", 12F);
+            btnA.Location = new Point(235, 396);
             btnA.Name = "btnA";
-            btnA.Size = new Size(300, 100);
+            btnA.Size = new Size(400, 150);
             btnA.TabIndex = 10;
             btnA.Text = "btnA";
             btnA.UseVisualStyleBackColor = false;
@@ -96,9 +79,10 @@
             // btnC
             // 
             btnC.BackColor = Color.FromArgb(255, 192, 255);
-            btnC.Location = new Point(272, 645);
+            btnC.Font = new Font("Imprint MT Shadow", 12F);
+            btnC.Location = new Point(235, 578);
             btnC.Name = "btnC";
-            btnC.Size = new Size(300, 100);
+            btnC.Size = new Size(400, 150);
             btnC.TabIndex = 11;
             btnC.Text = "btnC";
             btnC.UseVisualStyleBackColor = false;
@@ -107,9 +91,10 @@
             // btnB
             // 
             btnB.BackColor = Color.FromArgb(255, 192, 255);
-            btnB.Location = new Point(991, 510);
+            btnB.Font = new Font("Imprint MT Shadow", 12F);
+            btnB.Location = new Point(954, 396);
             btnB.Name = "btnB";
-            btnB.Size = new Size(300, 100);
+            btnB.Size = new Size(400, 150);
             btnB.TabIndex = 12;
             btnB.Text = "btnB";
             btnB.UseVisualStyleBackColor = false;
@@ -118,13 +103,26 @@
             // btnD
             // 
             btnD.BackColor = Color.FromArgb(255, 192, 255);
-            btnD.Location = new Point(991, 645);
+            btnD.Font = new Font("Imprint MT Shadow", 12F);
+            btnD.Location = new Point(954, 578);
             btnD.Name = "btnD";
-            btnD.Size = new Size(300, 100);
+            btnD.Size = new Size(400, 150);
             btnD.TabIndex = 13;
             btnD.Text = "btnD";
             btnD.UseVisualStyleBackColor = false;
             btnD.Click += btnD_Click;
+            // 
+            // lblPersonalityTest
+            // 
+            lblPersonalityTest.AutoSize = true;
+            lblPersonalityTest.BackColor = Color.Transparent;
+            lblPersonalityTest.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPersonalityTest.ForeColor = Color.FloralWhite;
+            lblPersonalityTest.Location = new Point(405, 70);
+            lblPersonalityTest.Name = "lblPersonalityTest";
+            lblPersonalityTest.Size = new Size(750, 79);
+            lblPersonalityTest.TabIndex = 20;
+            lblPersonalityTest.Text = "PERSONALITY TEST";
             // 
             // PersonalityTest
             // 
@@ -134,11 +132,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1542, 813);
+            Controls.Add(lblPersonalityTest);
             Controls.Add(btnD);
             Controls.Add(btnB);
             Controls.Add(btnC);
             Controls.Add(btnA);
-            Controls.Add(label1);
             Controls.Add(lblProgress);
             Controls.Add(lblQuestion);
             DoubleBuffered = true;
@@ -153,10 +151,10 @@
 
         private Label lblQuestion;
         private Label lblProgress;
-        private Label label1;
         private Button btnA;
         private Button btnB;
         private Button btnD;
         private Button btnC;
+        private Label lblPersonalityTest;
     }
 }

@@ -8,17 +8,20 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using static Alethiea2.Login;
 
 namespace Alethiea2
 {
     public partial class PersonalityTest : Form
     {
+        string connectionString = "Server=localhost;Database=oop_finals;User ID=root;Pooling=true;";
         public PersonalityTest()
         {
             InitializeComponent();
         }
 
-        // Question list
+        // Questions for Macro-Personality
         List<string> questions = new List<string>
         {
             "How do you usually respond when meeting new people?",
@@ -31,10 +34,9 @@ namespace Alethiea2
             "When you're overwhelmed, what helps you regain balance?",
             "What type of conversations do you prefer?",
             "Which environment fits you best?"
-
-            // … continue until Question 10
         };
 
+        // Choices for Macro-Personality
         List<string> answersA = new List<string>
         {
             "I take initiative and lead the conversation.",
@@ -46,23 +48,21 @@ namespace Alethiea2
             "“I enjoy leading and improving systems.”",
             "Focusing on goals and regaining control.",
             "Debates, ideas, and productivity topics.",
-            " Fast-paced, competitive, driven to achieve results."
+            "Fast-paced, competitive, driven to achieve results."
         };
-
         List<string> answersB = new List<string>
         {
-            " I smile, connect, and try to make everyone feel comfortable.",
+            "I smile, connect, and try to make everyone feel comfortable.",
             "Understand how people feel about it and collaborate.",
             "Social places where I can connect with others.",
             "Harmony and how it affects people..",
             "Encouraging others or working in a team.",
             "Work with others and keep everyone motivated.",
-            " “I enjoy connecting with people and uplifting them.”",
+            "“I enjoy connecting with people and uplifting them.”",
             "Talking to someone and seeking emotional connection.",
             "Personal stories, shared energy, and lively discussions.",
             "Friendly, collaborative, full of social energy."
         };
-
         List<string> answersC = new List<string>
         {
             "I observe first and only speak when needed.",
@@ -76,7 +76,6 @@ namespace Alethiea2
             "Technical, logical, or informational topics.",
             "Calm, structured, focused on precision and tasks."
         };
-
         List<string> answersD = new List<string>
         {
             "I stay quiet and respond thoughtfully and gently.",
@@ -85,7 +84,7 @@ namespace Alethiea2
             "Personal values, feelings, and inner meaning.",
             "Helping quietly or working creatively in your own flow.",
             "Reflect internally and approach at your own pace.",
-            " “I enjoy understanding people’s emotions and inner worlds.”",
+            "“I enjoy understanding people’s emotions and inner worlds.”",
             "Retreating into quiet reflection or creativity.",
             "Deep emotional or imaginative conversations.",
             "Peaceful, reflective, emotionally comfortable."
@@ -104,9 +103,19 @@ namespace Alethiea2
         int scoreC = 0; // Introverted Analysts
         int scoreD = 0; // Introverted Diplomats
 
-
         private void PersonalityTest_Load(object sender, EventArgs e)
         {
+            int userId = Login.UserSession.UserID;
+
+            if (UserAlreadyHasPersonality(userId))
+            {
+                MessageBox.Show("You already completed the personality test.");
+
+                Home_Page home = new Home_Page();
+                home.Show();
+                this.Close();
+                return;
+            }
             ShowQuestion(currentQuestionIndex);
         }
 
@@ -120,37 +129,55 @@ namespace Alethiea2
             btnD.Text = answersD[index];
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblProgress_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblQuestion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnA_Click(object sender, EventArgs e)
-        {
-            btnClicked();
-        }
-
-
-
-        void btnClicked()
+        private void btnClicked(char choice)
         {
             if (currentQuestionIndex != 9)
             {
                 currentQuestionIndex++;
+
+                switch (choice)
+                {
+                    case 'A': scoreA++; break;
+                    case 'B': scoreB++; break;
+                    case 'C': scoreC++; break;
+                    case 'D': scoreD++; break;
+                }
             }
             else
             {
-                //method for part 2 and next set of questions
+                int maxScore = Math.Max(Math.Max(scoreA, scoreB), Math.Max(scoreC, scoreD));
+                string macroPersonality = "";
+                string personality = "";
+
+                if (maxScore == scoreA)
+                    macroPersonality = "Extroverted Analyst";
+                else if (maxScore == scoreB)
+                    macroPersonality = "Extroverted Diplomat";
+                else if (maxScore == scoreC)
+                    macroPersonality = "Introverted Analyst";
+                else if (maxScore == scoreD)
+                    macroPersonality = "Introverted Diplomat";
+
+                int macro_id = GetMacroId(macroPersonality);
+                List<string> possiblePersonalities = GetPersonalitiesByMacroId(macro_id);
+
+                string resultPersonality = $"Macro Personality: {macroPersonality}\n" +
+                                $"Possible MBTI Types: {string.Join(", ", possiblePersonalities)}";
+
+                string result = $"Results:\n" +
+                               $"Extroverted Analysts (A): {scoreA}\n" +
+                               $"Extroverted Diplomats (B): {scoreB}\n" +
+                               $"Introverted Analysts (C): {scoreC}\n" +
+                               $"Introverted Diplomats (D): {scoreD}\n" +
+                               $"Your macro-personality type is: {macroPersonality}\n" +
+                               $"Proceed to next part to determine your MBTI Personality";
+
+                MessageBox.Show(result, "Quiz Finished");
+
+                PersonalityTestP2 part2 = new PersonalityTestP2(macroPersonality);
+                part2.Show();
+                Hide(); // or this.Close();
+
             }
             currentOptionA = currentQuestionIndex;
             currentOptionB = currentQuestionIndex;
@@ -161,19 +188,111 @@ namespace Alethiea2
             btnB.Text = answersB[currentOptionB];
             btnC.Text = answersC[currentOptionC];
             btnD.Text = answersD[currentOptionD];
+<<<<<<< HEAD
             lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
 
 
+=======
+
+            lblProgress.Text = $"Question {currentQuestionIndex + 1} of {questions.Count}";
+        }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+            btnClicked('A');
+>>>>>>> e919bd72c55fc13206b914d117d06401de03bb97
         }
 
         private void btnB_Click(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('B');
         }
 
         private void btnC_Clicked(object sender, EventArgs e)
         {
-            btnClicked();
+            btnClicked('C');
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+            btnClicked('D');
+        }
+
+        private int GetMacroId(string macroPersonality)
+        {
+            int macroId = -1; // default if not found
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT macro_id FROM MacroPersonalities WHERE macro_name = @name LIMIT 1";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", macroPersonality);
+
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        macroId = Convert.ToInt32(result);
+                    }
+                }
+            }
+            return macroId;
+        }
+
+        private List<string> GetPersonalitiesByMacroId(int macroId)
+        {
+            List<string> personalities = new List<string>();
+
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT code FROM Personalities WHERE macro_id = @macroId";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@macroId", macroId);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            personalities.Add(reader["code"].ToString());
+                        }
+                    }
+                }
+            }
+            return personalities;
+        }
+
+        private bool UserAlreadyHasPersonality(int userId)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                const string sql = @"SELECT personality_id FROM Users WHERE user_id = @uid LIMIT 1";
+
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@uid", userId);
+                    var result = cmd.ExecuteScalar();
+
+                    // Not found or NULL → no personality set
+                    if (result == null || result == DBNull.Value)
+                        return false;
+
+                    // If INT, treat 0 as NOT set; > 0 means set
+                    int personalityId;
+                    if (int.TryParse(result.ToString(), out personalityId))
+                        return personalityId > 0;
+
+                    // If stored as string, treat empty as NOT set
+                    var str = result.ToString().Trim();
+                    return !string.IsNullOrEmpty(str);
+                }
+            }
         }
 
         private void btnD_Click(object sender, EventArgs e)

@@ -32,13 +32,10 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             txtEmail = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
             btnSignUp1 = new Button();
             txtUsername1 = new TextBox();
-            txtpPassword1 = new TextBox();
+            txtPassword1 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -65,57 +62,22 @@
             label2.TabIndex = 1;
             label2.Text = "Reflect on your moods and patterns";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(224, 144);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 24);
-            label3.TabIndex = 2;
-            label3.Text = "Email";
-            // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(224, 171);
             txtEmail.Multiline = true;
             txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Enter your email";
             txtEmail.Size = new Size(300, 40);
             txtEmail.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(224, 214);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 24);
-            label4.TabIndex = 4;
-            label4.Text = "Username";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(224, 284);
-            label5.Name = "label5";
-            label5.Size = new Size(93, 24);
-            label5.TabIndex = 5;
-            label5.Text = "Password";
             // 
             // btnSignUp1
             // 
             btnSignUp1.BackColor = Color.FromArgb(0, 0, 192);
             btnSignUp1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp1.ForeColor = Color.White;
-            btnSignUp1.Location = new Point(327, 384);
+            btnSignUp1.Location = new Point(319, 377);
             btnSignUp1.Name = "btnSignUp1";
             btnSignUp1.Size = new Size(100, 40);
             btnSignUp1.TabIndex = 8;
@@ -129,18 +91,20 @@
             txtUsername1.Location = new Point(224, 241);
             txtUsername1.Multiline = true;
             txtUsername1.Name = "txtUsername1";
+            txtUsername1.PlaceholderText = "Enter your username";
             txtUsername1.Size = new Size(300, 40);
             txtUsername1.TabIndex = 9;
             // 
-            // txtpPassword1
+            // txtPassword1
             // 
-            txtpPassword1.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtpPassword1.Location = new Point(224, 311);
-            txtpPassword1.Multiline = true;
-            txtpPassword1.Name = "txtpPassword1";
-            txtpPassword1.PasswordChar = '*';
-            txtpPassword1.Size = new Size(300, 40);
-            txtpPassword1.TabIndex = 10;
+            txtPassword1.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword1.Location = new Point(224, 311);
+            txtPassword1.Multiline = true;
+            txtPassword1.Name = "txtPassword1";
+            txtPassword1.PasswordChar = '*';
+            txtPassword1.PlaceholderText = "Enter your password";
+            txtPassword1.Size = new Size(300, 40);
+            txtPassword1.TabIndex = 10;
             // 
             // Sign_Up
             // 
@@ -148,17 +112,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 64);
             ClientSize = new Size(782, 453);
-            Controls.Add(txtpPassword1);
+            Controls.Add(txtPassword1);
             Controls.Add(txtUsername1);
             Controls.Add(btnSignUp1);
-            Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(txtEmail);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Sign_Up";
-            Text = "Sign In";
+            Text = "Sign Up";
             Load += Sign_Up_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -168,13 +129,10 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private TextBox txtEmail;
-        private Label label4;
-        private Label label5;
         private Button btnSignUp1;
         private TextBox txtUsername1;
-        private TextBox txtpPassword1;
+        private TextBox txtPassword1;
 
         
 
