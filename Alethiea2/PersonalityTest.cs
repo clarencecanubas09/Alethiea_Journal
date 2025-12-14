@@ -288,10 +288,5 @@ namespace Alethiea2
                 }
             }
         }
-
-        private void btnD_Click(object sender, EventArgs e)
-        {
-            btnClicked();
-        }
     }
 }
