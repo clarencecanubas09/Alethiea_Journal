@@ -112,6 +112,7 @@
             Controls.Add(picLogo);
             DoubleBuffered = true;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Log In";
             Click += btnLogIn_Click;
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();

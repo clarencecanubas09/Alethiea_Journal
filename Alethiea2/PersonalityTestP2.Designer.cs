@@ -125,6 +125,7 @@
             Controls.Add(lblProgress2);
             DoubleBuffered = true;
             Name = "PersonalityTestP2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalityTestP2";
             Load += PersonalityTestP2_Load;
             ResumeLayout(false);

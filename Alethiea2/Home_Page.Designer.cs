@@ -2896,6 +2896,7 @@
             ClientSize = new Size(1542, 813);
             Controls.Add(tabControl1);
             Name = "Home_Page";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
             Load += Home_Page_Load;
             tabControl1.ResumeLayout(false);

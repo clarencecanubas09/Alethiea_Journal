@@ -84,7 +84,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Logout";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Logout";
             ResumeLayout(false);
         }

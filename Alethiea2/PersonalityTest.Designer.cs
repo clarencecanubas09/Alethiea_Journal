@@ -141,6 +141,7 @@
             Controls.Add(lblQuestion);
             DoubleBuffered = true;
             Name = "PersonalityTest";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalityTest";
             Load += PersonalityTest_Load;
             ResumeLayout(false);

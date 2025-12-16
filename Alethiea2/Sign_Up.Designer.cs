@@ -119,6 +119,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Sign_Up";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Sign Up";
             Load += Sign_Up_Load;
             ResumeLayout(false);
