@@ -188,9 +188,6 @@ namespace Alethiea2
             {
                 conn.Open();
 
-                // -------------------------
-                // 1) Update Mood Counter
-                // -------------------------
                 string moodSql = $@"
                     INSERT INTO Moods (user_id, {moodColumn})
                     VALUES (@userId, 1)
@@ -204,9 +201,6 @@ namespace Alethiea2
                     moodCmd.ExecuteNonQuery();
                 }
 
-                // -------------------------
-                // 2) Insert Notes in Notes Table
-                // -------------------------
                 if (!string.IsNullOrEmpty(notes))
                 {
                     string noteSql = @"
