@@ -124,6 +124,7 @@
             Controls.Add(btnA2);
             Controls.Add(lblProgress2);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PersonalityTestP2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalityTestP2";

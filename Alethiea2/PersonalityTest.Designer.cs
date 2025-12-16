@@ -140,6 +140,7 @@
             Controls.Add(lblProgress);
             Controls.Add(lblQuestion);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "PersonalityTest";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PersonalityTest";

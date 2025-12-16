@@ -2895,6 +2895,7 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1542, 813);
             Controls.Add(tabControl1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Home_Page";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
