@@ -111,6 +111,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 64);
+            BackgroundImage = Properties.Resources.BgForDailyQuote;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(782, 453);
             Controls.Add(txtPassword1);
             Controls.Add(txtUsername1);
