@@ -1,4 +1,4 @@
-﻿        namespace Alethiea2
+﻿namespace Alethiea2
 {
     partial class Sign_Up
     {
@@ -134,7 +134,7 @@
         private TextBox txtUsername1;
         private TextBox txtPassword1;
 
-        
+
 
     }
 }

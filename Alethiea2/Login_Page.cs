@@ -21,7 +21,7 @@ namespace Alethiea2
                 string sql = @"
                         CREATE DATABASE IF NOT EXISTS OOP_Finals;
                         USE OOP_Finals;
-
+                        
                         CREATE TABLE IF NOT EXISTS MacroPersonalities (
                             macro_id INT AUTO_INCREMENT PRIMARY KEY,
                             macro_name VARCHAR(100) NOT NULL UNIQUE

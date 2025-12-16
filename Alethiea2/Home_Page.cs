@@ -1,7 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using BCrypt.Net;
-using Org.BouncyCastle.Asn1.Cmp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
+using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Cmp;
 using static Alethiea2.Login;
 
 namespace Alethiea2
@@ -53,7 +53,8 @@ namespace Alethiea2
             tabViewProfile.Show();
         }
 
-        enum BreathPhase { Inhale, Hold1, Exhale, Hold2 }
+        private enum BreathPhase
+        { Inhale, Hold1, Exhale, Hold2 }
         BreathPhase currentPhase = BreathPhase.Inhale;
         int phaseTime = 40;
         int elapsed = 0;
