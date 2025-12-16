@@ -27,5 +27,13 @@ namespace Alethiea2
             // Close or hide current form
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home_Page home = new Home_Page();
+            home.Show();
+
+            this.Close();
+        }
     }
 }

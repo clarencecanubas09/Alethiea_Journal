@@ -153,9 +153,14 @@ namespace Alethiea2
         {
             tabControl1.SelectedIndex = 3;
             int userId = Login.UserSession.UserID;
-            List<string> notes = LoadUserNotes(userId);
+
+            //  Correct type: List of (note, date)
+            List<(string Note, DateTime CreatedAt)> notes = LoadUserNotes(userId);
+
+            //  Pass to updated DisplayNotes method
             DisplayNotes(notes);
         }
+
 
         private void btnNavigateProfile_Click(object sender, EventArgs e)
         {
@@ -168,6 +173,8 @@ namespace Alethiea2
         {
             Logout logout = new Logout();
             logout.Show();
+
+            this.Close();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -202,8 +209,8 @@ namespace Alethiea2
                 if (!string.IsNullOrEmpty(notes))
                 {
                     string noteSql = @"
-                        INSERT INTO Notes (user_id, notes)
-                        VALUES (@userId, @notes);
+                        INSERT INTO Notes (user_id, notes, created_at)
+                        VALUES (@userId, @notes, NOW());
                     ";
 
                     using (var noteCmd = new MySqlCommand(noteSql, conn))
@@ -393,15 +400,18 @@ namespace Alethiea2
                 lblMessage.Text = "You've been feeling fantastic! Great to see!";
         }
 
-        private List<string> LoadUserNotes(int userId)
+        private List<(string Note, DateTime CreatedAt)> LoadUserNotes(int userId)
         {
-            List<string> notesList = new List<string>();
+            var notesList = new List<(string Note, DateTime CreatedAt)>();
 
             using (var conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
 
-                string sql = @"SELECT notes FROM Notes WHERE user_id = @uid ORDER BY notes_id DESC;";
+                string sql = @"SELECT notes, created_at 
+                       FROM Notes 
+                       WHERE user_id = @uid 
+                       ORDER BY created_at DESC;";
 
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -411,43 +421,64 @@ namespace Alethiea2
                     {
                         while (reader.Read())
                         {
-                            notesList.Add(reader["notes"].ToString());
+                            string note = reader["notes"].ToString();
+                            DateTime createdAt = reader.GetDateTime("created_at");
+
+                            notesList.Add((note, createdAt));
                         }
                     }
                 }
             }
+
             return notesList;
         }
 
-        private void DisplayNotes(List<string> notes)
+
+        private void DisplayNotes(List<(string Note, DateTime CreatedAt)> notes)
         {
             flowNotes.Controls.Clear(); // Clear old notes
 
-            foreach (string note in notes)
+            foreach (var entry in notes)
             {
+                string noteText = entry.Note;
+                DateTime date = entry.CreatedAt;
+
                 // --- Create Panel ---
                 Panel notePanel = new Panel();
-                notePanel.Width = flowNotes.Width - 25;   // to fit nicely
-                notePanel.Height = 80;
+                notePanel.Width = flowNotes.Width - 25;
+                notePanel.Height = 100;
                 notePanel.BorderStyle = BorderStyle.FixedSingle;
                 notePanel.Margin = new Padding(5);
-                notePanel.BackColor = Color.White; // optional
+                notePanel.BackColor = Color.White;
 
-                // --- Create Label ---
+                // --- Create Label for Note ---
                 Label lblNote = new Label();
-                lblNote.Text = note;
-                lblNote.Dock = DockStyle.Fill;
+                lblNote.Text = noteText;
+                lblNote.Dock = DockStyle.Top;
                 lblNote.Padding = new Padding(8);
                 lblNote.Font = new Font("Imprint MT Shadow", 16);
                 lblNote.AutoSize = false;
+                lblNote.Height = 60;
+
+                // --- Create Label for Date ---
+                Label lblDate = new Label();
+                lblDate.Text = date.ToString("MMM dd, yyyy • hh:mm tt");
+                lblDate.Dock = DockStyle.Bottom;
+                lblDate.Padding = new Padding(5);
+                lblDate.Font = new Font("Segoe UI", 10, FontStyle.Italic);
+                lblDate.ForeColor = Color.Gray;
+                lblDate.AutoSize = false;
+                lblDate.Height = 30;
 
                 // --- Add to panel ---
+                notePanel.Controls.Add(lblDate);
                 notePanel.Controls.Add(lblNote);
 
                 // --- Add to FlowLayoutPanel ---
                 flowNotes.Controls.Add(notePanel);
             }
         }
+
 
         private void LoadUserInfo()
         {
@@ -506,7 +537,7 @@ namespace Alethiea2
                     using (var checkCmd = new MySqlCommand(checkQuery, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@username", newUsername);
-                        checkCmd.Parameters.AddWithValue("@id", userId);
+                        checkCmd.Parameters.AddWithValue("@uid", userId);
 
                         int exists = Convert.ToInt32(checkCmd.ExecuteScalar());
                         if (exists > 0)
@@ -523,14 +554,14 @@ namespace Alethiea2
                     string updateQuery = @"
                         UPDATE Users 
                         SET username = @username, password = @password 
-                        WHERE user_id = @id;
+                        WHERE user_id = @uid;
                     ";
 
                     using (var updateCmd = new MySqlCommand(updateQuery, conn))
                     {
                         updateCmd.Parameters.AddWithValue("@username", newUsername);
                         updateCmd.Parameters.AddWithValue("@password", hashedPassword);
-                        updateCmd.Parameters.AddWithValue("@id", userId);
+                        updateCmd.Parameters.AddWithValue("@uid", userId);
 
                         int rows = updateCmd.ExecuteNonQuery();
                         if (rows > 0)

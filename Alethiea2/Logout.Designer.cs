@@ -35,15 +35,15 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Imprint MT Shadow", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(0, 192, 192);
-            label1.Location = new Point(53, 103);
+            label1.ForeColor = Color.FloralWhite;
+            label1.Location = new Point(102, 71);
             label1.Name = "label1";
-            label1.Size = new Size(677, 52);
+            label1.Size = new Size(540, 110);
             label1.TabIndex = 2;
             label1.Text = "Are you sure you want to log out?";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -56,6 +56,7 @@
             button1.TabIndex = 6;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnLogout
             // 
@@ -63,7 +64,7 @@
             btnLogout.BackgroundImageLayout = ImageLayout.None;
             btnLogout.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(447, 255);
+            btnLogout.Location = new Point(447, 256);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(120, 55);
             btnLogout.TabIndex = 7;
@@ -75,7 +76,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 0, 64);
+            BackColor = SystemColors.ActiveBorder;
+            BackgroundImage = Properties.Resources.BgForDailyQuote;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(782, 453);
             Controls.Add(btnLogout);
             Controls.Add(button1);
@@ -84,7 +87,6 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Logout";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

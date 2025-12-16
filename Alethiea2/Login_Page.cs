@@ -57,8 +57,10 @@ namespace Alethiea2
                             notes_id INT AUTO_INCREMENT PRIMARY KEY,
                             user_id INT NOT NULL,
                             notes VARCHAR(500) NOT NULL,
+                            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                             CONSTRAINT fk_notes_users FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
                         );
+
                 ";
                 using var cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
