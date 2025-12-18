@@ -28,7 +28,7 @@ namespace Alethiea2
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             Home_Page home = new Home_Page();
             home.Show();

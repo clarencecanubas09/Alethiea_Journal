@@ -74,6 +74,7 @@
             // btnSignUp
             // 
             btnSignUp.BackColor = Color.DarkBlue;
+            btnSignUp.Cursor = Cursors.Hand;
             btnSignUp.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSignUp.ForeColor = Color.White;
             btnSignUp.Location = new Point(600, 600);
@@ -87,6 +88,7 @@
             // btnLogIn
             // 
             btnLogIn.BackColor = Color.DarkBlue;
+            btnLogIn.Cursor = Cursors.Hand;
             btnLogIn.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogIn.ForeColor = Color.White;
             btnLogIn.Location = new Point(830, 600);

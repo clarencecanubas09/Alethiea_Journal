@@ -75,6 +75,7 @@
             // btnSignUp1
             // 
             btnSignUp1.BackColor = Color.FromArgb(0, 0, 192);
+            btnSignUp1.Cursor = Cursors.Hand;
             btnSignUp1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSignUp1.ForeColor = Color.White;
             btnSignUp1.Location = new Point(319, 377);

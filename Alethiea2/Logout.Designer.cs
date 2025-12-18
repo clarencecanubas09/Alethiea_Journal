@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
+            btnBack = new Button();
             btnLogout = new Button();
             SuspendLayout();
             // 
@@ -45,23 +45,25 @@
             label1.Text = "Are you sure you want to log out?";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnBack
             // 
-            button1.BackColor = SystemColors.ControlDarkDark;
-            button1.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(177, 255);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 55);
-            button1.TabIndex = 6;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnBack.BackColor = SystemColors.ControlDarkDark;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(177, 255);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(120, 55);
+            btnBack.TabIndex = 6;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // btnLogout
             // 
             btnLogout.BackColor = Color.RoyalBlue;
             btnLogout.BackgroundImageLayout = ImageLayout.None;
+            btnLogout.Cursor = Cursors.Hand;
             btnLogout.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
             btnLogout.Location = new Point(447, 256);
@@ -81,7 +83,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(782, 453);
             Controls.Add(btnLogout);
-            Controls.Add(button1);
+            Controls.Add(btnBack);
             Controls.Add(label1);
             Name = "Logout";
             StartPosition = FormStartPosition.CenterScreen;
@@ -92,7 +94,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button btnBack;
         private Button btnLogout;
     }
 }

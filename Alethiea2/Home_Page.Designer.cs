@@ -456,6 +456,7 @@
             // btnBoxBreathing
             // 
             btnBoxBreathing.BackColor = Color.CadetBlue;
+            btnBoxBreathing.Cursor = Cursors.Hand;
             btnBoxBreathing.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing.ForeColor = Color.White;
             btnBoxBreathing.Location = new Point(53, 0);
@@ -489,6 +490,7 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.CadetBlue;
+            btnLogout.Cursor = Cursors.Hand;
             btnLogout.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.Red;
             btnLogout.Location = new Point(53, 0);
@@ -534,6 +536,7 @@
             // btnNotesHistory
             // 
             btnNotesHistory.BackColor = Color.CadetBlue;
+            btnNotesHistory.Cursor = Cursors.Hand;
             btnNotesHistory.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory.ForeColor = Color.White;
             btnNotesHistory.Location = new Point(53, 0);
@@ -567,6 +570,7 @@
             // btnViewProfile
             // 
             btnViewProfile.BackColor = Color.CadetBlue;
+            btnViewProfile.Cursor = Cursors.Hand;
             btnViewProfile.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile.ForeColor = Color.White;
             btnViewProfile.Location = new Point(53, 0);
@@ -600,6 +604,7 @@
             // btnMoodEntry
             // 
             btnMoodEntry.BackColor = Color.CadetBlue;
+            btnMoodEntry.Cursor = Cursors.Hand;
             btnMoodEntry.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry.ForeColor = Color.White;
             btnMoodEntry.Location = new Point(53, 0);
@@ -633,6 +638,7 @@
             // btnDailyQuote
             // 
             btnDailyQuote.BackColor = Color.CadetBlue;
+            btnDailyQuote.Cursor = Cursors.Hand;
             btnDailyQuote.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDailyQuote.ForeColor = Color.White;
             btnDailyQuote.Location = new Point(53, 0);
@@ -666,6 +672,7 @@
             // btnMoodSummary
             // 
             btnMoodSummary.BackColor = Color.CadetBlue;
+            btnMoodSummary.Cursor = Cursors.Hand;
             btnMoodSummary.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary.ForeColor = Color.White;
             btnMoodSummary.Location = new Point(53, 0);
@@ -713,14 +720,12 @@
             // 
             // lblMood
             // 
-            lblMood.AutoSize = true;
             lblMood.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMood.ForeColor = Color.FloralWhite;
-            lblMood.Location = new Point(754, 371);
+            lblMood.Location = new Point(611, 371);
             lblMood.Name = "lblMood";
-            lblMood.Size = new Size(265, 47);
+            lblMood.Size = new Size(557, 47);
             lblMood.TabIndex = 28;
-            lblMood.Text = "Current Mood";
             lblMood.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel16
@@ -762,6 +767,7 @@
             // btnBoxBreathing2
             // 
             btnBoxBreathing2.BackColor = Color.CadetBlue;
+            btnBoxBreathing2.Cursor = Cursors.Hand;
             btnBoxBreathing2.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing2.ForeColor = Color.White;
             btnBoxBreathing2.Location = new Point(53, 0);
@@ -795,6 +801,7 @@
             // btnLogout2
             // 
             btnLogout2.BackColor = Color.CadetBlue;
+            btnLogout2.Cursor = Cursors.Hand;
             btnLogout2.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout2.ForeColor = Color.Red;
             btnLogout2.Location = new Point(53, 0);
@@ -840,6 +847,7 @@
             // btnNotesHistory2
             // 
             btnNotesHistory2.BackColor = Color.CadetBlue;
+            btnNotesHistory2.Cursor = Cursors.Hand;
             btnNotesHistory2.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory2.ForeColor = Color.White;
             btnNotesHistory2.Location = new Point(53, 0);
@@ -873,6 +881,7 @@
             // btnViewProfile2
             // 
             btnViewProfile2.BackColor = Color.CadetBlue;
+            btnViewProfile2.Cursor = Cursors.Hand;
             btnViewProfile2.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile2.ForeColor = Color.White;
             btnViewProfile2.Location = new Point(53, 0);
@@ -906,6 +915,7 @@
             // btnMoodEntry2
             // 
             btnMoodEntry2.BackColor = Color.CadetBlue;
+            btnMoodEntry2.Cursor = Cursors.Hand;
             btnMoodEntry2.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry2.ForeColor = Color.White;
             btnMoodEntry2.Location = new Point(53, 0);
@@ -939,6 +949,7 @@
             // btnDailyQuote2
             // 
             btnDailyQuote2.BackColor = Color.CadetBlue;
+            btnDailyQuote2.Cursor = Cursors.Hand;
             btnDailyQuote2.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDailyQuote2.ForeColor = Color.White;
             btnDailyQuote2.Location = new Point(53, 0);
@@ -972,6 +983,7 @@
             // btnMoodSummary2
             // 
             btnMoodSummary2.BackColor = Color.CadetBlue;
+            btnMoodSummary2.Cursor = Cursors.Hand;
             btnMoodSummary2.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary2.ForeColor = Color.White;
             btnMoodSummary2.Location = new Point(53, 0);
@@ -985,6 +997,7 @@
             // btnSave
             // 
             btnSave.BackColor = Color.DarkCyan;
+            btnSave.Cursor = Cursors.Hand;
             btnSave.ForeColor = Color.FloralWhite;
             btnSave.Location = new Point(804, 753);
             btnSave.Name = "btnSave";
@@ -1025,6 +1038,7 @@
             // 
             // mood_Amazing
             // 
+            mood_Amazing.Cursor = Cursors.Hand;
             mood_Amazing.Image = (Image)resources.GetObject("mood_Amazing.Image");
             mood_Amazing.Location = new Point(1296, 215);
             mood_Amazing.Name = "mood_Amazing";
@@ -1036,6 +1050,7 @@
             // 
             // mood_Happy
             // 
+            mood_Happy.Cursor = Cursors.Hand;
             mood_Happy.Image = (Image)resources.GetObject("mood_Happy.Image");
             mood_Happy.Location = new Point(1060, 215);
             mood_Happy.Name = "mood_Happy";
@@ -1047,6 +1062,7 @@
             // 
             // mood_Neutral
             // 
+            mood_Neutral.Cursor = Cursors.Hand;
             mood_Neutral.Image = (Image)resources.GetObject("mood_Neutral.Image");
             mood_Neutral.Location = new Point(818, 215);
             mood_Neutral.Name = "mood_Neutral";
@@ -1058,6 +1074,7 @@
             // 
             // mood_Sad
             // 
+            mood_Sad.Cursor = Cursors.Hand;
             mood_Sad.Image = (Image)resources.GetObject("mood_Sad.Image");
             mood_Sad.Location = new Point(579, 215);
             mood_Sad.Name = "mood_Sad";
@@ -1069,6 +1086,7 @@
             // 
             // mood_Depressed
             // 
+            mood_Depressed.Cursor = Cursors.Hand;
             mood_Depressed.Image = (Image)resources.GetObject("mood_Depressed.Image");
             mood_Depressed.Location = new Point(337, 215);
             mood_Depressed.Name = "mood_Depressed";
@@ -1077,6 +1095,7 @@
             mood_Depressed.TabIndex = 20;
             mood_Depressed.TabStop = false;
             mood_Depressed.Click += mood_Depressed_Click;
+            mood_Depressed.MouseHover += mood_Depressed_MouseHover;
             // 
             // lblDailyMoodEntry
             // 
@@ -1154,6 +1173,7 @@
             // btnBoxBreathing3
             // 
             btnBoxBreathing3.BackColor = Color.CadetBlue;
+            btnBoxBreathing3.Cursor = Cursors.Hand;
             btnBoxBreathing3.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing3.ForeColor = Color.White;
             btnBoxBreathing3.Location = new Point(53, 0);
@@ -1187,6 +1207,7 @@
             // btnLogout3
             // 
             btnLogout3.BackColor = Color.CadetBlue;
+            btnLogout3.Cursor = Cursors.Hand;
             btnLogout3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout3.ForeColor = Color.Red;
             btnLogout3.Location = new Point(53, 0);
@@ -1232,6 +1253,7 @@
             // btnNotesHistory3
             // 
             btnNotesHistory3.BackColor = Color.CadetBlue;
+            btnNotesHistory3.Cursor = Cursors.Hand;
             btnNotesHistory3.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory3.ForeColor = Color.White;
             btnNotesHistory3.Location = new Point(53, 0);
@@ -1265,6 +1287,7 @@
             // btnViewProfile3
             // 
             btnViewProfile3.BackColor = Color.CadetBlue;
+            btnViewProfile3.Cursor = Cursors.Hand;
             btnViewProfile3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile3.ForeColor = Color.White;
             btnViewProfile3.Location = new Point(53, 0);
@@ -1298,6 +1321,7 @@
             // btnMoodEntry3
             // 
             btnMoodEntry3.BackColor = Color.CadetBlue;
+            btnMoodEntry3.Cursor = Cursors.Hand;
             btnMoodEntry3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry3.ForeColor = Color.White;
             btnMoodEntry3.Location = new Point(53, 0);
@@ -1331,6 +1355,7 @@
             // btnDailyQuote3
             // 
             btnDailyQuote3.BackColor = Color.CadetBlue;
+            btnDailyQuote3.Cursor = Cursors.Hand;
             btnDailyQuote3.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDailyQuote3.ForeColor = Color.White;
             btnDailyQuote3.Location = new Point(53, 0);
@@ -1364,6 +1389,7 @@
             // btnMoodSummary3
             // 
             btnMoodSummary3.BackColor = Color.CadetBlue;
+            btnMoodSummary3.Cursor = Cursors.Hand;
             btnMoodSummary3.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary3.ForeColor = Color.White;
             btnMoodSummary3.Location = new Point(53, 0);
@@ -1376,14 +1402,14 @@
             // 
             // lblMessage
             // 
-            lblMessage.AutoSize = true;
             lblMessage.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMessage.ForeColor = Color.FloralWhite;
-            lblMessage.Location = new Point(485, 598);
+            lblMessage.Location = new Point(332, 507);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(816, 47);
+            lblMessage.Size = new Size(1102, 259);
             lblMessage.TabIndex = 23;
             lblMessage.Text = "Message here. Depends on the dominant mood";
+            lblMessage.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlMoodSummary
             // 
@@ -1654,6 +1680,7 @@
             // btnBoxBreathing4
             // 
             btnBoxBreathing4.BackColor = Color.CadetBlue;
+            btnBoxBreathing4.Cursor = Cursors.Hand;
             btnBoxBreathing4.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing4.ForeColor = Color.White;
             btnBoxBreathing4.Location = new Point(53, 0);
@@ -1687,6 +1714,7 @@
             // btnLogout4
             // 
             btnLogout4.BackColor = Color.CadetBlue;
+            btnLogout4.Cursor = Cursors.Hand;
             btnLogout4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout4.ForeColor = Color.Red;
             btnLogout4.Location = new Point(53, 0);
@@ -1732,6 +1760,7 @@
             // btnNotesHistory4
             // 
             btnNotesHistory4.BackColor = Color.CadetBlue;
+            btnNotesHistory4.Cursor = Cursors.Hand;
             btnNotesHistory4.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory4.ForeColor = Color.White;
             btnNotesHistory4.Location = new Point(53, 0);
@@ -1765,6 +1794,7 @@
             // btnViewProfile4
             // 
             btnViewProfile4.BackColor = Color.CadetBlue;
+            btnViewProfile4.Cursor = Cursors.Hand;
             btnViewProfile4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile4.ForeColor = Color.White;
             btnViewProfile4.Location = new Point(53, 0);
@@ -1798,6 +1828,7 @@
             // btnMoodEntry4
             // 
             btnMoodEntry4.BackColor = Color.CadetBlue;
+            btnMoodEntry4.Cursor = Cursors.Hand;
             btnMoodEntry4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry4.ForeColor = Color.White;
             btnMoodEntry4.Location = new Point(53, 0);
@@ -1831,6 +1862,7 @@
             // brnDailyQuote4
             // 
             brnDailyQuote4.BackColor = Color.CadetBlue;
+            brnDailyQuote4.Cursor = Cursors.Hand;
             brnDailyQuote4.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             brnDailyQuote4.ForeColor = Color.White;
             brnDailyQuote4.Location = new Point(53, 0);
@@ -1864,6 +1896,7 @@
             // btnMoodSummary4
             // 
             btnMoodSummary4.BackColor = Color.CadetBlue;
+            btnMoodSummary4.Cursor = Cursors.Hand;
             btnMoodSummary4.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary4.ForeColor = Color.White;
             btnMoodSummary4.Location = new Point(53, 0);
@@ -1914,18 +1947,19 @@
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsername.ForeColor = Color.FloralWhite;
-            lblUsername.Location = new Point(812, 48);
+            lblUsername.Location = new Point(919, 48);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(439, 79);
+            lblUsername.Size = new Size(50, 79);
             lblUsername.TabIndex = 24;
-            lblUsername.Text = "USERNAME";
+            lblUsername.Text = ".";
+            lblUsername.Click += lblUsername_Click;
             // 
             // lblHello
             // 
             lblHello.AutoSize = true;
             lblHello.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblHello.ForeColor = Color.FloralWhite;
-            lblHello.Location = new Point(526, 48);
+            lblHello.Location = new Point(562, 48);
             lblHello.Name = "lblHello";
             lblHello.Size = new Size(319, 79);
             lblHello.TabIndex = 23;
@@ -1970,6 +2004,7 @@
             // btnBoxBreathing5
             // 
             btnBoxBreathing5.BackColor = Color.CadetBlue;
+            btnBoxBreathing5.Cursor = Cursors.Hand;
             btnBoxBreathing5.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing5.ForeColor = Color.White;
             btnBoxBreathing5.Location = new Point(53, 0);
@@ -2003,6 +2038,7 @@
             // btnLogout5
             // 
             btnLogout5.BackColor = Color.CadetBlue;
+            btnLogout5.Cursor = Cursors.Hand;
             btnLogout5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout5.ForeColor = Color.Red;
             btnLogout5.Location = new Point(53, 0);
@@ -2048,6 +2084,7 @@
             // btnNotesHistory5
             // 
             btnNotesHistory5.BackColor = Color.CadetBlue;
+            btnNotesHistory5.Cursor = Cursors.Hand;
             btnNotesHistory5.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory5.ForeColor = Color.White;
             btnNotesHistory5.Location = new Point(53, 0);
@@ -2081,6 +2118,7 @@
             // btnViewProfile5
             // 
             btnViewProfile5.BackColor = Color.CadetBlue;
+            btnViewProfile5.Cursor = Cursors.Hand;
             btnViewProfile5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile5.ForeColor = Color.White;
             btnViewProfile5.Location = new Point(53, 0);
@@ -2114,6 +2152,7 @@
             // btnMoodEntry5
             // 
             btnMoodEntry5.BackColor = Color.CadetBlue;
+            btnMoodEntry5.Cursor = Cursors.Hand;
             btnMoodEntry5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry5.ForeColor = Color.White;
             btnMoodEntry5.Location = new Point(53, 0);
@@ -2147,6 +2186,7 @@
             // btnDailyQuote5
             // 
             btnDailyQuote5.BackColor = Color.CadetBlue;
+            btnDailyQuote5.Cursor = Cursors.Hand;
             btnDailyQuote5.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDailyQuote5.ForeColor = Color.White;
             btnDailyQuote5.Location = new Point(53, 0);
@@ -2180,6 +2220,7 @@
             // btnMoodSummary5
             // 
             btnMoodSummary5.BackColor = Color.CadetBlue;
+            btnMoodSummary5.Cursor = Cursors.Hand;
             btnMoodSummary5.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary5.ForeColor = Color.White;
             btnMoodSummary5.Location = new Point(53, 0);
@@ -2247,6 +2288,7 @@
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.DimGray;
+            btnUpdate.Cursor = Cursors.Hand;
             btnUpdate.Font = new Font("Imprint MT Shadow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = Color.Snow;
             btnUpdate.Location = new Point(348, 369);
@@ -2304,6 +2346,7 @@
             // btnBreath
             // 
             btnBreath.BackColor = Color.DarkBlue;
+            btnBreath.Cursor = Cursors.Hand;
             btnBreath.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBreath.ForeColor = Color.White;
             btnBreath.Location = new Point(798, 484);
@@ -2326,11 +2369,10 @@
             // 
             lblInstruction.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInstruction.ForeColor = Color.FloralWhite;
-            lblInstruction.Location = new Point(701, 199);
+            lblInstruction.Location = new Point(644, 199);
             lblInstruction.Name = "lblInstruction";
-            lblInstruction.Size = new Size(326, 75);
+            lblInstruction.Size = new Size(426, 75);
             lblInstruction.TabIndex = 23;
-            lblInstruction.Text = "...";
             lblInstruction.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblBoxBreathing
@@ -2383,6 +2425,7 @@
             // btnBoxBreathing6
             // 
             btnBoxBreathing6.BackColor = Color.CadetBlue;
+            btnBoxBreathing6.Cursor = Cursors.Hand;
             btnBoxBreathing6.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBoxBreathing6.ForeColor = Color.White;
             btnBoxBreathing6.Location = new Point(53, 0);
@@ -2416,6 +2459,7 @@
             // btnLogout6
             // 
             btnLogout6.BackColor = Color.CadetBlue;
+            btnLogout6.Cursor = Cursors.Hand;
             btnLogout6.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout6.ForeColor = Color.Red;
             btnLogout6.Location = new Point(53, 0);
@@ -2461,6 +2505,7 @@
             // btnNotesHistory6
             // 
             btnNotesHistory6.BackColor = Color.CadetBlue;
+            btnNotesHistory6.Cursor = Cursors.Hand;
             btnNotesHistory6.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNotesHistory6.ForeColor = Color.White;
             btnNotesHistory6.Location = new Point(53, 0);
@@ -2494,6 +2539,7 @@
             // btnViewProfile6
             // 
             btnViewProfile6.BackColor = Color.CadetBlue;
+            btnViewProfile6.Cursor = Cursors.Hand;
             btnViewProfile6.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnViewProfile6.ForeColor = Color.White;
             btnViewProfile6.Location = new Point(53, 0);
@@ -2527,6 +2573,7 @@
             // btnMoodEntry6
             // 
             btnMoodEntry6.BackColor = Color.CadetBlue;
+            btnMoodEntry6.Cursor = Cursors.Hand;
             btnMoodEntry6.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodEntry6.ForeColor = Color.White;
             btnMoodEntry6.Location = new Point(53, 0);
@@ -2560,6 +2607,7 @@
             // btnDailyQuote6
             // 
             btnDailyQuote6.BackColor = Color.CadetBlue;
+            btnDailyQuote6.Cursor = Cursors.Hand;
             btnDailyQuote6.Font = new Font("Imprint MT Shadow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDailyQuote6.ForeColor = Color.White;
             btnDailyQuote6.Location = new Point(53, 0);
@@ -2593,6 +2641,7 @@
             // btnMoodSummary6
             // 
             btnMoodSummary6.BackColor = Color.CadetBlue;
+            btnMoodSummary6.Cursor = Cursors.Hand;
             btnMoodSummary6.Font = new Font("Imprint MT Shadow", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMoodSummary6.ForeColor = Color.White;
             btnMoodSummary6.Location = new Point(53, 0);

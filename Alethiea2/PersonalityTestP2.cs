@@ -306,6 +306,8 @@ namespace Alethiea2
                         cmd.Parameters.AddWithValue("@pid", personalityId);
                         cmd.Parameters.AddWithValue("@uid", UserSession.UserID);
                         cmd.ExecuteNonQuery();
+
+                        UserSession.PersonalityId = personalityId;
                     }
                 }
             }

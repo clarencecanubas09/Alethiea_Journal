@@ -41,12 +41,12 @@
             // lblQuestion
             // 
             lblQuestion.BackColor = Color.Transparent;
-            lblQuestion.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblQuestion.Font = new Font("Imprint MT Shadow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblQuestion.ForeColor = Color.FloralWhite;
-            lblQuestion.Location = new Point(237, 270);
+            lblQuestion.Location = new Point(238, 270);
             lblQuestion.MaximumSize = new Size(1138, 140);
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(1097, 56);
+            lblQuestion.Size = new Size(1097, 100);
             lblQuestion.TabIndex = 7;
             lblQuestion.Text = "question";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
@@ -67,8 +67,9 @@
             // btnA
             // 
             btnA.BackColor = Color.FromArgb(255, 192, 255);
+            btnA.Cursor = Cursors.Hand;
             btnA.Font = new Font("Imprint MT Shadow", 12F);
-            btnA.Location = new Point(235, 396);
+            btnA.Location = new Point(230, 396);
             btnA.Name = "btnA";
             btnA.Size = new Size(400, 150);
             btnA.TabIndex = 10;
@@ -79,8 +80,9 @@
             // btnC
             // 
             btnC.BackColor = Color.FromArgb(255, 192, 255);
+            btnC.Cursor = Cursors.Hand;
             btnC.Font = new Font("Imprint MT Shadow", 12F);
-            btnC.Location = new Point(235, 578);
+            btnC.Location = new Point(230, 578);
             btnC.Name = "btnC";
             btnC.Size = new Size(400, 150);
             btnC.TabIndex = 11;
@@ -91,8 +93,9 @@
             // btnB
             // 
             btnB.BackColor = Color.FromArgb(255, 192, 255);
+            btnB.Cursor = Cursors.Hand;
             btnB.Font = new Font("Imprint MT Shadow", 12F);
-            btnB.Location = new Point(954, 396);
+            btnB.Location = new Point(949, 396);
             btnB.Name = "btnB";
             btnB.Size = new Size(400, 150);
             btnB.TabIndex = 12;
@@ -104,7 +107,7 @@
             // 
             btnD.BackColor = Color.FromArgb(255, 192, 255);
             btnD.Font = new Font("Imprint MT Shadow", 12F);
-            btnD.Location = new Point(954, 578);
+            btnD.Location = new Point(949, 578);
             btnD.Name = "btnD";
             btnD.Size = new Size(400, 150);
             btnD.TabIndex = 13;

@@ -43,7 +43,7 @@
             lblPersonalityTestPart2.BackColor = Color.Transparent;
             lblPersonalityTestPart2.Font = new Font("Imprint MT Shadow", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPersonalityTestPart2.ForeColor = Color.FloralWhite;
-            lblPersonalityTestPart2.Location = new Point(382, 77);
+            lblPersonalityTestPart2.Location = new Point(426, 61);
             lblPersonalityTestPart2.Name = "lblPersonalityTestPart2";
             lblPersonalityTestPart2.Size = new Size(750, 79);
             lblPersonalityTestPart2.TabIndex = 27;
@@ -52,8 +52,9 @@
             // btnD2
             // 
             btnD2.BackColor = Color.FromArgb(255, 192, 255);
+            btnD2.Cursor = Cursors.Hand;
             btnD2.Font = new Font("Imprint MT Shadow", 12F);
-            btnD2.Location = new Point(931, 585);
+            btnD2.Location = new Point(947, 579);
             btnD2.Name = "btnD2";
             btnD2.Size = new Size(400, 150);
             btnD2.TabIndex = 26;
@@ -64,8 +65,9 @@
             // btnB2
             // 
             btnB2.BackColor = Color.FromArgb(255, 192, 255);
+            btnB2.Cursor = Cursors.Hand;
             btnB2.Font = new Font("Imprint MT Shadow", 12F);
-            btnB2.Location = new Point(931, 403);
+            btnB2.Location = new Point(947, 397);
             btnB2.Name = "btnB2";
             btnB2.Size = new Size(400, 150);
             btnB2.TabIndex = 25;
@@ -76,8 +78,9 @@
             // btnC2
             // 
             btnC2.BackColor = Color.FromArgb(255, 192, 255);
+            btnC2.Cursor = Cursors.Hand;
             btnC2.Font = new Font("Imprint MT Shadow", 12F);
-            btnC2.Location = new Point(212, 585);
+            btnC2.Location = new Point(228, 579);
             btnC2.Name = "btnC2";
             btnC2.Size = new Size(400, 150);
             btnC2.TabIndex = 24;
@@ -88,8 +91,9 @@
             // btnA2
             // 
             btnA2.BackColor = Color.FromArgb(255, 192, 255);
+            btnA2.Cursor = Cursors.Hand;
             btnA2.Font = new Font("Imprint MT Shadow", 12F);
-            btnA2.Location = new Point(212, 403);
+            btnA2.Location = new Point(228, 397);
             btnA2.Name = "btnA2";
             btnA2.Size = new Size(400, 150);
             btnA2.TabIndex = 23;
@@ -102,12 +106,11 @@
             lblProgress2.BackColor = Color.Transparent;
             lblProgress2.Font = new Font("Imprint MT Shadow", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblProgress2.ForeColor = Color.FloralWhite;
-            lblProgress2.Location = new Point(214, 187);
+            lblProgress2.Location = new Point(240, 181);
             lblProgress2.MaximumSize = new Size(1138, 140);
             lblProgress2.Name = "lblProgress2";
             lblProgress2.Size = new Size(1097, 56);
             lblProgress2.TabIndex = 22;
-            lblProgress2.Text = ".....";
             lblProgress2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PersonalityTestP2

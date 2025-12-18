@@ -23,14 +23,11 @@ namespace Alethiea2
             progressBarBreath.Minimum = 0;
             progressBarBreath.Maximum = phaseTime; // phaseTime = number of ticks per phase
             progressBarBreath.Value = 0;
-
-
-
         }
 
         private void Home_Page_Load(object sender, EventArgs e)
         {
-            string[] greetings = 
+            string[] greetings =
                 {
                 "“There is no normal life that is free of pain. It’s the very wrestling with our problems that can be the impetus for our growth.” — Fred Rogers",
                 "“Our wounds are often the openings into the best and most beautiful part of us.” — David Richo",
@@ -107,8 +104,8 @@ namespace Alethiea2
                         break;
                 }
             }
-            }
-        bool isPaused = false;  
+        }
+        bool isPaused = false;
         private void btnBreath_Click(object sender, EventArgs e)
         {
             if (timer1.Enabled)
@@ -136,7 +133,6 @@ namespace Alethiea2
                 isPaused = false;
             }
         }
-
 
         private void btnNavigateHome_Click(object sender, EventArgs e) => tabControl1.SelectedIndex = 0;
 
@@ -188,9 +184,6 @@ namespace Alethiea2
             {
                 conn.Open();
 
-                // -------------------------
-                // 1) Update Mood Counter
-                // -------------------------
                 string moodSql = $@"
                     INSERT INTO Moods (user_id, {moodColumn})
                     VALUES (@userId, 1)
@@ -204,9 +197,6 @@ namespace Alethiea2
                     moodCmd.ExecuteNonQuery();
                 }
 
-                // -------------------------
-                // 2) Insert Notes in Notes Table
-                // -------------------------
                 if (!string.IsNullOrEmpty(notes))
                 {
                     string noteSql = @"
@@ -222,11 +212,8 @@ namespace Alethiea2
                     }
                 }
             }
-
             HandleMoodSelection(lblMood.Text.ToLower());
         }
-
-
 
         private string GetMessageForMood(string mood, int personalityId)
         {
@@ -279,41 +266,34 @@ namespace Alethiea2
             // Show in TabPage2
             lblMessagesForMood.Text = messageText;
             tabControl1.SelectedIndex = 6;
-
-            // Optionally save mood + notes to DB here if you want
         }
 
 
         private void mood_Depressed_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Depressed";
-
         }
 
 
         private void mood_Sad_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Sad";
-
         }
 
 
         private void mood_Neutral_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Neutral";
-
         }
 
         private void mood_Happy_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Happy";
-
         }
 
         private void mood_Amazing_Click(object sender, EventArgs e)
         {
             lblMood.Text = "Amazing";
-
         }
 
         private void LoadMoodSummary()
@@ -582,7 +562,6 @@ namespace Alethiea2
             }
         }
 
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateAccount(
@@ -594,6 +573,16 @@ namespace Alethiea2
         }
 
         private void progressBarBreath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mood_Depressed_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
         {
 
         }
